@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a9fa6b013a2fee84f8bed6b7536ace98
+timeCreated: 1523582037
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Plants/TallGrass/Materials/Grass1.mat
+  uploadId: 435696

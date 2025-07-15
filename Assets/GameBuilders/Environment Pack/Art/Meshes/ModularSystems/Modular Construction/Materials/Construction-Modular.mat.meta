@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ce662380f854d3c408da4a4a1116a44a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/ModularSystems/Modular
+    Construction/Materials/Construction-Modular.mat
+  uploadId: 435696

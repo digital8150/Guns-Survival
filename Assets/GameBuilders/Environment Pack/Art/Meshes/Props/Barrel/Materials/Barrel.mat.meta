@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2551253d136e2bf49a54fbb2f9c5b72e
+timeCreated: 1523055288
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Barrel/Materials/Barrel.mat
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0e1ca1a23d8619641a4bd7de979552fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Lighting/Materials/Glass.mat
+  uploadId: 435696

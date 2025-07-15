@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43b2027288127bf4d9b59bc68e961a81
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Crane/Materials/Crane.mat
+  uploadId: 435696

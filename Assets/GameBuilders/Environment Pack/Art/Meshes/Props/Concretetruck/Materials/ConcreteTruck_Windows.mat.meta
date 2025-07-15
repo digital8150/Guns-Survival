@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 48535ac1cf07fc4499e48cf81738a22f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Concretetruck/Materials/ConcreteTruck_Windows.mat
+  uploadId: 435696

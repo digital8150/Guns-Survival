@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b22e8eb26ec1611459232b23c6054183
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Smallprops1/Materials/Metal.mat
+  uploadId: 435696

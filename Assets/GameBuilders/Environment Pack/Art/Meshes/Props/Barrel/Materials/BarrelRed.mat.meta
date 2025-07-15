@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 633292007c1153f4796d229c6836d86b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Barrel/Materials/BarrelRed.mat
+  uploadId: 435696

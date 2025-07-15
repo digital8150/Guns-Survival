@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5873d3803bf4edf479439e2cfa7b360a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/PortableOffice/Materials/Walls.mat
+  uploadId: 435696

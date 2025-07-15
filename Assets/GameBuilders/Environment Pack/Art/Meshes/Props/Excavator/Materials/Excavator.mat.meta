@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1c938c99405a3984889211b2c3dae1ec
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Props/Excavator/Materials/Excavator.mat
+  uploadId: 435696

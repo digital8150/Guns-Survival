@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 843ba03d81a2f204abc0cd8bdecbde60
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/ModularSystems/WoodAssets/Materials/Wood.mat
+  uploadId: 435696

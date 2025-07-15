@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f0d66bd2b8838f74c989689cc3803b85
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Bridge/Materials/BridgeRed.mat
+  uploadId: 435696

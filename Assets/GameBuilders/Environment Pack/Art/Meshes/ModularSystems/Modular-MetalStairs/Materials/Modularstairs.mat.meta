@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f24dde428157e6f428a632940a6c550d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/ModularSystems/Modular-MetalStairs/Materials/Modularstairs.mat
+  uploadId: 435696
