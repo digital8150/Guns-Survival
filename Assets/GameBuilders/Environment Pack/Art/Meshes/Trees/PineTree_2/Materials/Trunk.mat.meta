@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2fab59b38a1987944aa9f24828452de9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Trees/PineTree_2/Materials/Trunk.mat
+  uploadId: 435696

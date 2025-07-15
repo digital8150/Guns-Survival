@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1cac2e0bcc34e4b3cbb4bd85982eba83
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Shaders/FXWaterPro.shader
+  uploadId: 435696

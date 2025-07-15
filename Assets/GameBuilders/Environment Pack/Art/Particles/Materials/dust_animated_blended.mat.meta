@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a0c0f8a18294eec4f8d91f314ce007ae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Materials/dust_animated_blended.mat
+  uploadId: 435696

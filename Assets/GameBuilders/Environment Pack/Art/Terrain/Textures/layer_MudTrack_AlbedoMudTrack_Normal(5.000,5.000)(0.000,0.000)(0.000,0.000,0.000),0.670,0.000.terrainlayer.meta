@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 31d8b77162feb3348a22e2b59dc3e28f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Terrain/Textures/layer_MudTrack_AlbedoMudTrack_Normal(5.000,5.000)(0.000,0.000)(0.000,0.000,0.000),0.670,0.000.terrainlayer
+  uploadId: 435696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a1da353243062479a9b31c85074a796b
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Scripts/Water/WaterBase.cs
+  uploadId: 435696

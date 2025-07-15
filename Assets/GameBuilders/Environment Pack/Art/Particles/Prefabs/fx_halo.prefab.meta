@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1eb06b769c3aac4eab917f2bd178fd8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Prefabs/fx_halo.prefab
+  uploadId: 435696

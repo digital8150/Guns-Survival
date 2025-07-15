@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4c6cc0d715d199a4bbc8a2ce962e1815
+timeCreated: 1530224059
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Plants/TallGrass2.prefab
+  uploadId: 435696

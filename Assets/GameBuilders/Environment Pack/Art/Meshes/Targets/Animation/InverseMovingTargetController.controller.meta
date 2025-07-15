@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 856a48a3ff9a7384fbb732bcc0a8c35a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Targets/Animation/InverseMovingTargetController.controller
+  uploadId: 435696

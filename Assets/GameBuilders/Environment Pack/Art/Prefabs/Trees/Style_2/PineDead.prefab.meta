@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 948e89224ad36a04aa1f492aa96a0719
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Trees/Style_2/PineDead.prefab
+  uploadId: 435696

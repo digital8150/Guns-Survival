@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 63eebb974928ef64c83ab56134b47e9a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Prefabs/fx_sun_shaft_large.prefab
+  uploadId: 435696

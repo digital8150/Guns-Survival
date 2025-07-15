@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 32b02ce1ea1c7364f9f8354f97177dce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Skybox/Pine HDRI.mat
+  uploadId: 435696

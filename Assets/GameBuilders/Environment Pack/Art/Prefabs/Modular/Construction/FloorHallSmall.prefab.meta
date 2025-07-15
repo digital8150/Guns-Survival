@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a2cd6899b6f34e4581cff449668ea53
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Construction/FloorHallSmall.prefab
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba9002dfe35fb9243b62254ceda0e168
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Materials/sun_shaft_01.mat
+  uploadId: 435696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fc3c799d07bf1e94081dcb5284ba1c84
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Post-Process Volume Profiles/Bridge
+    Post-Process Profile.asset
+  uploadId: 435696

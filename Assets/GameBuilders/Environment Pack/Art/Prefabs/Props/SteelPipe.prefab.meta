@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0078f1af000a256498306a6b104f676c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Props/SteelPipe.prefab
+  uploadId: 435696

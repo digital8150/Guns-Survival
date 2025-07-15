@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fb55df42e763c444281a53dd9f4dc873
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Crane/Crane.prefab
+  uploadId: 435696

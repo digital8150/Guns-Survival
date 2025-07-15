@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 79ea9180b76dbac41be6424ca319d669
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Props/WireDebris.prefab
+  uploadId: 435696

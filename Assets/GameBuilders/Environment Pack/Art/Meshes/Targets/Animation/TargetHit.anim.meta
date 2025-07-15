@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8df2d9ca2ef678a498a5e3cf2bde0045
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Targets/Animation/TargetHit.anim
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5381543d3a2fac040b149eab621f8e73
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Terrain/Textures/layer_Jungle_AlbedoJungle_Normal(3.000,3.000)(0.000,0.000)(0.000,0.000,0.000),0.250,0.000.terrainlayer
+  uploadId: 435696

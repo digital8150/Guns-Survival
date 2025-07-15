@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1abb3c6822f574b4e97f7892be132005
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Vehicles/Forklift.prefab
+  uploadId: 435696

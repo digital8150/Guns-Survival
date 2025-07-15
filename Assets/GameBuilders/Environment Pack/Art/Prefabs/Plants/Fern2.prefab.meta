@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bc0866b583a3b994d9ff0a6af84977d8
+timeCreated: 1530223779
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Plants/Fern2.prefab
+  uploadId: 435696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 88ed6087e5f86154a9e055992c561f32
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Concrete/Concretefence
+    1.prefab
+  uploadId: 435696

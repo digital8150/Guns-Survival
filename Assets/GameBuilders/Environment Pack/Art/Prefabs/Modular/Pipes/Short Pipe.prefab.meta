@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d22a5830cc1461b44b1045a8e8fd5b26
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Pipes/Short
+    Pipe.prefab
+  uploadId: 435696

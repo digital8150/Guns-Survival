@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c0fefecc57452854883b35a44f2ebe2c
+timeCreated: 1523416832
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Materials/Lightshaft.mat
+  uploadId: 435696

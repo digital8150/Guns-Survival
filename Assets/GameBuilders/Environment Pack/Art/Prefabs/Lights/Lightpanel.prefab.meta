@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 06fe5eacff1415d4595315e71e0d6496
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Lights/Lightpanel.prefab
+  uploadId: 435696

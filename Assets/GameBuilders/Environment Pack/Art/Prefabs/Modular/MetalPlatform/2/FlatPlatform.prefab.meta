@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7fb0f297646b582478ca5c3e4ab1ec76
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/MetalPlatform/2/FlatPlatform.prefab
+  uploadId: 435696

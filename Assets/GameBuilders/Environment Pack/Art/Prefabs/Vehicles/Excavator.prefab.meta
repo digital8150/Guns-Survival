@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ba57d6c9b5ac2142989a7f7b2119574
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Vehicles/Excavator.prefab
+  uploadId: 435696

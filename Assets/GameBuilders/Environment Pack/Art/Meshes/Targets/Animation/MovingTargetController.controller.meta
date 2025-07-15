@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cded0a046be59a644be5186755f9963d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Targets/Animation/MovingTargetController.controller
+  uploadId: 435696

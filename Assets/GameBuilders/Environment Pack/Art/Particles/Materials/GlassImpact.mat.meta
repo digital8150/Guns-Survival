@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1860a60c8b4a9c04c900e70b9e8200d7
+timeCreated: 1523407420
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Materials/GlassImpact.mat
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e162fc71b54c9ce419f5989b61987002
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Props/BarrelRed.prefab
+  uploadId: 435696

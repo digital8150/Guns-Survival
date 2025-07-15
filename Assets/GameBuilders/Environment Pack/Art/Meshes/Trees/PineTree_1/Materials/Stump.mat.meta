@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46e4529b004a1474986282260331aad2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Trees/PineTree_1/Materials/Stump.mat
+  uploadId: 435696

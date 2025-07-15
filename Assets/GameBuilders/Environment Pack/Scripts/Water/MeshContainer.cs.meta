@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 951d74f7d57bed84cb623c62436bd064
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Scripts/Water/MeshContainer.cs
+  uploadId: 435696

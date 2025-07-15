@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eeb97db32786fea4894c987f5fd5a428
+timeCreated: 1523412383
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Particles/Prefabs/GlassShatterEffect.prefab
+  uploadId: 435696

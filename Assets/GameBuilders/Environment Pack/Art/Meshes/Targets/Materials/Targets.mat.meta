@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b49a590c41f1b0b429c2058b4ec17192
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Meshes/Targets/Materials/Targets.mat
+  uploadId: 435696

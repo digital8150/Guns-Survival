@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3967302f7459d3044a29906c73a7c9dd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Fence/MetalFence.prefab
+  uploadId: 435696

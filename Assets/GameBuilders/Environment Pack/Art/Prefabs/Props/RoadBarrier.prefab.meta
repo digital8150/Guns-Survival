@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 823e22923d8bbab468ec4041c2f6938a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Props/RoadBarrier.prefab
+  uploadId: 435696

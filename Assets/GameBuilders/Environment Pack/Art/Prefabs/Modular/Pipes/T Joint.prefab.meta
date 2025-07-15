@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3408879e18c694a4fa1b5f86f7cb8a4a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Pipes/T Joint.prefab
+  uploadId: 435696

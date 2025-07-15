@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5697149922889f3458324f05acbafabd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Pipes/Quarter
+    Pipe.prefab
+  uploadId: 435696

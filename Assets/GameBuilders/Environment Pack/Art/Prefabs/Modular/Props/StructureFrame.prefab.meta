@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0456e4d8702b9c14ea00b2d4ebd2c010
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Props/StructureFrame.prefab
+  uploadId: 435696

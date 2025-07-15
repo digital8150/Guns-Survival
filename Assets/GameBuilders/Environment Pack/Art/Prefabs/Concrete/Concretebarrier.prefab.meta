@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ffb3dab4d0c6234bab39559def42a9c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Concrete/Concretebarrier.prefab
+  uploadId: 435696

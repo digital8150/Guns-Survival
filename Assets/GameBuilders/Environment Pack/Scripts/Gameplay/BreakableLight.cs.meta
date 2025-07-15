@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c71c4e2672ad22b4b96e84ff0c856fd0
+timeCreated: 1523155682
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Scripts/Gameplay/BreakableLight.cs
+  uploadId: 435696

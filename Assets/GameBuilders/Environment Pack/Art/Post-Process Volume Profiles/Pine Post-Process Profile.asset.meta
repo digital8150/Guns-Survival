@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e5407ee353f154247bdbfe488dd969fb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Post-Process Volume Profiles/Pine
+    Post-Process Profile.asset
+  uploadId: 435696

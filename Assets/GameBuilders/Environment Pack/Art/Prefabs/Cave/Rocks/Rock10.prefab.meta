@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef60b563e3daceb4abda13ee894bceaf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Cave/Rocks/Rock10.prefab
+  uploadId: 435696

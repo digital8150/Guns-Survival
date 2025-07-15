@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7f3939b3681f704c89f1a0e22281c65
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Concrete/CinderBlock.prefab
+  uploadId: 435696

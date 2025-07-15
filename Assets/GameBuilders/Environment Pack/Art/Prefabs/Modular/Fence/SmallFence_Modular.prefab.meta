@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bbd5b3ef287f1ca4ea12ae0901df6a2a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Fence/SmallFence_Modular.prefab
+  uploadId: 435696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4185bc77c7194462ca3b1097ef4a5de0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Scripts/Water/PlanarReflection.cs
+  uploadId: 435696

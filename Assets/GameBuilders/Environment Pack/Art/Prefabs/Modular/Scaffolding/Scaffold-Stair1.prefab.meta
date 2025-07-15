@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6193e28b52afcbb4ba89ec47ddec3593
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Prefabs/Modular/Scaffolding/Scaffold-Stair1.prefab
+  uploadId: 435696

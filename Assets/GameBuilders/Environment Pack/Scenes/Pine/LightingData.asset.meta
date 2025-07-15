@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2beba14bfe824e549b4af61b83b3c0a7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Scenes/Pine/LightingData.asset
+  uploadId: 435696

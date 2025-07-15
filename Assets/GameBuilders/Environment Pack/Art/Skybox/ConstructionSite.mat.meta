@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c3693286cb32a14196fecbae64ecdca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Environment Pack/Art/Skybox/ConstructionSite.mat
+  uploadId: 435696
