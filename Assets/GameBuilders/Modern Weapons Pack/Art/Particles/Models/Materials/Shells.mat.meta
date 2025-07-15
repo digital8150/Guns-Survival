@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 88565f888176c8248b28b97ac7ce369a
+timeCreated: 1508878171
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Models/Materials/Shells.mat
+  uploadId: 435696

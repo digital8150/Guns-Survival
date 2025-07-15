@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6708590a0ee6775439920645b61d65b8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Prefabs/Tracer/Tracer.prefab
+  uploadId: 435696

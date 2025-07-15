@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e2c1e2e7012218746bced1050584d93d
+timeCreated: 1519965790
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Surface/SurfaceIdentifier.cs
+  uploadId: 435696

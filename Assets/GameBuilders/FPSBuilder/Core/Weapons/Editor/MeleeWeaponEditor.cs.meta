@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 78a2024d1b668334c811bc27cb875dc0
+timeCreated: 1506888903
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Weapons/Editor/MeleeWeaponEditor.cs
+  uploadId: 435696

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2ab9b7a5eaa3f5b4b867164ab7cbbaaf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Editor/Drawers/RequiredPropertyDrawer.cs
+  uploadId: 435696

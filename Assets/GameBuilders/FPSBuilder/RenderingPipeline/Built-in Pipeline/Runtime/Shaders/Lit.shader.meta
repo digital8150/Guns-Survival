@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e8da69b304e183f4a9917867ec28f298
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Runtime/Shaders/Lit.shader
+  uploadId: 435696

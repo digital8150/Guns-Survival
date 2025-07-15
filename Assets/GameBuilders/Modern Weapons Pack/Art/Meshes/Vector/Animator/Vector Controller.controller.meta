@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 17fc99dcd5dac444dbeb47151b59800a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/Vector/Animator/Vector
+    Controller.controller
+  uploadId: 435696

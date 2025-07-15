@@ -1,0 +1,1019 @@
+fileFormatVersion: 2
+guid: b9b956772f915ca4d8a87dee3ae1c8a3
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Bolt
+  - first:
+      1: 100004
+    second: Bolt 1
+  - first:
+      1: 100006
+    second: Bone_Left_Finger_Index_0
+  - first:
+      1: 100008
+    second: Bone_Left_Finger_Index_1
+  - first:
+      1: 100010
+    second: Bone_Left_Finger_Index_2
+  - first:
+      1: 100012
+    second: Bone_Left_Finger_Index_3
+  - first:
+      1: 100014
+    second: Bone_Left_Finger_Middle_0
+  - first:
+      1: 100016
+    second: Bone_Left_Finger_Middle_1
+  - first:
+      1: 100018
+    second: Bone_Left_Finger_Middle_2
+  - first:
+      1: 100020
+    second: Bone_Left_Finger_Middle_3
+  - first:
+      1: 100022
+    second: Bone_Left_Finger_Pinky_0
+  - first:
+      1: 100024
+    second: Bone_Left_Finger_Pinky_1
+  - first:
+      1: 100026
+    second: Bone_Left_Finger_Pinky_2
+  - first:
+      1: 100028
+    second: Bone_Left_Finger_Pinky_3
+  - first:
+      1: 100030
+    second: Bone_Left_Finger_Ring_0
+  - first:
+      1: 100032
+    second: Bone_Left_Finger_Ring_1
+  - first:
+      1: 100034
+    second: Bone_Left_Finger_Ring_2
+  - first:
+      1: 100036
+    second: Bone_Left_Finger_Ring_3
+  - first:
+      1: 100038
+    second: Bone_Left_Finger_Thumb_0
+  - first:
+      1: 100040
+    second: Bone_Left_Finger_Thumb_1
+  - first:
+      1: 100042
+    second: Bone_Left_Finger_Thumb_2
+  - first:
+      1: 100044
+    second: Bone_Left_Finger_Thumb_3
+  - first:
+      1: 100046
+    second: Bone_Left_Forearm
+  - first:
+      1: 100048
+    second: Bone_Left_Hand
+  - first:
+      1: 100050
+    second: Bone_Left_UpperArm
+  - first:
+      1: 100052
+    second: Bone_Right_Finger_Index_0
+  - first:
+      1: 100054
+    second: Bone_Right_Finger_Index_1
+  - first:
+      1: 100056
+    second: Bone_Right_Finger_Index_2
+  - first:
+      1: 100058
+    second: Bone_Right_Finger_Index_3
+  - first:
+      1: 100060
+    second: Bone_Right_Finger_Middle_0
+  - first:
+      1: 100062
+    second: Bone_Right_Finger_Middle_1
+  - first:
+      1: 100064
+    second: Bone_Right_Finger_Middle_2
+  - first:
+      1: 100066
+    second: Bone_Right_Finger_Middle_3
+  - first:
+      1: 100068
+    second: Bone_Right_Finger_Pinky_0
+  - first:
+      1: 100070
+    second: Bone_Right_Finger_Pinky_1
+  - first:
+      1: 100072
+    second: Bone_Right_Finger_Pinky_2
+  - first:
+      1: 100074
+    second: Bone_Right_Finger_Pinky_3
+  - first:
+      1: 100076
+    second: Bone_Right_Finger_Ring_0
+  - first:
+      1: 100078
+    second: Bone_Right_Finger_Ring_1
+  - first:
+      1: 100080
+    second: Bone_Right_Finger_Ring_2
+  - first:
+      1: 100082
+    second: Bone_Right_Finger_Ring_3
+  - first:
+      1: 100084
+    second: Bone_Right_Finger_Thumb_0
+  - first:
+      1: 100086
+    second: Bone_Right_Finger_Thumb_1
+  - first:
+      1: 100088
+    second: Bone_Right_Finger_Thumb_2
+  - first:
+      1: 100090
+    second: Bone_Right_Finger_Thumb_3
+  - first:
+      1: 100092
+    second: Bone_Right_Forearm
+  - first:
+      1: 100094
+    second: Bone_Right_Hand
+  - first:
+      1: 100096
+    second: Bone_Right_UpperArm
+  - first:
+      1: 100098
+    second: Bullet
+  - first:
+      1: 100100
+    second: Bullet 1
+  - first:
+      1: 100102
+    second: Camera
+  - first:
+      1: 100104
+    second: Camera.Target
+  - first:
+      1: 100106
+    second: Controller_Left_Forearm
+  - first:
+      1: 100108
+    second: Controller_Left_Hand
+  - first:
+      1: 100110
+    second: Controller_Left_Shoulder
+  - first:
+      1: 100112
+    second: Controller_Right_Forearm
+  - first:
+      1: 100114
+    second: Controller_Right_Hand
+  - first:
+      1: 100116
+    second: Controller_Right_Shoulder
+  - first:
+      1: 100118
+    second: Cover
+  - first:
+      1: 100120
+    second: Dummy001
+  - first:
+      1: 100122
+    second: DustCover
+  - first:
+      1: 100124
+    second: Handle
+  - first:
+      1: 100126
+    second: Handle 1
+  - first:
+      1: 100128
+    second: IK_Left
+  - first:
+      1: 100130
+    second: IK_Right
+  - first:
+      1: 100132
+    second: Magazine
+  - first:
+      1: 100134
+    second: Magazine 1
+  - first:
+      1: 100136
+    second: Magpul Masada
+  - first:
+      1: 100138
+    second: Mesh_Arm
+  - first:
+      1: 100140
+    second: Sights
+  - first:
+      1: 100142
+    second: Stock
+  - first:
+      1: 100144
+    second: Stock 1
+  - first:
+      1: 100146
+    second: Trigger
+  - first:
+      1: 100148
+    second: Trigger 1
+  - first:
+      1: 100150
+    second: Weapon
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Bolt
+  - first:
+      4: 400004
+    second: Bolt 1
+  - first:
+      4: 400006
+    second: Bone_Left_Finger_Index_0
+  - first:
+      4: 400008
+    second: Bone_Left_Finger_Index_1
+  - first:
+      4: 400010
+    second: Bone_Left_Finger_Index_2
+  - first:
+      4: 400012
+    second: Bone_Left_Finger_Index_3
+  - first:
+      4: 400014
+    second: Bone_Left_Finger_Middle_0
+  - first:
+      4: 400016
+    second: Bone_Left_Finger_Middle_1
+  - first:
+      4: 400018
+    second: Bone_Left_Finger_Middle_2
+  - first:
+      4: 400020
+    second: Bone_Left_Finger_Middle_3
+  - first:
+      4: 400022
+    second: Bone_Left_Finger_Pinky_0
+  - first:
+      4: 400024
+    second: Bone_Left_Finger_Pinky_1
+  - first:
+      4: 400026
+    second: Bone_Left_Finger_Pinky_2
+  - first:
+      4: 400028
+    second: Bone_Left_Finger_Pinky_3
+  - first:
+      4: 400030
+    second: Bone_Left_Finger_Ring_0
+  - first:
+      4: 400032
+    second: Bone_Left_Finger_Ring_1
+  - first:
+      4: 400034
+    second: Bone_Left_Finger_Ring_2
+  - first:
+      4: 400036
+    second: Bone_Left_Finger_Ring_3
+  - first:
+      4: 400038
+    second: Bone_Left_Finger_Thumb_0
+  - first:
+      4: 400040
+    second: Bone_Left_Finger_Thumb_1
+  - first:
+      4: 400042
+    second: Bone_Left_Finger_Thumb_2
+  - first:
+      4: 400044
+    second: Bone_Left_Finger_Thumb_3
+  - first:
+      4: 400046
+    second: Bone_Left_Forearm
+  - first:
+      4: 400048
+    second: Bone_Left_Hand
+  - first:
+      4: 400050
+    second: Bone_Left_UpperArm
+  - first:
+      4: 400052
+    second: Bone_Right_Finger_Index_0
+  - first:
+      4: 400054
+    second: Bone_Right_Finger_Index_1
+  - first:
+      4: 400056
+    second: Bone_Right_Finger_Index_2
+  - first:
+      4: 400058
+    second: Bone_Right_Finger_Index_3
+  - first:
+      4: 400060
+    second: Bone_Right_Finger_Middle_0
+  - first:
+      4: 400062
+    second: Bone_Right_Finger_Middle_1
+  - first:
+      4: 400064
+    second: Bone_Right_Finger_Middle_2
+  - first:
+      4: 400066
+    second: Bone_Right_Finger_Middle_3
+  - first:
+      4: 400068
+    second: Bone_Right_Finger_Pinky_0
+  - first:
+      4: 400070
+    second: Bone_Right_Finger_Pinky_1
+  - first:
+      4: 400072
+    second: Bone_Right_Finger_Pinky_2
+  - first:
+      4: 400074
+    second: Bone_Right_Finger_Pinky_3
+  - first:
+      4: 400076
+    second: Bone_Right_Finger_Ring_0
+  - first:
+      4: 400078
+    second: Bone_Right_Finger_Ring_1
+  - first:
+      4: 400080
+    second: Bone_Right_Finger_Ring_2
+  - first:
+      4: 400082
+    second: Bone_Right_Finger_Ring_3
+  - first:
+      4: 400084
+    second: Bone_Right_Finger_Thumb_0
+  - first:
+      4: 400086
+    second: Bone_Right_Finger_Thumb_1
+  - first:
+      4: 400088
+    second: Bone_Right_Finger_Thumb_2
+  - first:
+      4: 400090
+    second: Bone_Right_Finger_Thumb_3
+  - first:
+      4: 400092
+    second: Bone_Right_Forearm
+  - first:
+      4: 400094
+    second: Bone_Right_Hand
+  - first:
+      4: 400096
+    second: Bone_Right_UpperArm
+  - first:
+      4: 400098
+    second: Bullet
+  - first:
+      4: 400100
+    second: Bullet 1
+  - first:
+      4: 400102
+    second: Camera
+  - first:
+      4: 400104
+    second: Camera.Target
+  - first:
+      4: 400106
+    second: Controller_Left_Forearm
+  - first:
+      4: 400108
+    second: Controller_Left_Hand
+  - first:
+      4: 400110
+    second: Controller_Left_Shoulder
+  - first:
+      4: 400112
+    second: Controller_Right_Forearm
+  - first:
+      4: 400114
+    second: Controller_Right_Hand
+  - first:
+      4: 400116
+    second: Controller_Right_Shoulder
+  - first:
+      4: 400118
+    second: Cover
+  - first:
+      4: 400120
+    second: Dummy001
+  - first:
+      4: 400122
+    second: DustCover
+  - first:
+      4: 400124
+    second: Handle
+  - first:
+      4: 400126
+    second: Handle 1
+  - first:
+      4: 400128
+    second: IK_Left
+  - first:
+      4: 400130
+    second: IK_Right
+  - first:
+      4: 400132
+    second: Magazine
+  - first:
+      4: 400134
+    second: Magazine 1
+  - first:
+      4: 400136
+    second: Magpul Masada
+  - first:
+      4: 400138
+    second: Mesh_Arm
+  - first:
+      4: 400140
+    second: Sights
+  - first:
+      4: 400142
+    second: Stock
+  - first:
+      4: 400144
+    second: Stock 1
+  - first:
+      4: 400146
+    second: Trigger
+  - first:
+      4: 400148
+    second: Trigger 1
+  - first:
+      4: 400150
+    second: Weapon
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      21: 2100002
+    second: Material #43
+  - first:
+      21: 2100004
+    second: Material #47
+  - first:
+      23: 2300000
+    second: Sights
+  - first:
+      33: 3300000
+    second: Sights
+  - first:
+      43: 4300000
+    second: Mesh_Arm
+  - first:
+      43: 4300002
+    second: Magpul Masada
+  - first:
+      43: 4300004
+    second: Magazine
+  - first:
+      43: 4300006
+    second: Trigger
+  - first:
+      43: 4300008
+    second: Stock
+  - first:
+      43: 4300010
+    second: Cover
+  - first:
+      43: 4300012
+    second: Bullet
+  - first:
+      43: 4300014
+    second: Bolt
+  - first:
+      43: 4300016
+    second: Sights
+  - first:
+      43: 4300018
+    second: Handle
+  - first:
+      74: 7400000
+    second: hide
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Bolt 1
+  - first:
+      137: 13700002
+    second: Bullet
+  - first:
+      137: 13700004
+    second: Cover
+  - first:
+      137: 13700006
+    second: Handle
+  - first:
+      137: 13700008
+    second: Magazine
+  - first:
+      137: 13700010
+    second: Magpul Masada
+  - first:
+      137: 13700012
+    second: Mesh_Arm
+  - first:
+      137: 13700014
+    second: Stock 1
+  - first:
+      137: 13700016
+    second: Trigger 1
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: ACR(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mesh_Arm
+      parentName: ACR(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0.0000000842937, z: -0.0000000842937, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Controller_Right_Hand
+      parentName: ACR(Clone)
+      position: {x: -0.015557002, y: -0.053670015, z: 0.027673494}
+      rotation: {x: -0.0780636, y: 0.04921408, z: -0.044344418, w: 0.994745}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: IK_Right
+      parentName: Controller_Right_Hand
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -7.2858406e-17, y: -0.000000009778889, z: -0.0000000074505815,
+        w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+    - name: Controller_Right_Shoulder
+      parentName: ACR(Clone)
+      position: {x: 0.0765938, y: -0.035271995, z: 0.03717876}
+      rotation: {x: -0.26751295, y: -0.000000045892826, z: -0.000000011774742, w: 0.96355426}
+      scale: {x: 1.0000004, y: 0.9999998, z: 0.9999997}
+    - name: Controller_Left_Shoulder
+      parentName: ACR(Clone)
+      position: {x: 0.033436194, y: -0.052875202, z: -0.013830962}
+      rotation: {x: 0.9874275, y: 0, z: 0, w: -0.158073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Controller_Left_Hand
+      parentName: ACR(Clone)
+      position: {x: -0.10945876, y: -0.03142068, z: 0.008117403}
+      rotation: {x: 0.89281, y: 0.18620124, z: -0.06736556, w: 0.40457553}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_Left
+      parentName: Controller_Left_Hand
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.005888784, y: 0.09891146, z: -0.021378363, w: 0.99484915}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: Camera
+      parentName: ACR(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -2.1648903e-17, y: 0.7071068, z: 2.1648903e-17, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camera.Target
+      parentName: ACR(Clone)
+      position: {x: -0.25, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Magpul Masada
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Magazine
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Trigger 1
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Stock 1
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Cover
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Bullet
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Bolt 1
+      parentName: ACR(Clone)
+      position: {x: -0.14071104, y: 0.010156526, z: 0.024424037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Handle
+      parentName: ACR(Clone)
+      position: {x: -0.09588102, y: -0.042091276, z: 0.018421795}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.142593, y: 0.142593, z: 0.142593}
+    - name: Bone_Right_UpperArm
+      parentName: ACR(Clone)
+      position: {x: 0.0765938, y: -0.035271995, z: 0.03717876}
+      rotation: {x: -0.6571902, y: 0.2136207, z: 0.25863528, w: 0.67496306}
+      scale: {x: 11.891888, y: 11.891864, z: 11.891891}
+    - name: Bone_Right_Forearm
+      parentName: Bone_Right_UpperArm
+      position: {x: -0.006922028, y: 0, z: 0}
+      rotation: {x: 0.93913984, y: -0.33215925, z: -0.07132449, w: 0.05098487}
+      scale: {x: 0.99999905, y: 1.0000005, z: 0.9999993}
+    - name: Controller_Right_Forearm
+      parentName: Bone_Right_Forearm
+      position: {x: -0.00420455, y: -0.000000019073486, z: -0.000000002235174}
+      rotation: {x: 0.9997435, y: 0.00000023835743, z: 0.000000005399986, w: 0.022649182}
+      scale: {x: 0.08409091, y: 0.08409104, z: 0.08409095}
+    - name: Bone_Right_Hand
+      parentName: Bone_Right_Forearm
+      position: {x: 0.0004991689, y: -0.006746399, z: -0.006917489}
+      rotation: {x: -0.99120736, y: -0.026382323, z: 0.12201876, w: 0.04385705}
+      scale: {x: 1.000001, y: 0.9999998, z: 0.9999999}
+    - name: Bone_Right_Finger_Thumb_0
+      parentName: Bone_Right_Hand
+      position: {x: -0.0019361877, y: -0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: 0.14756958, y: -0.01807843, z: 0.75242364, w: -0.6416815}
+      scale: {x: 0.9999995, y: 0.99999994, z: 0.9999998}
+    - name: Bone_Right_Finger_Thumb_1
+      parentName: Bone_Right_Finger_Thumb_0
+      position: {x: -0.0013590694, y: -0.0000000023841857, z: 0}
+      rotation: {x: -0.16732784, y: 0.16617207, z: -0.4749761, w: -0.8478125}
+      scale: {x: 1.0000002, y: 0.99999964, z: 1.0000002}
+    - name: Bone_Right_Finger_Thumb_2
+      parentName: Bone_Right_Finger_Thumb_1
+      position: {x: -0.000915257, y: 0.0000000023841857, z: 0}
+      rotation: {x: 0.00047813344, y: -0.07361242, z: 0.06965321, w: 0.99485147}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: Bone_Right_Finger_Thumb_3
+      parentName: Bone_Right_Finger_Thumb_2
+      position: {x: -0.00045334696, y: -0.0000000011920929, z: 5.9604643e-10}
+      rotation: {x: 0.04588749, y: -0.05756685, z: 0.041361667, w: 0.9964285}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000002}
+    - name: Bone_Right_Finger_Pinky_0
+      parentName: Bone_Right_Hand
+      position: {x: -0.0019361877, y: -0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: -0.20016171, y: 0.5520248, z: 0.4222884, w: 0.6905624}
+      scale: {x: 0.9999993, y: 1.0000007, z: 0.9999998}
+    - name: Bone_Right_Finger_Pinky_1
+      parentName: Bone_Right_Finger_Pinky_0
+      position: {x: -0.0011895382, y: -5.9604643e-10, z: -2.9802322e-10}
+      rotation: {x: -0.17565385, y: -0.16170295, z: -0.4624282, w: 0.8539075}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000002}
+    - name: Bone_Right_Finger_Pinky_2
+      parentName: Bone_Right_Finger_Pinky_1
+      position: {x: -0.0009207439, y: 5.9604643e-10, z: 5.9604643e-10}
+      rotation: {x: -0.01491989, y: -0.05885981, z: -0.1162447, w: 0.9913627}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: Bone_Right_Finger_Pinky_3
+      parentName: Bone_Right_Finger_Pinky_2
+      position: {x: -0.0006385696, y: 0.0000000017881393, z: -5.9604643e-10}
+      rotation: {x: 0.0035869782, y: -0.083720535, z: -0.025896462, w: 0.99614626}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Bone_Right_Finger_Index_0
+      parentName: Bone_Right_Hand
+      position: {x: -0.0019361877, y: -0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: -0.04039464, y: 0.059429783, z: -0.32355383, w: 0.9434773}
+      scale: {x: 1.0000006, y: 0.9999988, z: 0.99999976}
+    - name: Bone_Right_Finger_Index_1
+      parentName: Bone_Right_Finger_Index_0
+      position: {x: -0.0012273546, y: 0, z: -3.9115547e-10}
+      rotation: {x: 0.072431035, y: -0.15810373, z: 0.30740362, w: 0.93555325}
+      scale: {x: 0.99999964, y: 1.0000002, z: 0.99999994}
+    - name: Bone_Right_Finger_Index_2
+      parentName: Bone_Right_Finger_Index_1
+      position: {x: -0.0010660696, y: -5.9604643e-10, z: -0.0000000011920929}
+      rotation: {x: -0.006503258, y: -0.03785285, z: -0.010284157, w: 0.9992092}
+      scale: {x: 1.0000005, y: 0.9999999, z: 0.9999999}
+    - name: Bone_Right_Finger_Index_3
+      parentName: Bone_Right_Finger_Index_2
+      position: {x: -0.0007673788, y: -0.0000000011920929, z: 0}
+      rotation: {x: -0.009191623, y: -0.036847603, z: -0.014688582, w: 0.99917066}
+      scale: {x: 0.9999994, y: 0.99999994, z: 1.0000005}
+    - name: Bone_Right_Finger_Middle_0
+      parentName: Bone_Right_Hand
+      position: {x: -0.0019361877, y: -0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: 0.007172812, y: 0.04036135, z: -0.028565485, w: 0.99875104}
+      scale: {x: 0.9999999, y: 0.99999964, z: 0.9999999}
+    - name: Bone_Right_Finger_Middle_1
+      parentName: Bone_Right_Finger_Middle_0
+      position: {x: -0.0009387123, y: 0, z: 0}
+      rotation: {x: -0.0014432663, y: -0.16634868, z: 0.022945596, w: 0.985799}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: Bone_Right_Finger_Middle_2
+      parentName: Bone_Right_Finger_Middle_1
+      position: {x: -0.0012195288, y: 0, z: 0}
+      rotation: {x: -0.007338138, y: -0.033881925, z: -0.012510218, w: 0.9993206}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1.0000006}
+    - name: Bone_Right_Finger_Middle_3
+      parentName: Bone_Right_Finger_Middle_2
+      position: {x: -0.0008907628, y: 0, z: 0}
+      rotation: {x: -0.0051870765, y: 0.00022358069, z: -0.010163414, w: 0.9999349}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999964}
+    - name: Bone_Right_Finger_Ring_0
+      parentName: Bone_Right_Hand
+      position: {x: -0.0019361877, y: -0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: 0.21486264, y: -0.52753985, z: 0.194677, w: 0.7985216}
+      scale: {x: 0.9999995, y: 1.0000007, z: 1}
+    - name: Bone_Right_Finger_Ring_1
+      parentName: Bone_Right_Finger_Ring_0
+      position: {x: -0.0010196507, y: -0.0000000012665987, z: 2.9802322e-10}
+      rotation: {x: -0.09461343, y: -0.18091862, z: -0.20581433, w: 0.9570565}
+      scale: {x: 1.0000001, y: 0.9999992, z: 0.99999946}
+    - name: Bone_Right_Finger_Ring_2
+      parentName: Bone_Right_Finger_Ring_1
+      position: {x: -0.0009900737, y: 0, z: 0}
+      rotation: {x: 0.32711303, y: 0.54724526, z: 0.362635, w: 0.6797173}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000007}
+    - name: Bone_Right_Finger_Ring_3
+      parentName: Bone_Right_Finger_Ring_2
+      position: {x: -0.00075045344, y: -5.9604643e-10, z: -5.9604643e-10}
+      rotation: {x: -0.012537109, y: -0.013151962, z: -0.011976673, w: 0.9997632}
+      scale: {x: 1.0000012, y: 0.9999998, z: 1.000001}
+    - name: Bone_Left_UpperArm
+      parentName: ACR(Clone)
+      position: {x: 0.033436194, y: -0.052875202, z: -0.013830962}
+      rotation: {x: -0.6749632, y: -0.2586353, z: -0.21362069, w: 0.65719}
+      scale: {x: 11.891884, y: 11.891888, z: 11.891884}
+    - name: Bone_Left_Forearm
+      parentName: Bone_Left_UpperArm
+      position: {x: -0.006922016, y: 5.9604643e-10, z: -2.9802322e-10}
+      rotation: {x: 0.93913984, y: 0.33215913, z: -0.07132447, w: -0.05098491}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000002}
+    - name: Controller_Left_Forearm
+      parentName: Bone_Left_Forearm
+      position: {x: -0.004204569, y: 0.000000009536743, z: 5.9604643e-10}
+      rotation: {x: 0.76391166, y: -0.03488203, z: 0.03422552, w: 0.64346784}
+      scale: {x: 0.08409098, y: 0.08409092, z: 0.08409097}
+    - name: Bone_Left_Hand
+      parentName: Bone_Left_Forearm
+      position: {x: -0.00708881, y: 0.000000001490116, z: -5.9604643e-10}
+      rotation: {x: -0.99120736, y: 0.026382502, z: 0.12201879, w: -0.043856848}
+      scale: {x: 1.0000005, y: 1, z: 1.0000002}
+    - name: Bone_Left_Finger_Thumb_0
+      parentName: Bone_Left_Hand
+      position: {x: -0.0019361865, y: 0.0000000011920929, z: 0.0000000010430813}
+      rotation: {x: 0.14756954, y: 0.018078491, z: 0.7524237, w: 0.64168143}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.99999994}
+    - name: Bone_Left_Finger_Thumb_1
+      parentName: Bone_Left_Finger_Thumb_0
+      position: {x: -0.0013590681, y: 0, z: -2.9802322e-10}
+      rotation: {x: -0.16732787, y: -0.1661721, z: -0.4749761, w: 0.8478124}
+      scale: {x: 0.99999976, y: 1, z: 0.9999999}
+    - name: Bone_Left_Finger_Thumb_2
+      parentName: Bone_Left_Finger_Thumb_1
+      position: {x: -0.000915257, y: -0.0000000011920929, z: 1.4901161e-10}
+      rotation: {x: -0.00047831237, y: -0.07361239, z: -0.06965318, w: 0.9948515}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Bone_Left_Finger_Thumb_3
+      parentName: Bone_Left_Finger_Thumb_2
+      position: {x: -0.00045334816, y: 0.0000000011920929, z: 2.9802322e-10}
+      rotation: {x: -0.045887478, y: -0.057566814, z: -0.041361682, w: 0.99642843}
+      scale: {x: 0.9999997, y: 1.0000002, z: 1}
+    - name: Bone_Left_Finger_Pinky_0
+      parentName: Bone_Left_Hand
+      position: {x: -0.0019361865, y: 0.0000000011920929, z: 0.0000000010430813}
+      rotation: {x: -0.15134999, y: -0.03850012, z: -0.4740773, w: 0.8665227}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
+    - name: Bone_Left_Finger_Pinky_1
+      parentName: Bone_Left_Finger_Pinky_0
+      position: {x: -0.0011895406, y: 0.0000000017881393, z: 0.000000001490116}
+      rotation: {x: 0.17366675, y: -0.09326953, z: 0.34605107, w: 0.9172728}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999976}
+    - name: Bone_Left_Finger_Pinky_2
+      parentName: Bone_Left_Finger_Pinky_1
+      position: {x: -0.0009207415, y: -0.0000000011920929, z: 0.0000000011920929}
+      rotation: {x: 0.025923386, y: -0.08856931, z: -0.009309176, w: 0.9956891}
+      scale: {x: 1, y: 1.0000007, z: 1.0000004}
+    - name: Bone_Left_Finger_Pinky_3
+      parentName: Bone_Left_Finger_Pinky_2
+      position: {x: -0.00063856837, y: -5.9604643e-10, z: 0}
+      rotation: {x: -0.0035870671, y: -0.0837207, z: 0.025896434, w: 0.99614626}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+    - name: Bone_Left_Finger_Index_0
+      parentName: Bone_Left_Hand
+      position: {x: -0.0019361865, y: 0.0000000011920929, z: 0.0000000010430813}
+      rotation: {x: 0.040394474, y: 0.059429847, z: 0.3235539, w: 0.9434772}
+      scale: {x: 0.9999994, y: 1.0000004, z: 0.9999998}
+    - name: Bone_Left_Finger_Index_1
+      parentName: Bone_Left_Finger_Index_0
+      position: {x: -0.0012273544, y: -0.0000000011920929, z: -5.0291415e-10}
+      rotation: {x: -0.0724311, y: -0.1581037, z: -0.30740365, w: 0.93555325}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.9999998}
+    - name: Bone_Left_Finger_Index_2
+      parentName: Bone_Left_Finger_Index_1
+      position: {x: -0.0010660696, y: 5.9604643e-10, z: -5.9604643e-10}
+      rotation: {x: 0.006503408, y: -0.037852846, z: 0.010284117, w: 0.9992093}
+      scale: {x: 0.9999998, y: 0.9999995, z: 0.9999997}
+    - name: Bone_Left_Finger_Index_3
+      parentName: Bone_Left_Finger_Index_2
+      position: {x: -0.00076738, y: -0.0000000011920929, z: 5.9604643e-10}
+      rotation: {x: 0.009191489, y: -0.03684759, z: 0.014688507, w: 0.9991707}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Bone_Left_Finger_Middle_0
+      parentName: Bone_Left_Hand
+      position: {x: -0.0019361865, y: 0.0000000011920929, z: 0.0000000010430813}
+      rotation: {x: -0.0071729235, y: 0.040361382, z: 0.028565437, w: 0.99875104}
+      scale: {x: 1, y: 1.0000002, z: 0.9999998}
+    - name: Bone_Left_Finger_Middle_1
+      parentName: Bone_Left_Finger_Middle_0
+      position: {x: -0.0009387147, y: 0, z: -1.4901161e-10}
+      rotation: {x: 0.0014433474, y: -0.1663487, z: -0.022945499, w: 0.985799}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone_Left_Finger_Middle_2
+      parentName: Bone_Left_Finger_Middle_1
+      position: {x: -0.0012195277, y: -0.0000000011920929, z: 0}
+      rotation: {x: 0.007338011, y: -0.03388202, z: 0.012510253, w: 0.9993207}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: Bone_Left_Finger_Middle_3
+      parentName: Bone_Left_Finger_Middle_2
+      position: {x: -0.0008907628, y: -0.0000000023841857, z: 0}
+      rotation: {x: 0.005187135, y: 0.0002236515, z: 0.010163376, w: 0.999935}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000002}
+    - name: Bone_Left_Finger_Ring_0
+      parentName: Bone_Left_Hand
+      position: {x: -0.0019361865, y: 0.0000000011920929, z: 0.0000000010430813}
+      rotation: {x: -0.0746653, y: 0.026125787, z: -0.27142337, w: 0.95920384}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: Bone_Left_Finger_Ring_1
+      parentName: Bone_Left_Finger_Ring_0
+      position: {x: -0.001019653, y: 7.45058e-10, z: 0}
+      rotation: {x: 0.09461326, y: -0.18091857, z: 0.20581418, w: 0.9570566}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: Bone_Left_Finger_Ring_2
+      parentName: Bone_Left_Finger_Ring_1
+      position: {x: -0.0009900712, y: 5.9604643e-10, z: -5.9604643e-10}
+      rotation: {x: -0.003571346, y: -0.025276404, z: -0.005980692, w: 0.99965626}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Bone_Left_Finger_Ring_3
+      parentName: Bone_Left_Finger_Ring_2
+      position: {x: -0.00075045467, y: 5.9604643e-10, z: 0}
+      rotation: {x: 0.012537108, y: -0.013151787, z: 0.011976609, w: 0.99976325}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Weapon
+      parentName: ACR(Clone)
+      position: {x: -0.08120994, y: -0.026230803, z: 0.019223569}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.52550656, y: 0.52550656, z: 0.5255065}
+    - name: Sights
+      parentName: Weapon
+      position: {x: 0.0010556697, y: -0.030812787, z: -0.03005626}
+      rotation: {x: -0.000024473178, y: 0.0015205463, z: 0.72241884, w: 0.69145405}
+      scale: {x: 0.271344, y: 0.27134404, z: 0.271344}
+    - name: Dummy001
+      parentName: Weapon
+      position: {x: -0.017917842, y: -0.0549113, z: -0.00987596}
+      rotation: {x: 0.49873793, y: 0.7905777, z: -0.19359866, w: -0.2979378}
+      scale: {x: 2.5553703, y: 2.5553706, z: 2.5553708}
+    - name: Magazine 1
+      parentName: ACR(Clone)
+      position: {x: -0.08816259, y: -0.050540294, z: 0.019109825}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.5255064, y: 0.5255064, z: 0.52550644}
+    - name: Trigger
+      parentName: ACR(Clone)
+      position: {x: -0.06380729, y: -0.030717105, z: 0.01950829}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.5255064, y: 0.5255064, z: 0.52550644}
+    - name: Stock
+      parentName: ACR(Clone)
+      position: {x: 0.021868696, y: -0.026230803, z: 0.020910017}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.5255064, y: 0.5255064, z: 0.52550644}
+    - name: DustCover
+      parentName: ACR(Clone)
+      position: {x: -0.08429616, y: -0.017970297, z: 0.023067243}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.5255064, y: 0.5255064, z: 0.52550644}
+    - name: Bullet 1
+      parentName: ACR(Clone)
+      position: {x: -0.08515412, y: -0.028522627, z: 0.019551782}
+      rotation: {x: 0.48918113, y: 0.5105897, z: 0.51058966, w: -0.48918107}
+      scale: {x: 0.23069374, y: 0.23069374, z: 0.23069377}
+    - name: Bolt
+      parentName: ACR(Clone)
+      position: {x: -0.066772155, y: -0.022353286, z: 0.019019993}
+      rotation: {x: 0.48918116, y: 0.5105897, z: 0.51058966, w: -0.4891811}
+      scale: {x: 0.5255064, y: 0.5255064, z: 0.52550644}
+    - name: Handle 1
+      parentName: ACR(Clone)
+      position: {x: -0.12446313, y: -0.013913096, z: 0.018862572}
+      rotation: {x: 0.48498836, y: 0.51457393, z: 0.5145739, w: -0.4849883}
+      scale: {x: 0.36124107, y: 0.36124104, z: 0.36124107}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.5
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4a1f474573bd17e49b17f1ccd2a54327,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/ACR/ACR@Hide.FBX
+  uploadId: 435696

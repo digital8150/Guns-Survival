@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6326d30055ba9e341a39ab79178e5207
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/AmmoType/Shotgun Ammo.asset
+  uploadId: 435696

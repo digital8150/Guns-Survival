@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 1f2c6b75b3054370bd91bf16d5b7bd79
+timeCreated: 1589363455
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Interfaces/IWeaponAnimator.cs
+  uploadId: 435696

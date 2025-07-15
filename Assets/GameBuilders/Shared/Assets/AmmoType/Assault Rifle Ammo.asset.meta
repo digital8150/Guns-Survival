@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cfcb8336786bf764daa6a7a6b9dab04f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/AmmoType/Assault Rifle Ammo.asset
+  uploadId: 435696

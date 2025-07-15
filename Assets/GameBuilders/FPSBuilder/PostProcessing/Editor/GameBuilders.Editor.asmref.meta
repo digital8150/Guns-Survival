@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4aeccb0f415cff54390942f1c81b9d64
+AssemblyDefinitionReferenceImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/PostProcessing/Editor/GameBuilders.Editor.asmref
+  uploadId: 435696

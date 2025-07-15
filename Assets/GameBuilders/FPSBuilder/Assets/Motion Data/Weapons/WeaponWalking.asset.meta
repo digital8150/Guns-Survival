@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f3cd27ae93cddfe4b866690bbb63b90d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Weapons/WeaponWalking.asset
+  uploadId: 435696

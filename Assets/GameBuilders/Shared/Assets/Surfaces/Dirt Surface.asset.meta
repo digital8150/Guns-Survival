@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a6dba0c8ab0184645a0225e2db8ec099
+timeCreated: 1503522078
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/Surfaces/Dirt Surface.asset
+  uploadId: 435696

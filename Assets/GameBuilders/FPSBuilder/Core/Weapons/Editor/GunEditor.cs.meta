@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ad578bd51aab3d74586fad31f21d4c90
+timeCreated: 1503554841
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Weapons/Editor/GunEditor.cs
+  uploadId: 435696

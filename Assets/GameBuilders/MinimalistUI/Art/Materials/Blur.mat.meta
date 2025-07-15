@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 510fe5be2ab69cf4981bb193ff2ecf18
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Materials/Blur.mat
+  uploadId: 435696

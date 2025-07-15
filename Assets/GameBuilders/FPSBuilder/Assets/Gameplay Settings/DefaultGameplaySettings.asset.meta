@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 710c9e9c03cfb6540a5c6467c25654e3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Gameplay Settings/DefaultGameplaySettings.asset
+  uploadId: 435696

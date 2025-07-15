@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a598a0d5e845d8b4d8affb3f113a01c2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Prefabs/Equipment-Slot .prefab
+  uploadId: 435696

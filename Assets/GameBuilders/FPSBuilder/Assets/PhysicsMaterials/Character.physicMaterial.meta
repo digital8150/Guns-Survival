@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 280ef07a4770d3b4b856b0cd29fb1385
+timeCreated: 1498560109
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/PhysicsMaterials/Character.physicMaterial
+  uploadId: 435696

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dcb59e3511ab1454995bc7309553d900
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_FPController: {instanceID: 0}
+  - m_HealthController: {instanceID: 0}
+  - m_HoldBreath: {fileID: 8300000, guid: 30b803889744c6c4ab2eacbfcbc6d33f, type: 3}
+  - m_Exhale: {fileID: 8300000, guid: 45e63dc8b1e93254e975bb3c2b6064b1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Player/CameraAnimator.cs
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c26c299258713d43aa5eea9c3b5e7ac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/Attachments/ElcanSpecter/Textures/ElcanSpecter_Reticle.renderTexture
+  uploadId: 435696

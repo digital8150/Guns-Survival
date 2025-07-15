@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b874d8fb2b82c9649a98dc9c94c1184a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Scenes/UI Showcase/LightingData.asset
+  uploadId: 435696

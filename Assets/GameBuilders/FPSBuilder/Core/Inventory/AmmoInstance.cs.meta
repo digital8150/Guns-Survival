@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 893432a85009465a8ac93c1d40c0ff1e
+timeCreated: 1619652578
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Inventory/AmmoInstance.cs
+  uploadId: 435696

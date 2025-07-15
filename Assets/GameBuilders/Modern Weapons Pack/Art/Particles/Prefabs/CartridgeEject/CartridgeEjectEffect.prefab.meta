@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3534980ff08a8a741897906c077a5235
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Prefabs/CartridgeEject/CartridgeEjectEffect.prefab
+  uploadId: 435696

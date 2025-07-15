@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1b28b08b8c3e35a4fa3c3abfcba27b6c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Camera/CameraWalking.asset
+  uploadId: 435696

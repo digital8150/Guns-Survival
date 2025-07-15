@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 76932c62265f6ec46b4bf1ff76bd3bd2
+timeCreated: 1506878238
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Interfaces/IWeapon.cs
+  uploadId: 435696

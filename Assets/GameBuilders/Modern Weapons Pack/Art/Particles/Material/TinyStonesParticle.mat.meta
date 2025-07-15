@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4ac7c4f70dacbc742a33d842cebc2157
+timeCreated: 1473673924
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Material/TinyStonesParticle.mat
+  uploadId: 435696

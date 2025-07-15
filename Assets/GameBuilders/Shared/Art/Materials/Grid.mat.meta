@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8dc645cd5252ebb49add7d3049bb1015
+timeCreated: 1523154877
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Art/Materials/Grid.mat
+  uploadId: 435696

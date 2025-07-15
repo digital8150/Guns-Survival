@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d668bfd5a64cbf54c9464306057b4782
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Art/Meshes/Bootcamp Soldier Re-Textured/Materials/Soldier_Body.mat
+  uploadId: 435696

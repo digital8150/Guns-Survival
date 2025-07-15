@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e9a1be2e5cab25d4c9170a36dc98f564
+timeCreated: 1503521850
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/Surfaces/Flesh Surface.asset
+  uploadId: 435696

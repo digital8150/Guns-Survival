@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 33d5581bf6dc6814baf38f0b29fd1f54
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Fonts/Ubuntu-Regular SDF.asset
+  uploadId: 435696

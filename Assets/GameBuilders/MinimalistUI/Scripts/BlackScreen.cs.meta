@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0e3a6195237e7e746ab244062b7f769a
+timeCreated: 1506906514
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Scripts/BlackScreen.cs
+  uploadId: 435696

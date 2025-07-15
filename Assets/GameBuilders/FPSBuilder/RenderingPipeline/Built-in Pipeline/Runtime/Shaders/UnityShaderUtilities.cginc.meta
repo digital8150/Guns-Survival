@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f5f285b7c310a084dacce45dda686986
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Runtime/Shaders/UnityShaderUtilities.cginc
+  uploadId: 435696

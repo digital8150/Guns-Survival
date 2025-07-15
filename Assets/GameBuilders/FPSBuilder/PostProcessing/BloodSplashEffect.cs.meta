@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 84ffb8ec2bbc5114383b8829426ad7a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/PostProcessing/BloodSplashEffect.cs
+  uploadId: 435696

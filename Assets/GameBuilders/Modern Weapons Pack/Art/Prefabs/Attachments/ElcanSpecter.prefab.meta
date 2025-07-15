@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b58b328976410f541bd9f65e6c6c2414
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Prefabs/Attachments/ElcanSpecter.prefab
+  uploadId: 435696

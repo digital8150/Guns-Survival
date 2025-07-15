@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e1e173f50d7efd48bb14d2a34e8a2fb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Art/Materials/Sky.mat
+  uploadId: 435696

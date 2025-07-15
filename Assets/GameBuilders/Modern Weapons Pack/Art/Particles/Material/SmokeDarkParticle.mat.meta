@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 698a8134f4ebbbd4e848648685f68067
+timeCreated: 1471944184
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Material/SmokeDarkParticle.mat
+  uploadId: 435696

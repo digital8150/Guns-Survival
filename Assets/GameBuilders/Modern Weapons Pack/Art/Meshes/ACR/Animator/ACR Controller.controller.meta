@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3d8eb76035f54fb4dbf126409d9620ea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/ACR/Animator/ACR
+    Controller.controller
+  uploadId: 435696

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 742734fadd3fbd546910d1a3e4d6f207
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Fonts/UFL.txt
+  uploadId: 435696

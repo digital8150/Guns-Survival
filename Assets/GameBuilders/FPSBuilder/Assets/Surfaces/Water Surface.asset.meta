@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 518a32117489b4fa5b664e36810e2eda
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Surfaces/Water Surface.asset
+  uploadId: 435696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91a3e7af5a8a3e342b50e2f65cbeb46a
+timeCreated: 1509441611
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Material/Muzzle_smoke.mat
+  uploadId: 435696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7d8206db2d8994d48ad00aebedafc674
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Shaders/Blur.shader
+  uploadId: 435696

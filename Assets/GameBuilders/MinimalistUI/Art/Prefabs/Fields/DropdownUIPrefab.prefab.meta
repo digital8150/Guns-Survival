@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8762ef7e61b865a4f874075c9f12e4ea
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Prefabs/Fields/DropdownUIPrefab.prefab
+  uploadId: 435696

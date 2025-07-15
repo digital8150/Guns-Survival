@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad2a52c27547834597d92de30950d1c, type: 3}
+  m_Name: Spas-12 Data
+  m_EditorClassIdentifier: 
+  m_GunName: Spas-12
+  m_DroppablePrefab: {fileID: 1908647586824534, guid: 509ad32cee2a0bf4e9a8dee05eac9ad2,
+    type: 3}
+  m_Weight: 4.4
+  m_Size: 0.82
+  m_MeleeDamage: 50
+  m_MeleeForce: 20
+  m_PrimaryFireMode: 4
+  m_SecondaryFireMode: 0
+  m_PrimaryRateOfFire: 60
+  m_SecondaryRateOfFire: 600
+  m_Force: 5
+  m_Range: 50
+  m_BulletsPerShoot: 8
+  m_BulletsPerBurst: 3
+  m_AffectedLayers:
+    serializedVersion: 2
+    m_Bits: 17
+  m_DamageMode: 0
+  m_Damage: {x: 15, y: 30}
+  m_DamageFalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_AmmoType: {fileID: 11400000, guid: 6326d30055ba9e341a39ab79178e5207, type: 2}
+  m_ReloadMode: 1
+  m_RoundsPerMagazine: 6
+  m_HasChamber: 1
+  m_MaximumSpread: 2
+  m_BaseAccuracy: 0.3
+  m_HIPAccuracy: 0.4
+  m_AIMAccuracy: 0.5
+  m_DecreaseRateByWalking: 1
+  m_DecreaseRateByShooting: 1

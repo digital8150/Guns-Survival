@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5599a0f10740fe41896430b79ab4d4a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Weapons/WeaponRunningStrong.asset
+  uploadId: 435696

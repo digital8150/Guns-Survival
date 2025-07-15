@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c2c1416c7fe344346a83c36191633220
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/Python/Materials/SpeedLoader.mat
+  uploadId: 435696

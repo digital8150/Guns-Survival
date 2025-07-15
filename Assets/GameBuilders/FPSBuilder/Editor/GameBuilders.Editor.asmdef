@@ -1,0 +1,17 @@
+{
+    "name": "GameBuilders.Editor",
+    "references": [
+        "GUID:bfa08615e25e84d4b8228be05c100701"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

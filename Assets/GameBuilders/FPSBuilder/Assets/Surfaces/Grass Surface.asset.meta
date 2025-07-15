@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ac7994960c2d74913b3ff36db65c9abf
+timeCreated: 1503522078
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Surfaces/Grass Surface.asset
+  uploadId: 435696

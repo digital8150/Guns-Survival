@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6838e7a3c3241847ae6a5271cb5a58b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/Attachments/Acog/Textures/Acog_Reticle.renderTexture
+  uploadId: 435696

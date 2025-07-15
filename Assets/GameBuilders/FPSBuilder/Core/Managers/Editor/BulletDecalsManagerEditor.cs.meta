@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 143818431782d784396ac8c9b93af1b6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Managers/Editor/BulletDecalsManagerEditor.cs
+  uploadId: 435696

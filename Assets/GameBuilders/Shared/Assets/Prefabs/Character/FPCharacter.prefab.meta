@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 291398a25c9058d46ba3fd4a99d6487e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/Prefabs/Character/FPCharacter.prefab
+  uploadId: 435696

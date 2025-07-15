@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f55d65bb18422c4e82d6e1d048d0b2b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Camera/CameraRunning.asset
+  uploadId: 435696

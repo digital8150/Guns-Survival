@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b35c0bc36248d6340acde9f0669c268a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Prefabs/Game UI.prefab
+  uploadId: 435696

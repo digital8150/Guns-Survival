@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45fa26ded5618c3458198e0c6830c0e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/AmmoType/Sniper Ammo.asset
+  uploadId: 435696

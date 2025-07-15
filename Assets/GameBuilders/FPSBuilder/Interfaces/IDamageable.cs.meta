@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ea0f3f5fdac5eee4fb3750b5376133ba
+timeCreated: 1506873156
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Interfaces/IDamageable.cs
+  uploadId: 435696

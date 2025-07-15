@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: aaf41cb7fcbaeb347ab3035b2dd47114
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_SfxMixer: {fileID: 243335366053303442, guid: 439d7d260bd1a1d49ac3f31a76cb4381,
+      type: 2}
+  - m_MusicMixer: {fileID: 243730406919017618, guid: 439d7d260bd1a1d49ac3f31a76cb4381,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Managers/AudioManager.cs
+  uploadId: 435696

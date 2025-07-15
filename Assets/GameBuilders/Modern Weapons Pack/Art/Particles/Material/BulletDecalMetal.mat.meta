@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 094e76e620df5714eb3946120657e1f6
+timeCreated: 1473687979
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Material/BulletDecalMetal.mat
+  uploadId: 435696

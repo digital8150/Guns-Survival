@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b1bc191cab9f52478fc1d297a1a6973
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/GameBuilders.UI.asmdef
+  uploadId: 435696

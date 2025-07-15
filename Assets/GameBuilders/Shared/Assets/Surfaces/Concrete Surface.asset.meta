@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4bc471b056298d14e82d7bad173b47da
+timeCreated: 1499766882
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/Surfaces/Concrete Surface.asset
+  uploadId: 435696

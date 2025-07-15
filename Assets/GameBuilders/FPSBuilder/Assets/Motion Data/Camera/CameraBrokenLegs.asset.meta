@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 59b03de253ea58d45ba0db4c0ae21099
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Camera/CameraBrokenLegs.asset
+  uploadId: 435696

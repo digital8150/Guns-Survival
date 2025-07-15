@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f9d597e4e5acb854187e9ea38e609177
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/AmmoType/SMG & Pistol Ammo.asset
+  uploadId: 435696

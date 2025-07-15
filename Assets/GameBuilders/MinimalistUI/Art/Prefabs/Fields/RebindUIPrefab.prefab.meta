@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 934606d076ea3144c80cde63a737daa6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Prefabs/Fields/RebindUIPrefab.prefab
+  uploadId: 435696

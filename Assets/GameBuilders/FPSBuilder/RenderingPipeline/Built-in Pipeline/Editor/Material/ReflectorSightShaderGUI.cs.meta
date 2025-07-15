@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b3070484229bc634892536d936698830
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Editor/Material/ReflectorSightShaderGUI.cs
+  uploadId: 435696

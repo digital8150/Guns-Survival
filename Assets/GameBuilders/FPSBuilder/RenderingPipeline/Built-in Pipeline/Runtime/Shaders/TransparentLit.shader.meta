@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5342f2a952ece445b02438dca355b6a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Runtime/Shaders/TransparentLit.shader
+  uploadId: 435696

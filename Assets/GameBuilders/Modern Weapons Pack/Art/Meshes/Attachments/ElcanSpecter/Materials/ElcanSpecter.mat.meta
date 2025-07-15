@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e2f4e0bdb5a1f90489e42c8809d5ac1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/Attachments/ElcanSpecter/Materials/ElcanSpecter.mat
+  uploadId: 435696

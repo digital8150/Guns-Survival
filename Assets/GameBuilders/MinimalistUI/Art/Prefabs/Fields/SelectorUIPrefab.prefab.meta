@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5537b3917a5783b46b07f6c911112ca9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Art/Prefabs/Fields/SelectorUIPrefab.prefab
+  uploadId: 435696

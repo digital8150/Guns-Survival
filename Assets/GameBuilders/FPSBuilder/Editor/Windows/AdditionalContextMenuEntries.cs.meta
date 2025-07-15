@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aec698d202343cc44be37a3c5a4ce192
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Editor/Windows/AdditionalContextMenuEntries.cs
+  uploadId: 435696

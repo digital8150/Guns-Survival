@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33fc03707b5f6214ba7711c5e3ac5584
+timeCreated: 1498560157
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/PostProcessing/Resources/Shaders/BloodSplashEffect.shader
+  uploadId: 435696

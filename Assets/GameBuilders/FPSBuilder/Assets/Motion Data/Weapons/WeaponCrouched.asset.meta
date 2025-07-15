@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 891db05c57e4a2248b9a6eb2c3b9d09c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Assets/Motion Data/Weapons/WeaponCrouched.asset
+  uploadId: 435696

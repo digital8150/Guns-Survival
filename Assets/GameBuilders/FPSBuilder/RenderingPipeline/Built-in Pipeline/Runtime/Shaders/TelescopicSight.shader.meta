@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c12ac7a5171187240a3cb90681c200b9
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Runtime/Shaders/TelescopicSight.shader
+  uploadId: 435696

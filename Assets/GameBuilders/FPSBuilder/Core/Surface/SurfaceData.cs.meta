@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 77fafc5e2f0f4f41b908e404dfecc2ce
+timeCreated: 1589106050
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Surface/SurfaceData.cs
+  uploadId: 435696

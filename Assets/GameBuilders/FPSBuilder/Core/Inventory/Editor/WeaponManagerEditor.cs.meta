@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e88a55e785ff0954da6616e01021d48b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Inventory/Editor/WeaponManagerEditor.cs
+  uploadId: 435696

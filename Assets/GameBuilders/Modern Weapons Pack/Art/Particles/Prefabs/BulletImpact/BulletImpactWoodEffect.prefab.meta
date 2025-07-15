@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: beb3acff7ab73944fb8f470f24d74ed3
+timeCreated: 1473956166
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Particles/Prefabs/BulletImpact/BulletImpactWoodEffect.prefab
+  uploadId: 435696

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b230f9b65fc59d4419268b4aabb6e25a
+timeCreated: 1512307395
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Weapons/WeaponSwing.cs
+  uploadId: 435696

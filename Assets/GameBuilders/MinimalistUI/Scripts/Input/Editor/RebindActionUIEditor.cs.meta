@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: fa7fa75d154b431893a88cd8aa9c1d10
+timeCreated: 1574957258
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/MinimalistUI/Scripts/Input/Editor/RebindActionUIEditor.cs
+  uploadId: 435696

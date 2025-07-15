@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30ec68d0679021a4eaf37a9de9f6055d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Runtime/Shaders/ReflectorSight.shader
+  uploadId: 435696

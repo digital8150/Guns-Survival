@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 45e945c3cf914c58910bcc60eb9b4453
+timeCreated: 1609615036
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Interfaces/IPickup.cs
+  uploadId: 435696

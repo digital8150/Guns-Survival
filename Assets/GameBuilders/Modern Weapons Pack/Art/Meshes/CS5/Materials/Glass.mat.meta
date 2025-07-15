@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70c4c870e458b2645833b4c85367c4ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/CS5/Materials/Glass.mat
+  uploadId: 435696

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 62dfb3f47bd821043b8593c3690e9190
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/RenderingPipeline/Built-in Pipeline/Editor/Material/TelescopicSightShaderGUI.cs
+  uploadId: 435696

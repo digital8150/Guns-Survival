@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f6e0d3dca61092a4c884c2cff89e0e77
+timeCreated: 1506787260
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Attributes/TagAttribute.cs
+  uploadId: 435696

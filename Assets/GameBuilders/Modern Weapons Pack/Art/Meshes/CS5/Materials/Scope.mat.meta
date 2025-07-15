@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a563fb622f1587842a86fdc7a1696ce2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Modern Weapons Pack/Art/Meshes/CS5/Materials/Scope.mat
+  uploadId: 435696

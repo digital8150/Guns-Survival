@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07c99ac94be0140e59783c3d70feba4f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Scenes/Demo Scene.unity
+  uploadId: 435696

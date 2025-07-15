@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f3f9fa6a8601a7249acef1c8937a78e4
+timeCreated: 1506982039
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Editor/Drawers/MinMaxPropertyDrawer.cs
+  uploadId: 435696

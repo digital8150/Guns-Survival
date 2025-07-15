@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d141a1b45dc220346927230058f49983
+timeCreated: 1503521850
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/Shared/Assets/Surfaces/Wood Surface.asset
+  uploadId: 435696

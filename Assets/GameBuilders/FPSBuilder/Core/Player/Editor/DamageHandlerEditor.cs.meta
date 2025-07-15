@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6609bf13759df574b9d5e5207872d0e5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167252
+  packageName: FPS Builder
+  packageVersion: 1.1.0
+  assetPath: Assets/GameBuilders/FPSBuilder/Core/Player/Editor/DamageHandlerEditor.cs
+  uploadId: 435696
