@@ -22,10 +22,27 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     //player position
     private Transform player;
 
+    //private members
+    private Vector3 previousPosition;
+
     void Start()
     {
         currentHp = hp;
         IsAlive = true;
+    }
+
+    void FixedUpdate()
+    {
+        if ((transform.position - previousPosition).magnitude > 0.02f)
+        {
+            AnimSetBool("Moving", true);
+        }
+        else
+        {
+            AnimSetBool("Moving", false);
+        }
+
+        previousPosition = transform.position;
     }
 
     public bool IsAlive { get; private set; }
@@ -57,9 +74,16 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         Damage(damage);
     }
 
-    void AnimSetTrigger(string name)
+    public void AnimSetTrigger(string name)
     {
         if(animator1 is not null) animator1.SetTrigger(name);
         if(animator2 is not null) animator2.SetTrigger(name);
+    }
+
+    public void AnimSetBool(string name, bool value)
+    {
+        if(animator1 is not null) animator1.SetBool(name, value);
+        if(animator2 is not null) animator2.SetBool(name, value);
+
     }
 }
