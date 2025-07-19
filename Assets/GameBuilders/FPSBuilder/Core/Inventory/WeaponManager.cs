@@ -142,8 +142,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         private FirstAidKit m_Adrenaline;
 
         private bool m_ItemCoolDown;
-        private bool m_Climbing;
-        private bool m_OnLadder;
 
         private Camera m_Camera;
         private IWeapon m_CurrentWeapon;
@@ -458,44 +456,8 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             InvokeRepeating(nameof(Search), 0, 0.1f);
             m_PlayerBodySource = AudioManager.Instance.RegisterSource("[AudioEmitter] CharacterBody", transform.root, spatialBlend: 0);
 
-            m_FPController.LadderEvent += ClimbingLadder;
         }
 
-        /// <summary>
-        /// Notifies the equipped weapon that the character is climbing a ladder.
-        /// </summary>
-        /// <param name="climbing">Is the character climbing?</param>
-        private void ClimbingLadder(bool climbing)
-        {
-            if (m_Climbing == climbing)
-                return;
-
-            m_Climbing = climbing;
-            if (m_OnLadder)
-            {
-                OnExitLadder();
-            }
-        }
-
-        /// <summary>
-        /// Deselect the current weapon to simulate climbing a ladder.
-        /// </summary>
-        private void OnEnterLadder()
-        {
-            m_OnLadder = true;
-            m_ItemCoolDown = true;
-            m_CurrentWeapon.Deselect();
-        }
-
-        /// <summary>
-        /// Select the previous weapon and reactive all weapon features.
-        /// </summary>
-        private void OnExitLadder()
-        {
-            m_CurrentWeapon.Select();
-            m_ItemCoolDown = false;
-            m_OnLadder = false;
-        }
 
         private void SelectByPreviousAndNextButtons()
         {
@@ -534,15 +496,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             {
                 if (m_CurrentWeapon.CanSwitch)
                 {
-                    // If the character is climbing a ladder
-                    if (m_Climbing && !m_OnLadder)
-                    {
-                        OnEnterLadder();
-                    }
-                    else
-                    {
                         SelectByPreviousAndNextButtons();
-                    }
                 }
             }
             else
@@ -684,7 +638,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         /// </summary>
         private void SearchForAmmo()
         {
-            if (!m_ItemCoolDown && m_EquippedWeaponsList.Count > 0 && m_CurrentWeapon != null 
+            if (m_EquippedWeaponsList.Count > 0 && m_CurrentWeapon != null 
                 && m_CurrentWeapon.CanUseEquipment && CanRefillAmmo())
             {
                 if (Target)
@@ -695,6 +649,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                         if (m_InteractAction.triggered)
                         {
                             StartCoroutine(RefillAmmo());
+                            Destroy(Target);        //Ammokit Destroy
                         }
                     }
                 }
@@ -706,7 +661,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         /// </summary>
         private void SearchForAdrenaline()
         {
-            if (!m_ItemCoolDown && m_EquippedWeaponsList.Count > 0 && m_CurrentWeapon != null && m_CurrentWeapon.CanUseEquipment)
+            if (m_EquippedWeaponsList.Count > 0 && m_CurrentWeapon != null && m_CurrentWeapon.CanUseEquipment)
             {
                 if (Target)
                 {
@@ -716,6 +671,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                         if (m_InteractAction.triggered)
                         {
                             StartCoroutine(RefillItem(new Equipment.Equipment[] { m_Adrenaline }));
+                            Destroy(Target);        //HealKit Destroy
                         }
                     }
                 }
@@ -746,8 +702,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
 
         private IEnumerator RefillItem(Equipment.Equipment[] items)
         {
-            m_ItemCoolDown = true;
-
             m_CurrentWeapon.Interact();
             yield return new WaitForSeconds(m_CurrentWeapon.InteractDelay);
 
@@ -759,7 +713,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             m_PlayerBodySource.ForcePlay(m_ItemPickupSound, m_ItemPickupVolume);
 
             yield return new WaitForSeconds(Mathf.Max(m_CurrentWeapon.InteractAnimationLength - m_CurrentWeapon.InteractDelay, 0));
-            m_ItemCoolDown = false;
         }
 
         public bool CanRefillAmmo()
@@ -785,8 +738,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         /// </summary>
         private IEnumerator RefillAmmo()
         {
-            m_ItemCoolDown = true;
-
             m_CurrentWeapon.Interact();
             yield return new WaitForSeconds(m_CurrentWeapon.InteractDelay);
 
@@ -806,7 +757,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                 m_FragGrenade.Refill();
 
             yield return new WaitForSeconds(Mathf.Max(m_CurrentWeapon.InteractAnimationLength - m_CurrentWeapon.InteractDelay, 0));
-            m_ItemCoolDown = false;
         }
         
         /// <summary>
