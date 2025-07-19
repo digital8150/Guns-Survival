@@ -43,6 +43,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!enemy.IsAlive)
         {
+            agent.isStopped = true;
             return;
         }
 
@@ -101,6 +102,7 @@ public class EnemyAI : MonoBehaviour
         // 여기에 적의 공격 로직을 구현합니다.
         // 예: 애니메이션 재생, 데미지 주기 등
         Debug.Log("플레이어를 공격합니다!");
+        enemy.AnimSetTrigger("Attack");
         lastAttackTime = Time.time; // 마지막 공격 시간 갱신
         damageHandler.Damage(damage);
         // isAttacking = true; // 애니메이션 등을 사용하는 경우 설정
