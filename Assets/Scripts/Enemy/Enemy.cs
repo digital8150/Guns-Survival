@@ -14,7 +14,10 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private float destroyDelay;
 
     //components
-    private Animator animator;
+    [SerializeField]
+    private Animator animator1;
+    [SerializeField]
+    private Animator animator2;
 
     //player position
     private Transform player;
@@ -23,11 +26,6 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     {
         currentHp = hp;
         IsAlive = true;
-    }
-
-    void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
     }
 
     public bool IsAlive { get; private set; }
@@ -43,7 +41,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         if(hp <= 0)
         {
             IsAlive = false;
-            animator.SetTrigger("Dead");
+            AnimSetTrigger("Dead");
             Debug.Log("적이 뒤졌습니다!");
             Destroy(this.gameObject, destroyDelay);
         }
@@ -57,5 +55,11 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     public void ProjectileDamage(float damage, Vector3 targetPosition, Vector3 hitPosition, float penetrationPower)
     {
         Damage(damage);
+    }
+
+    void AnimSetTrigger(string name)
+    {
+        animator1.SetTrigger(name);
+        animator2.SetTrigger(name);
     }
 }
