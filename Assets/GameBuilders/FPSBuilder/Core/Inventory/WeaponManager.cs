@@ -695,6 +695,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                         if (m_InteractAction.triggered)
                         {
                             StartCoroutine(RefillAmmo());
+                            Destroy(Target);        //Ammokit Destroy
                         }
                     }
                 }
@@ -716,6 +717,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                         if (m_InteractAction.triggered)
                         {
                             StartCoroutine(RefillItem(new Equipment.Equipment[] { m_Adrenaline }));
+                            Destroy(Target);        //HealKit Destroy
                         }
                     }
                 }
