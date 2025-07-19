@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
 
     void AnimSetTrigger(string name)
     {
-        animator1.SetTrigger(name);
-        animator2.SetTrigger(name);
+        if(animator1 is not null) animator1.SetTrigger(name);
+        if(animator2 is not null) animator2.SetTrigger(name);
     }
 }
