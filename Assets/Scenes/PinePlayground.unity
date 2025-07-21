@@ -2104,6 +2104,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b96d86a07be38314689b060466ac85b7, type: 3}
+--- !u!1 &376939300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376939302}
+  - component: {fileID: 376939301}
+  m_Layer: 0
+  m_Name: EmenySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &376939301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376939300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6bccf4ccabce8044a168d8461495d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 3
+  waves:
+  - waveName: Wave1
+    waveStartDelay: 3
+    monsterGroups:
+    - monsterPrefab: {fileID: 3094641989431790095, guid: a42992095553d4742a97d3f928e7defe,
+        type: 3}
+      numberOfMonsters: 3
+      spawnInterval: 2
+    - monsterPrefab: {fileID: 1599731724452271769, guid: e9811b5de53c549448fda06ec24f7122,
+        type: 3}
+      numberOfMonsters: 3
+      spawnInterval: 2
+    nextWaveDelay: 0
+--- !u!4 &376939302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376939300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.41, y: 0.286, z: -57.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &394176877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11243,6 +11301,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 445903568743393802, guid: 8a4df7f31c720d949a94feee843deccb,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445903568743393802, guid: 8a4df7f31c720d949a94feee843deccb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445903568743393802, guid: 8a4df7f31c720d949a94feee843deccb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445903568743393802, guid: 8a4df7f31c720d949a94feee843deccb,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.22
       objectReference: {fileID: 0}
@@ -11434,3 +11507,4 @@ SceneRoots:
   - {fileID: 607752826}
   - {fileID: 1320210757}
   - {fileID: 8390467893561346600}
+  - {fileID: 376939302}
