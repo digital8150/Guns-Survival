@@ -23,9 +23,6 @@ namespace GameBuilders.MinimalistUI.Scripts.Equipment
         
         [SerializeField] 
         private SlotUI m_GrenadeSlot;
-        
-        [SerializeField] 
-        private SlotUI m_AdrenalineSlot;
 
         [Header("Weapon")]
         [SerializeField]
@@ -113,15 +110,6 @@ namespace GameBuilders.MinimalistUI.Scripts.Equipment
             {
                 m_GrenadeSlot.Amount.text = grenadeAmount.ToString();
             }
-            
-            int adrenalineAmount = m_UIController.InventoryManager.Adrenaline.Amount;
-            bool hasAdrenaline = m_UIController.InventoryManager.Adrenaline && adrenalineAmount > 0;
-            
-            m_AdrenalineSlot.SlotObject.SetActive(hasAdrenaline);
-            if (hasAdrenaline)
-            {
-                m_AdrenalineSlot.Amount.text = adrenalineAmount.ToString();
-            }
 
             if (m_UIController.InventoryManager.Target)
             {
@@ -155,17 +143,16 @@ namespace GameBuilders.MinimalistUI.Scripts.Equipment
                     ShowInteractAction();
                 }
 
-                bool isAdrenaline =
-                    m_UIController.InventoryManager.Target.CompareTag(m_UIController.InventoryManager
-                        .AdrenalinePackTag) && m_UIController.InventoryManager.Adrenaline.CanRefill;
-
-                if (isAdrenaline)
+                //메디킷 상호작용 메세지 추가
+                bool isMedkit =
+                    m_UIController.InventoryManager.Target.CompareTag(m_UIController.InventoryManager.MedkitTag);
+                if (isMedkit)
                 {
-                    m_InteractActionText.text = "TO REFILL ADRENALINE SHOTS";
+                    m_InteractActionText.text = "TO USE MEDKIT";
                     ShowInteractAction();
                 }
 
-                if (!gunPickup && target == null && !isAdrenaline && !isAmmo)
+                if (!gunPickup && target == null && !isAmmo && !isMedkit)
                 {
                     HideInteractAction();
                 }
