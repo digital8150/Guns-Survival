@@ -350,8 +350,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
         /// </summary>
         /// <param name="healthAmount">Amount of vitality to be healed.</param>
         /// <param name="healInjuries">Should the character injuries be healed?</param>
-        /// <param name="bonus">Allow adrenaline bonus?</param>
-        /// <param name="bonusDuration">Duration of the adrenaline bonus.</param>
         public virtual void Heal(float healthAmount, bool healInjuries, bool bonus = false, float bonusDuration = 10)
         {
             if (healthAmount > 0 && m_BodyParts.Count > 0)
@@ -374,9 +372,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
                     Trembling = false;
                     Bleeding = false;
                 }
-
-                if (bonus)
-                    StartCoroutine(m_FPController.AdrenalineShot(bonusDuration));
             }
         }
 
