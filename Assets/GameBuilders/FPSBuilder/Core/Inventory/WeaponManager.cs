@@ -73,12 +73,12 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         private string m_AmmoTag = "Ammo";
 
         /// <summary>
-        /// Determines the GameObject tag identifier to adrenaline packs pickups.
+        /// Determines the GameObject tag identifier to medkit pickups.
         /// </summary>
         [SerializeField]
         [Tag(AllowUntagged = false)]
-        [Tooltip("Determines the GameObject tag identifier to adrenaline packs pickups.")]
-        private string m_AdrenalinePackTag = "Adrenaline Pack";
+        [Tooltip("Determines the GameObject tag identifier to medkit pickups.")]
+        private string m_MedkitTag = "Medkit";
 
         /// <summary>
         /// Sound played when the character pick up an Item or Weapon.
@@ -134,13 +134,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         [Tooltip("Defines the reference to the Frag Grenade item.")]
         private Grenade m_FragGrenade;
 
-        /// <summary>
-        /// Defines the reference to the Adrenaline item.
-        /// </summary>
-        [SerializeField]
-        [Tooltip("Defines the reference to the Adrenaline item.")]
-        private FirstAidKit m_Adrenaline;
-
         private bool m_ItemCoolDown;
 
         private Camera m_Camera;
@@ -153,7 +146,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
         private InputAction m_PreviousWeaponAction;
         
         private InputAction m_LethalEquipmentAction;
-        private InputAction m_TacticalEquipmentAction;
         
         private InputAction m_InteractAction;
 
@@ -315,8 +307,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             }
         }
         
-        public FirstAidKit Adrenaline => m_Adrenaline;
-        
         public Grenade FragGrenade => m_FragGrenade;
 
         /// <summary>
@@ -328,15 +318,8 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             private set;
         }
 
-        /// <summary>
-        /// The GameObject tag used for ammunition.
-        /// </summary>
         public string AmmoTag => m_AmmoTag;
-
-        /// <summary>
-        /// The GameObject tag used for adrenaline packs.
-        /// </summary>
-        public string AdrenalinePackTag => m_AdrenalinePackTag;
+        public string MedkitTag => m_MedkitTag;
 
         /// <summary>
         /// Returns true if the equipped gun is a shotgun, false otherwise.
@@ -412,9 +395,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             if (m_FragGrenade != null)
                 m_FragGrenade.gameObject.SetActive(false);
 
-            if (m_Adrenaline != null)
-                m_Adrenaline.gameObject.SetActive(false);
-
             if (m_EquippedWeaponsList.Count > 0)
             {
                 for (int i = 0, c = m_EquippedWeaponsList.Count; i < c; i++)
@@ -446,7 +426,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             m_NextWeaponAction = m_WeaponMap.FindAction("Next Weapon");
             m_PreviousWeaponAction = m_WeaponMap.FindAction("Previous Weapon");
             m_LethalEquipmentAction = m_WeaponMap.FindAction("Lethal Equipment");
-            m_TacticalEquipmentAction = m_WeaponMap.FindAction("Tactical Equipment");
 
             m_MovementMap = GameplayManager.Instance.GetActionMap("Movement");
             m_MovementMap.Enable();
@@ -485,7 +464,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             // Analyze the character's target
             SearchForWeapons();
             SearchForAmmo();
-            SearchForAdrenaline();
+            SearchForMedkit();
             SearchInteractiveObjects();
 
             if (!m_FPController.Controllable)
@@ -512,15 +491,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                     StartCoroutine(ThrowGrenade());
                 }
             }
-
-            // Use adrenaline
-            if (!m_ItemCoolDown)
-            {
-                if (m_TacticalEquipmentAction.triggered && m_CurrentWeapon != null && m_CurrentWeapon.CanUseEquipment && m_Adrenaline && m_Adrenaline.Amount > 0)
-                {
-                    StartCoroutine(AdrenalineShot());
-                }
-            }
         }
 
         private IEnumerator ThrowGrenade()
@@ -537,26 +507,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
 
             yield return new WaitForSeconds(m_FragGrenade.UsageDuration);
             m_FragGrenade.gameObject.SetActive(false);
-
-            m_CurrentWeapon.Viewmodel.SetActive(true);
-            m_CurrentWeapon.Select();
-            m_ItemCoolDown = false;
-        }
-
-        private IEnumerator AdrenalineShot()
-        {
-            m_ItemCoolDown = true;
-
-            m_CurrentWeapon.Deselect();
-            yield return new WaitForSeconds(m_CurrentWeapon.HideAnimationLength);
-            m_CurrentWeapon.Viewmodel.SetActive(false);
-
-            m_Adrenaline.gameObject.SetActive(true);
-            m_Adrenaline.Init();
-            m_Adrenaline.Use();
-
-            yield return new WaitForSeconds(m_Adrenaline.UsageDuration);
-            m_Adrenaline.gameObject.SetActive(false);
 
             m_CurrentWeapon.Viewmodel.SetActive(true);
             m_CurrentWeapon.Select();
@@ -656,23 +606,28 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             }
         }
 
-        /// <summary>
-        /// Checks the target object to analyze if it is a adrenaline pack.
-        /// </summary>
-        private void SearchForAdrenaline()
+
+        private void SearchForMedkit()
         {
-            if (m_EquippedWeaponsList.Count > 0 && m_CurrentWeapon != null && m_CurrentWeapon.CanUseEquipment)
+            if(Target)
             {
-                if (Target)
+                if(Target.CompareTag(m_MedkitTag))
                 {
-                    // If the target has the Adrenaline Tag
-                    if (Target.CompareTag(m_AdrenalinePackTag) && m_Adrenaline.CanRefill)
+                    if(m_InteractAction.triggered)
                     {
-                        if (m_InteractAction.triggered)
+                        HealthController healthController = m_FPController.GetComponent<HealthController>();
+
+                        if (healthController != null)
                         {
-                            StartCoroutine(RefillItem(new Equipment.Equipment[] { m_Adrenaline }));
-                            Destroy(Target);        //HealKit Destroy
+                            //체력을 50만큼 회복
+                            healthController.Heal(50, true);
                         }
+
+                        //Sound Play
+                        m_PlayerBodySource.ForcePlay(m_ItemPickupSound, m_ItemPickupVolume);
+
+                        //medkit 삭제
+                        Destroy(Target);
                     }
                 }
             }
@@ -863,7 +818,7 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                 }
 
                 // Discard unnecessary objects.
-                if (!c.CompareTag(m_AdrenalinePackTag) && !c.CompareTag(m_AmmoTag) && c.GetComponent<IActionable>() == null && c.GetComponent<GunPickup>() == null)
+                if (!c.CompareTag(m_MedkitTag) && !c.CompareTag(m_AmmoTag) && c.GetComponent<IActionable>() == null && c.GetComponent<GunPickup>() == null)
                     continue;
 
                 if (results[i].distance > dist)

@@ -20,7 +20,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
         private SerializedProperty m_CameraTransformReference;
         private SerializedProperty m_InteractionRadius;
         private SerializedProperty m_AmmoTag;
-        private SerializedProperty m_AdrenalinePackTag;
         
         private SerializedProperty m_ItemPickupSound;
         private SerializedProperty m_ItemPickupVolume;
@@ -33,7 +32,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
 
         private SerializedProperty m_DefaultWeapon;
         private SerializedProperty m_FragGrenade;
-        private SerializedProperty m_Adrenaline;
 
         private void OnEnable ()
         {
@@ -42,7 +40,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
             m_CameraTransformReference = serializedObject.FindProperty("m_CameraTransformReference");
             m_InteractionRadius = serializedObject.FindProperty("m_InteractionRadius");
             m_AmmoTag = serializedObject.FindProperty("m_AmmoTag");
-            m_AdrenalinePackTag = serializedObject.FindProperty("m_AdrenalinePackTag");
             m_EquippedWeaponsList = serializedObject.FindProperty("m_EquippedWeaponsList");
             m_ItemPickupSound = serializedObject.FindProperty("m_ItemPickupSound");
             m_ItemPickupVolume = serializedObject.FindProperty("m_ItemPickupVolume");
@@ -51,7 +48,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
             m_AmmoList = serializedObject.FindProperty("m_AmmoList");
             m_DefaultWeapon = serializedObject.FindProperty("m_DefaultWeapon");
             m_FragGrenade = serializedObject.FindProperty("m_FragGrenade");
-            m_Adrenaline = serializedObject.FindProperty("m_Adrenaline");
             
             m_AmmoReorderableList = ReorderableListUtility.CreateAutoLayout(m_AmmoList, false, true, true, true);
         }
@@ -69,7 +65,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
             
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(m_AmmoTag);
-            EditorGUILayout.PropertyField(m_AdrenalinePackTag);
             EditorGUILayout.PropertyField(m_ItemPickupSound);
             EditorGUILayout.PropertyField(m_ItemPickupVolume);
 
@@ -148,7 +143,6 @@ namespace GameBuilders.FPSBuilder.Core.Inventory.Editor
             EditorGUILayout.LabelField("Items", EditorStyles.boldLabel);
 
             EditorGUILayout.PropertyField(m_FragGrenade);
-            EditorGUILayout.PropertyField(m_Adrenaline);
 
             //Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI
             serializedObject.ApplyModifiedProperties();

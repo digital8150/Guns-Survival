@@ -1688,17 +1688,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
             }
         }
 
-        public IEnumerator AdrenalineShot(float duration)
-        {
-            if (!m_Stamina)
-                yield break;
-
-            m_Stamina = false;
-            StartCoroutine(RegenStaminaProgressively());
-            yield return new WaitForSeconds(duration);
-            m_Stamina = true;
-        }
-
         private IEnumerator RegenStaminaProgressively(float duration = 1)
         {
             for (float t = 0; t <= duration; t += Time.deltaTime)
