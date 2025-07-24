@@ -3,9 +3,14 @@ using UnityEngine;
 public class EXP : MonoBehaviour
 {
     [Header("Ä¸½¶ °æÇèÄ¡·®")]
-    [SerializeField]
-    private float exp = 25.0f;
+    public float exp;
 
+    private Renderer capsuleRenderer;       //Ä¸½¶ »ö
+
+    private void Awake()
+    {
+        capsuleRenderer = GetComponent<Renderer>();
+    }
 
     //----------------------- ÇÃ·¹ÀÌ¾î - °æÇèÄ¡ Ä¸½¶ Á¢ÃË ------------------------
     private void OnTriggerEnter(Collider other)
@@ -23,5 +28,12 @@ public class EXP : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    //------------------------ Àû¸¶´Ù Ä¸½¶ »ö º¯°æ ---------------------
+    public void SetColor(Color color)
+    {
+        if (capsuleRenderer != null)
+            capsuleRenderer.material.color = color;
     }
 }

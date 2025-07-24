@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EXPManager : MonoBehaviour
 {
-    [Header("경험치 및 레벨 관리")]
+    [Header("플레이어 경험치 및 레벨 관리")]
     [SerializeField]
     private int level = 1;              //현재 레벨
     [SerializeField]
