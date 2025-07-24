@@ -12,6 +12,12 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private float currentHp;
     [SerializeField]
     private float destroyDelay;
+    [SerializeField]
+    private GameObject expPrefab;       //캡슐 프리팹
+    [SerializeField]
+    private float exp;            //적이 드랍한 처치 경험치
+    [SerializeField]
+    private Color capsuleColor = Color.blue;        //경험치 캡슐 기본 색
 
     //components
     [SerializeField]
@@ -60,6 +66,20 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
             IsAlive = false;
             AnimSetTrigger("Dead");
             Debug.Log("적이 뒤졌습니다!");
+
+            //EXP 생성
+            if (expPrefab != null)
+            {
+                GameObject capsule = Instantiate(expPrefab, transform.position, Quaternion.identity);
+                EXP exp = capsule.GetComponent<EXP>();
+
+                if(exp != null)
+                {
+                    exp.exp = this.exp;
+                    exp.SetColor(this.capsuleColor);
+                }
+            }
+
             Destroy(this.gameObject, destroyDelay);
         }
     }
