@@ -12,6 +12,12 @@ public class EXPManager : MonoBehaviour
     [SerializeField]
     private float nextLevelPenalty = 1.0f;     //다음 경험치의 최대량 비율
     private float expGainMult = 1.0f; // 경험치 획득 배율
+    private SkillManager skillManager; //스킬매니저 컴포넌트
+
+    private void Start()
+    {
+        skillManager = GetComponent<SkillManager>();
+    }
 
     //---------------경험치 획득 배율 설정
     public void SetExpGainMult(float expGainMult)
@@ -23,7 +29,7 @@ public class EXPManager : MonoBehaviour
     public void AddExp(float exp)
     {
         currentExp += exp * expGainMult; //경험치 획득 배율 반영
-        Debug.Log($"경험치 {exp} 만큼 획득!");
+        Debug.Log($"경험치 {exp} * {expGainMult} = {exp * expGainMult} 만큼 획득!");
 
         if (currentExp >= maxExp)
         {
@@ -37,6 +43,8 @@ public class EXPManager : MonoBehaviour
         level++;                    //레벨 + 1
         currentExp -= maxExp;       //잔여 경험치 이동
         maxExp *= nextLevelPenalty; //다음 레벨에 필요한 경험치를 해당 비율만큼 증가
+        
+        skillManager.LevelUp();//스킬매니저 컴포넌트의 레벨업 호출
 
         Debug.Log($"레벨 업! 현재 레벨 {level}");
     }

@@ -525,6 +525,8 @@ namespace GameBuilders.FPSBuilder.Core.Player
                     m_BodyParts[i].IncreaseMaxVitality(amount / bodyPartsCount); // 모든 신체 부위에 똑같은 양만큼 vitality 증가
                 }
             }
+
+            Heal(amount, false); //증가한 최대 체력 양 만큼 힐
         }
     }
 }
