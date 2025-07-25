@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ using UnityEngine;
 public class SkillManager : MonoBehaviour
 {
     //TODO : 플레이어 스텟 관리 시스템 구축 및 연동 필요
+    private PlayerStatsManager playerStatsManager;
 
     //플레이어가 보유한 스킬 목록과 스킬의 레벨
     private Dictionary<SkillData, int> ownedSkills = new Dictionary<SkillData, int>();
@@ -15,7 +17,17 @@ public class SkillManager : MonoBehaviour
     //액티브 및 유틸리티 스킬 컨트롤러
     private Dictionary<SkillData, SkillController> activeSkillControllers = new Dictionary<SkillData, SkillController>();
 
+    //게임 테스트
+    [Header("테스트!")]
+    public SkillData testSkillData;
 
+    private void Start()
+    {
+        playerStatsManager = GetComponent<PlayerStatsManager>();
+
+        //test:
+        LearnOrUpgradeSkill(testSkillData);
+    }
 
     /// <summary>
     /// 스킬 획득 또는 업그레이드
@@ -43,8 +55,23 @@ public class SkillManager : MonoBehaviour
         //플레이어 스탯 증가형 스킬인 경우 :
         if (skillData is PlayerStatSkillData playerStatSkill)
         {
-            //여기서 플레이어 스텟을 증가
-            //TODO : 플레이어 스탯 관리 시스템 호출
+            switch (playerStatSkill.statType)
+            {
+                case PlayerStatType.MaxHealth:
+                    playerStatsManager.IncreaseMaxHp(playerStatSkill.GetLevelInfo(newLevel).value);
+                    break;
+                case PlayerStatType.MovementSpeed:
+                    playerStatsManager.IncreaseMovementSpeed(playerStatSkill.GetLevelInfo(newLevel).value);
+                    break;
+                case PlayerStatType.ExperienceGainMult:
+                    playerStatsManager.SetExpGainMult(playerStatSkill.GetLevelInfo(newLevel).value);
+                    break;
+                case PlayerStatType.ReloadSpeedMult:
+                    Debug.LogWarning("재장전 속도 증가는 현재 구현 필요");
+                    break;
+                default:
+                    throw new NotImplementedException($"구현 되지 않은 PlayerStatType에 대한 처리 발생 : {playerStatSkill.statType}");
+            }
             return;
         }
 
@@ -64,12 +91,5 @@ public class SkillManager : MonoBehaviour
 
     }
 
-    //게임 테스트
-    [Header("테스트!")]
-    public SkillData testSkillData;
 
-    private void Start()
-    {
-        LearnOrUpgradeSkill(testSkillData);
-    }
 }

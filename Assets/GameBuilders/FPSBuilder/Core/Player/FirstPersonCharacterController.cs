@@ -128,6 +128,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         [Range(0.1f, 10)]
         [Tooltip("Defines how much force will be applied on the character when walking.")]
         private float m_WalkingForce = 4.25f;
+        public float WalkingForce {  get { return m_WalkingForce; } set { m_WalkingForce = value; } }
 
         /// <summary>
         /// Defines how much force will be applied on the character when walking crouching.

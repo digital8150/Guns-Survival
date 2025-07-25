@@ -11,11 +11,18 @@ public class EXPManager : MonoBehaviour
     private float maxExp = 100;         //최대 경험치
     [SerializeField]
     private float nextLevelPenalty = 1.0f;     //다음 경험치의 최대량 비율
+    private float expGainMult = 1.0f; // 경험치 획득 배율
+
+    //---------------경험치 획득 배율 설정
+    public void SetExpGainMult(float expGainMult)
+    {
+        this.expGainMult = expGainMult;
+    }
 
     //---------------경험치가 maxExp를 넘으면 레벨업시킴----------------
     public void AddExp(float exp)
     {
-        currentExp += exp;
+        currentExp += exp * expGainMult; //경험치 획득 배율 반영
         Debug.Log($"경험치 {exp} 만큼 획득!");
 
         if (currentExp >= maxExp)
