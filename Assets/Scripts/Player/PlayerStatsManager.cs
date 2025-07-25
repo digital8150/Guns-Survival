@@ -18,7 +18,7 @@ public class PlayerStatsManager : MonoBehaviour
         healthController = GetComponent<HealthController>();
         expManager = GetComponent<EXPManager>();
         firstPersonCharacterController = GetComponent<FirstPersonCharacterController>();
-        originMovementSpeed = firstPersonCharacterController.WalkingForce;
+        originMovementSpeed = firstPersonCharacterController.WalkingSpeed;
     }
 
     /// <summary>
@@ -45,7 +45,7 @@ public class PlayerStatsManager : MonoBehaviour
     /// <param name="multAmount"></param>
     public void IncreaseMovementSpeed(float multAmount)
     {
-        firstPersonCharacterController.WalkingForce = originMovementSpeed * multAmount; //배율 곱하여 적용
+        firstPersonCharacterController.WalkingSpeed = originMovementSpeed * multAmount; //배율 곱하여 적용
     }
 
     /// TODO : 재장전 속도 증가 -> 재장전 속도를 어디서 관장하는지 추가 파악 필요
