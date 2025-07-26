@@ -353,5 +353,10 @@ namespace GameBuilders.FPSBuilder.Core.Player
             }
             m_Healing = false;
         }
+
+        public void IncreaseMaxVitality(float amount)
+        {
+            m_Vitality += amount;
+        }
     }
 }
