@@ -3,10 +3,10 @@ using UnityEngine;
 public class AreaDamageSkillController : SkillController
 {
     private float tickTimer;
-    private Collider[] hitBuffer = new Collider[50];
+    private Collider[] hitBuffer = new Collider[200];
 
     //원기둥 판정 높이 상수
-    private const float CAPSULEHEIGHT = 20f;
+    private const float CAPSULEHEIGHT = 50f;
 
     private void Update()
     {
