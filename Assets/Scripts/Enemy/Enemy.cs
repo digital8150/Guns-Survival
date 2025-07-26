@@ -98,6 +98,13 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         Debug.Log("적이 뒤졌습니다!");
         gameObject.layer = deadEnemyLayer;
 
+        CreateExp();
+
+        Destroy(this.gameObject, destroyDelay);
+    }
+
+    void CreateExp()
+    {
         //EXP 생성
         if (expPrefab != null)
         {
@@ -110,7 +117,5 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
                 exp.SetColor(this.capsuleColor);
             }
         }
-
-        Destroy(this.gameObject, destroyDelay);
     }
 }
