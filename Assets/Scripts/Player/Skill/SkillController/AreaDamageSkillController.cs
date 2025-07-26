@@ -38,7 +38,6 @@ public class AreaDamageSkillController : SkillController
                 if (enemy != null)
                 {
                     enemy.Damage(levelData.damagePerTick);
-                    Debug.Log($"{hit.name}에게 {levelData.damagePerTick}의 틱 데미지 적용!");
                 }
             }
         }

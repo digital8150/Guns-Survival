@@ -95,7 +95,6 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     {
         IsAlive = false;
         AnimSetTrigger("Dead");
-        Debug.Log("적이 뒤졌습니다!");
         gameObject.layer = deadEnemyLayer;
 
         CreateExp();
