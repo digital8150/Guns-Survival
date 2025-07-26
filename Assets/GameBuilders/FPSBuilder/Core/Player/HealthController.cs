@@ -526,6 +526,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
                 }
             }
 
+            m_TotalVitality += amount;
             Heal(amount, false); //증가한 최대 체력 양 만큼 힐
         }
     }
