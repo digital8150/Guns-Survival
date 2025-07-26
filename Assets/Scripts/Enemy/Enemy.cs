@@ -30,11 +30,13 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
 
     //private members
     private Vector3 previousPosition;
+    private int deadEnemyLayer;
 
     void Start()
     {
         currentHp = hp;
         IsAlive = true;
+        deadEnemyLayer = LayerMask.NameToLayer("DeadEnemy");
     }
 
     void FixedUpdate()
@@ -63,24 +65,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         hp -= damage;
         if(hp <= 0)
         {
-            IsAlive = false;
-            AnimSetTrigger("Dead");
-            Debug.Log("적이 뒤졌습니다!");
-
-            //EXP 생성
-            if (expPrefab != null)
-            {
-                GameObject capsule = Instantiate(expPrefab, transform.position, Quaternion.identity);
-                EXP exp = capsule.GetComponent<EXP>();
-
-                if(exp != null)
-                {
-                    exp.exp = this.exp;
-                    exp.SetColor(this.capsuleColor);
-                }
-            }
-
-            Destroy(this.gameObject, destroyDelay);
+            Die();
         }
     }
 
@@ -104,5 +89,28 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     {
         if(animator1 != null) animator1.SetBool(name, value);
         if(animator2 != null) animator2.SetBool(name, value);
+    }
+
+    void Die()
+    {
+        IsAlive = false;
+        AnimSetTrigger("Dead");
+        Debug.Log("적이 뒤졌습니다!");
+        gameObject.layer = deadEnemyLayer;
+
+        //EXP 생성
+        if (expPrefab != null)
+        {
+            GameObject capsule = Instantiate(expPrefab, transform.position, Quaternion.identity);
+            EXP exp = capsule.GetComponent<EXP>();
+
+            if (exp != null)
+            {
+                exp.exp = this.exp;
+                exp.SetColor(this.capsuleColor);
+            }
+        }
+
+        Destroy(this.gameObject, destroyDelay);
     }
 }
