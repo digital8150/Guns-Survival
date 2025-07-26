@@ -2702,6 +2702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5772550997086799325, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5876995959361166231, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
       propertyPath: m_AllowWallJumping
