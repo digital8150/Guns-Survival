@@ -159,7 +159,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
 
         #endregion
 
-        private BloodSplashEffect m_BloodSplashEffect;
         private FirstPersonCharacterController m_FPController;
         private AudioEmitter m_PlayerHealthSource;
         private AudioEmitter m_PlayerBreathSource;
@@ -265,7 +264,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
         {
             // References
             m_FPController = GetComponent<FirstPersonCharacterController>();
-            m_BloodSplashEffect = GetComponentInChildren<BloodSplashEffect>();
             m_FPController.LandingEvent += FallDamage;
 
             // Audio Sources
@@ -327,11 +325,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
             // Sets whether or not the character has broken their legs.
             m_FPController.LowerBodyDamaged = Limping;
             m_FPController.TremorTrauma = Trembling;
-
-            if (m_BloodSplashEffect)
-            {
-                m_BloodSplashEffect.BloodAmount = 1 - m_CurrentVitality / m_TotalVitality;
-            }
 
             if (GameplayManager.Instance.IsDead && m_DeadCharacter != null)
             {
