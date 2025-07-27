@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 961391918463703582}
   - component: {fileID: 2820289863027389949}
   m_Layer: 0
+  m_Name: HealthKit
+  m_TagString: Medkit
   m_Name: Medkit
   m_TagString: Medkit
   m_Icon: {fileID: 0}

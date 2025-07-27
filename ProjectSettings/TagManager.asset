@@ -8,6 +8,7 @@ TagManager:
   - Adrenaline Pack
   - Medkit
   - Enemy
+  - EXP
   layers:
   - Default
   - TransparentFX
