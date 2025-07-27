@@ -511,5 +511,23 @@ namespace GameBuilders.FPSBuilder.Core.Player
             Transform t = transform;
             Instantiate(m_DeadCharacter, t.position, t.rotation);
         }
+
+        /// <summary>
+        /// amount 를 모든 바디파트에 분배하여 최대 체력 증가 (playerstat과 상호작용하는 단말)
+        /// </summary>
+        /// <param name="amount"></param>
+        public void IncreaseTotalVitality(float amount)
+        {
+            for (int i = 0, bodyPartsCount = m_BodyParts.Count; i < bodyPartsCount; i++)
+            {
+                if (m_BodyParts[i])
+                {
+                    m_BodyParts[i].IncreaseMaxVitality(amount / bodyPartsCount); // 모든 신체 부위에 똑같은 양만큼 vitality 증가
+                }
+            }
+
+            m_TotalVitality += amount;
+            Heal(amount, false); //증가한 최대 체력 양 만큼 힐
+        }
     }
 }
