@@ -20,7 +20,7 @@ public class EXPAttractionController : MonoBehaviour
 
             // 씬에 있는 모든 "EXP" 태그를 가진 GameObject 찾기
             GameObject[] expCapsulesInScene = GameObject.FindGameObjectsWithTag("EXP");
-
+            var player = FindFirstObjectByType<FirstPersonCharacterController>().transform
             foreach (GameObject capsuleGO in expCapsulesInScene)
             {
                 //충돌 끄기
@@ -30,7 +30,7 @@ public class EXPAttractionController : MonoBehaviour
                 //플레이어를 향해 이동
                 capsuleGO.AddComponent<Movement3D>().MoveSpeed = moveSpeed;
                 var moveTo = capsuleGO.AddComponent<MoveTo>();
-                moveTo.Setup(FindFirstObjectByType<FirstPersonCharacterController>().transform);
+                moveTo.Setup(player);
             }
             Destroy(gameObject); // Sphere 오브젝트 자체를 파괴
         }
