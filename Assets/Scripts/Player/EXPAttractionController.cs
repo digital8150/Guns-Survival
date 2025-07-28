@@ -1,9 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using GameBuilders.FPSBuilder.Core.Player;
 
 // 이 스크립트는 Sphere 오브젝트에 부착됩니다.
 public class EXPAttractionController : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("경허치 구슬들이 플레이어로 딸려오는 속도")]
+    private float moveSpeed = 3.0f;
+
     //----------------------- Sphere - 플레이어 접촉 ------------------------
     private void OnTriggerEnter(Collider other)
     {
@@ -18,17 +23,14 @@ public class EXPAttractionController : MonoBehaviour
 
             foreach (GameObject capsuleGO in expCapsulesInScene)
             {
-                // 각 캡슐에서 EXP 스크립트 가져오기
-                EXP expScript = capsuleGO.GetComponent<EXP>();
-
-                if (expScript != null)
-                {
-                    // 플레이어에게 경험치 추가
-                    playerExpManager.AddExp(expScript.exp);
-
-                    // 경험치 캡슐 파괴
-                    Destroy(capsuleGO);
-                }
+                //충돌 끄기
+                capsuleGO.layer = LayerMask.NameToLayer("Noclip");
+                //중력 off
+                capsuleGO.GetComponent<Rigidbody>().useGravity = false;
+                //플레이어를 향해 이동
+                capsuleGO.AddComponent<Movement3D>().MoveSpeed = moveSpeed;
+                var moveTo = capsuleGO.AddComponent<MoveTo>();
+                moveTo.Setup(FindFirstObjectByType<FirstPersonCharacterController>().transform);
             }
             Destroy(gameObject); // Sphere 오브젝트 자체를 파괴
         }
