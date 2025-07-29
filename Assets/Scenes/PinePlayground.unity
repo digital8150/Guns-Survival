@@ -5298,6 +5298,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1281218045}
   m_PrefabAsset: {fileID: 0}
+  moveSpeed: 30
 --- !u!1 &919716041
 GameObject:
   m_ObjectHideFlags: 0
@@ -12559,4 +12560,5 @@ SceneRoots:
   - {fileID: 670789834}
   - {fileID: 1063349887}
   - {fileID: 902054850}
-  - {fileID: 1801302932}
+  - {fileID: 670789834}
+  - {fileID: 1063349887}
