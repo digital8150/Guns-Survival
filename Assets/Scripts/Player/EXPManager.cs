@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EXPManager : MonoBehaviour
 {
@@ -14,9 +15,17 @@ public class EXPManager : MonoBehaviour
     private float expGainMult = 1.0f; // 경험치 획득 배율
     private SkillManager skillManager; //스킬매니저 컴포넌트
 
+    [Header("UI 관련")]
+    [SerializeField]
+    private Image image_ExpBar;
+    [SerializeField]
+    private Text text_Level;
+
     private void Start()
     {
         skillManager = GetComponent<SkillManager>();
+        UpdateExpBar();
+        UpdateLevel();
     }
 
     //---------------경험치 획득 배율 설정
@@ -31,10 +40,13 @@ public class EXPManager : MonoBehaviour
         currentExp += exp * expGainMult; //경험치 획득 배율 반영
         Debug.Log($"경험치 {exp} * {expGainMult} = {exp * expGainMult} 만큼 획득!");
 
-        if (currentExp >= maxExp)
+        //레벨이 한번에 오르는 상황이 생기기 때문에 while로 변경
+        while (currentExp >= maxExp)
         {
             LevelUp();
         }
+
+        UpdateExpBar();
     }
 
     //---------------------------- 레벨업 ---------------------------
@@ -46,6 +58,20 @@ public class EXPManager : MonoBehaviour
         
         skillManager.LevelUp();//스킬매니저 컴포넌트의 레벨업 호출
 
-        Debug.Log($"레벨 업! 현재 레벨 {level}");
+        UpdateLevel();
+        UpdateExpBar();
+    }
+
+    //---------------------------- UI ------------------------
+    private void UpdateExpBar()
+    {
+        //경험치 바 업데이트
+        if(image_ExpBar != null)
+            image_ExpBar.fillAmount = currentExp / maxExp;
+    }
+    private void UpdateLevel()
+    {
+        if(text_Level != null)
+            text_Level.text = "Level : " + level.ToString();
     }
 }
