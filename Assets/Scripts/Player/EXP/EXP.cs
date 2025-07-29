@@ -1,19 +1,25 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EXP : MonoBehaviour
 {
     [Header("캡슐 경험치량")]
     public float exp;
 
-    [Header("끌려오는 효과 설정 속성")]
-
     private Renderer capsuleRenderer;       //캡슐 색
     private Rigidbody rb;
+
+    private IObjectPool<GameObject> m_Pool;
 
     private void Awake()
     {
         capsuleRenderer = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
+    }
+
+    public void SetPool(IObjectPool<GameObject> pool)
+    {
+        m_Pool = pool;
     }
 
     //----------------------- 플레이어 - 경험치 캡슐 접촉 ------------------------
@@ -28,8 +34,11 @@ public class EXP : MonoBehaviour
                 //경험치 습득
                 xPManager.AddExp(exp);
 
-                //경험치 옵젝 파괴
-                Destroy(gameObject);
+                //경험치 옵젝 파괴(풀링 이용)
+                if(m_Pool != null)
+                    m_Pool.Release(gameObject);
+                else
+                    Destroy(gameObject);
             }
         }
     }

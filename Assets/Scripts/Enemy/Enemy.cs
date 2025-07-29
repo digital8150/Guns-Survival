@@ -13,9 +13,9 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     [SerializeField]
     private float destroyDelay;
     [SerializeField]
-    private GameObject expPrefab;       //캡슐 프리팹
+    private GameObject expPrefab;                   //캡슐 프리팹
     [SerializeField]
-    private float exp;            //적이 드랍한 처치 경험치
+    private float exp;                              //적이 드랍한 처치 경험치
     [SerializeField]
     private Color capsuleColor = Color.blue;        //경험치 캡슐 기본 색
 
@@ -31,12 +31,14 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     //private members
     private Vector3 previousPosition;
     private int deadEnemyLayer;
+    private EXPPool expPool;
 
     void Start()
     {
         currentHp = hp;
         IsAlive = true;
         deadEnemyLayer = LayerMask.NameToLayer("DeadEnemy");
+        expPool = FindAnyObjectByType<EXPPool>();
     }
 
     void FixedUpdate()
@@ -107,14 +109,21 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         //EXP 생성
         if (expPrefab != null)
         {
-            GameObject capsule = Instantiate(expPrefab, transform.position, Quaternion.identity);
-            EXP exp = capsule.GetComponent<EXP>();
+            GameObject capsule = expPool.Get();
+            capsule.transform.position = transform.position;
+            capsule.transform.rotation = Quaternion.identity;
 
+            EXP exp = capsule.GetComponent<EXP>();
             if (exp != null)
             {
                 exp.exp = this.exp;
                 exp.SetColor(this.capsuleColor);
             }
+        }
+        else
+        {
+            Debug.Log("EXPPool을 찾을 수 없으므로 직접 경험치 캡슐을 생성합니다");
+            Instantiate(expPrefab, transform.position, Quaternion.identity);
         }
     }
 }
