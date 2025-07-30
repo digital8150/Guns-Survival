@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EXPManager : MonoBehaviour
 {
@@ -10,22 +10,21 @@ public class EXPManager : MonoBehaviour
     private float currentExp = 0;       //실시간 확인용으로 직렬화시킴
     [SerializeField]
     private float maxExp = 100;         //최대 경험치
+    public float MaxExp => maxExp;
     [SerializeField]
     private float nextLevelPenalty = 1.0f;     //다음 경험치의 최대량 비율
     private float expGainMult = 1.0f; // 경험치 획득 배율
-    private SkillManager skillManager; //스킬매니저 컴포넌트
 
-    [Header("UI 관련")]
-    [SerializeField]
-    private Image image_ExpBar;
-    [SerializeField]
-    private Text text_Level;
+    public static event Action<int> OnLevelChanged;
+    public static event Action OnLevelUp;
+    public static event Action<float, float> OnExpChanged;
+
+
 
     private void Start()
     {
-        skillManager = GetComponent<SkillManager>();
-        UpdateExpBar();
-        UpdateLevel();
+        OnExpChanged?.Invoke(currentExp, maxExp);
+        OnLevelChanged?.Invoke(level);
     }
 
     //---------------경험치 획득 배율 설정
@@ -46,7 +45,7 @@ public class EXPManager : MonoBehaviour
             LevelUp();
         }
 
-        UpdateExpBar();
+        OnExpChanged?.Invoke(currentExp, maxExp);
     }
 
     //---------------------------- 레벨업 ---------------------------
@@ -55,23 +54,9 @@ public class EXPManager : MonoBehaviour
         level++;                    //레벨 + 1
         currentExp -= maxExp;       //잔여 경험치 이동
         maxExp *= nextLevelPenalty; //다음 레벨에 필요한 경험치를 해당 비율만큼 증가
-        
-        skillManager.LevelUp();//스킬매니저 컴포넌트의 레벨업 호출
 
-        UpdateLevel();
-        UpdateExpBar();
-    }
-
-    //---------------------------- UI ------------------------
-    private void UpdateExpBar()
-    {
-        //경험치 바 업데이트
-        if(image_ExpBar != null)
-            image_ExpBar.fillAmount = currentExp / maxExp;
-    }
-    private void UpdateLevel()
-    {
-        if(text_Level != null)
-            text_Level.text = "Level : " + level.ToString();
+        OnLevelUp?.Invoke();
+        OnLevelChanged?.Invoke(level);
+        OnExpChanged?.Invoke(currentExp, maxExp);
     }
 }

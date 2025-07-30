@@ -68,6 +68,16 @@ public class SkillManager : MonoBehaviour
         skillDatabase = FindFirstObjectByType<SkillDatabase>();
     }
 
+    private void OnEnable()
+    {
+        EXPManager.OnLevelUp += LevelUp;
+    }
+
+    private void OnDisable()
+    {
+        EXPManager.OnLevelUp -= LevelUp;
+    }
+
     /// <summary>
     /// 레벨업 시 랜덤 스킬 획득 또는 업그레이드
     /// </summary>
