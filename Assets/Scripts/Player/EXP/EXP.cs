@@ -8,6 +8,7 @@ public class EXP : MonoBehaviour
 
     private Renderer capsuleRenderer;       //캡슐 색
     private Rigidbody rb;
+    private Movement3D movement3D;
 
     private IObjectPool<GameObject> m_Pool;
 
@@ -15,6 +16,7 @@ public class EXP : MonoBehaviour
     {
         capsuleRenderer = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
+        movement3D = GetComponent<Movement3D>();
     }
 
     public void SetPool(IObjectPool<GameObject> pool)
@@ -35,8 +37,10 @@ public class EXP : MonoBehaviour
                 xPManager.AddExp(exp);
 
                 //경험치 옵젝 파괴(풀링 이용)
-                if(m_Pool != null)
+                if (m_Pool != null)
+                {
                     m_Pool.Release(gameObject);
+                }
                 else
                     Destroy(gameObject);
             }
@@ -48,5 +52,13 @@ public class EXP : MonoBehaviour
     {
         if (capsuleRenderer != null)
             capsuleRenderer.material.color = color;
+    }
+
+    private void OnDisable()
+    {
+        // 풀에 반환될 때 이전에 변경했던 상태들을 기본값으로 되돌립니다.
+        if (rb != null) rb.useGravity = true; 
+        if (movement3D != null) movement3D.MoveSpeed = 0;
+        gameObject.layer = LayerMask.NameToLayer("Default"); 
     }
 }
