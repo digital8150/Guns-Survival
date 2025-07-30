@@ -8,7 +8,11 @@ public class EXP : MonoBehaviour
 
     private Renderer capsuleRenderer;       //Ä¸½¶ »ö
     private Rigidbody rb;
+    public Rigidbody Rb => rb;
     private Movement3D movement3D;
+    public Movement3D Movement3D => movement3D;
+    private MoveTo moveTo;
+    public MoveTo MoveTo => moveTo;
 
     private IObjectPool<GameObject> m_Pool;
 
@@ -17,6 +21,7 @@ public class EXP : MonoBehaviour
         capsuleRenderer = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
         movement3D = GetComponent<Movement3D>();
+        moveTo = GetComponent<MoveTo>();
     }
 
     public void SetPool(IObjectPool<GameObject> pool)
