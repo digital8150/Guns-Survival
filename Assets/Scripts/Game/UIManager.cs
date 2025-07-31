@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     private GameObject upgradePanel;
     [SerializeField]
     private SkillOptionUI[] skillOptions;
+    private bool isSelecting = false;
+    private int pendingSelection = 0;
 
     //레퍼런스
     private SkillManager _skillManager;
@@ -63,6 +65,14 @@ public class UIManager : MonoBehaviour
     //------------------ 스킬 업그레이드 선택지 -----------
     public void ShowUpgradeUI(KeyValuePair<SkillData, int> skill1, KeyValuePair<SkillData, int> skill2, KeyValuePair<SkillData, int>skill3)
     {
+        if (isSelecting)
+        {
+            pendingSelection++;
+            return;
+        }
+
+        isSelecting = true;
+
         //pause
         _UIController.HUDCanvas.SetActive(false);
         _scaleManager.Pause();
@@ -115,14 +125,24 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log($"버튼 클릭 : {skillData.skillName}");
         _skillManager.LearnOrUpgradeSkill(skillData);
+        isSelecting = false;
 
-        //RESUME
-        _UIController.HUDCanvas.SetActive(true);
-        upgradePanel.SetActive(false);
-        _scaleManager.Resume();
-        AudioListener.pause = false;
-        HideCursor(true);
-        _UIController.EnableInputBindings();
+        if(pendingSelection > 0)
+        {
+            _skillManager.LevelUp();
+            pendingSelection--;
+        }
+        else
+        {
+            //RESUME
+            _UIController.HUDCanvas.SetActive(true);
+            upgradePanel.SetActive(false);
+            _scaleManager.Resume();
+            AudioListener.pause = false;
+            HideCursor(true);
+            _UIController.EnableInputBindings();
+        }
+
     }
 
     private static void HideCursor(bool hide)
