@@ -50,6 +50,7 @@ public class SkillManager : MonoBehaviour
 {
     //필요 컴포넌트
     private PlayerStatsManager playerStatsManager;
+    private SkillDatabase skillDatabase;
 
     //플레이어가 보유한 스킬 목록과 스킬의 레벨
     [Header("플레이어가 보유한 스킬 목록")]
@@ -64,6 +65,72 @@ public class SkillManager : MonoBehaviour
     private void Start()
     {
         playerStatsManager = GetComponent<PlayerStatsManager>();
+        skillDatabase = FindFirstObjectByType<SkillDatabase>();
+    }
+
+    private void OnEnable()
+    {
+        EXPManager.OnLevelUp += LevelUp;
+    }
+
+    private void OnDisable()
+    {
+        EXPManager.OnLevelUp -= LevelUp;
+    }
+
+    /// <summary>
+    /// 레벨업 시 랜덤 스킬 획득 또는 업그레이드
+    /// </summary>
+    public void LevelUp()
+    {
+        if (skillDatabase != null)
+        {
+
+            //임시 테스트 구현 : 랜덤으로 스킬 슥듭 또는 업그레이드
+            //TODO : 실제 게임 구현에서는 증강 선택지 시스템을 구현해야 함.
+            if(ownedSkills.Count < maxSkillCount)
+            {
+                //최대 보유 스킬보다 적은 스킬을 보유 중인 경우
+                //실제 게임에서는 레벨업 선택지 제공 구현해야 함
+                List<SkillData> cadinates = new List<SkillData>();
+                foreach(var entry in skillDatabase.skillDatas) //후보는 스킬 데이터베이스의 모든 스킬 중에서 가져온다
+                {
+                    if ( !ownedSkills.ContainsKey(entry.skillData) || entry.skillData.MaxLevel > ownedSkills[entry.skillData])
+                    {
+                        cadinates.Add(entry.skillData); //최대 레벨이 아닌 것만 후보에 등록
+                    }
+                }
+                if (cadinates.Count == 0)
+                {
+                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    return;
+                }
+                LearnOrUpgradeSkill(cadinates[UnityEngine.Random.Range(0, cadinates.Count)]); //후보에서 획득 또는 레벨업
+            }
+            else
+            {
+                //최대 보유 스킬을 모두 가지고 있으면 갖고 있는 것 중에서 레벨업
+                List<SkillData> cadinates = new List<SkillData>();
+                foreach (var entry in ownedSkills) //후보는 보유하고 있는 스킬 목록에서 가져온다
+                {
+                    if(entry.Key.MaxLevel > entry.Value)
+                    {
+                        cadinates.Add(entry.Key); //최대 레벨이 아닌 것만 후보에 등록
+                    }
+                }
+
+                if (cadinates.Count == 0)
+                {
+                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    return;
+                }
+                LearnOrUpgradeSkill(cadinates[UnityEngine.Random.Range(0, cadinates.Count)]); //후보에서 레벨업
+            }
+        }
+        else
+        {
+            Debug.LogError("스킬 데이터베이스가 null이었습니다.");
+        }
     }
 
     /// <summary>
