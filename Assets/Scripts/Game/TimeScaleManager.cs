@@ -7,7 +7,7 @@ using UnityEngine;
 public class TimeScaleManager : MonoBehaviour
 {
     [Tooltip("시간 배율이 변경되는 데 걸리는 시간 (초)")]
-    [SerializeField] private float transitionDuration = 0.5f;
+    public static float transitionDuration = 0.5f;
 
     private Coroutine _timeScaleCoroutine;
 
@@ -16,7 +16,7 @@ public class TimeScaleManager : MonoBehaviour
         SetTimeScale(0f);
     }
 
-    public void Resume()
+    public  void Resume()
     {
         SetTimeScale(1f);
     }
