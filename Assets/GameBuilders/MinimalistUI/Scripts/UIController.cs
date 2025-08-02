@@ -19,6 +19,7 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         [SerializeField]
         private GameObject m_HUDCanvas;
+        public GameObject HUDCanvas => m_HUDCanvas;
 
         [SerializeField]
         private GameObject m_DeathScreenCanvas;
@@ -115,6 +116,18 @@ namespace GameBuilders.MinimalistUI.Scripts
             m_DeathScreenCanvas.SetActive(false);
             AudioListener.pause = true;
             HideCursor(false);
+        }
+
+        public void DisableInputBindings()
+        {
+            m_WeaponInputBindings.Disable();
+            m_MovementInputBindings.Disable();
+        }
+
+        public void EnableInputBindings()
+        {
+            m_WeaponInputBindings.Enable();
+            m_MovementInputBindings.Enable();
         }
 
         private void DeathScreen()
