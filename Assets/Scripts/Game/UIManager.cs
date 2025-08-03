@@ -100,6 +100,7 @@ public class UIManager : MonoBehaviour
 
             skillOptions[i].container.SetActive(true);
             skillOptions[i].skillNameText.text = skillData.skillName;
+            skillOptions[i].skillIconImage.sprite = skillData.skillIcon;
             UpdateSkillDescription(i, skillData, skillLevel);
 
             skillOptions[i].skillSelectButton.onClick.AddListener(() => SelectSkillAndCloseUI(skillData));
