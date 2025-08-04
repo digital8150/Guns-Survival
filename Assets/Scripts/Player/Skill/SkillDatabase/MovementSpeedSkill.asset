@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00"
   description: "\uD50C\uB808\uC5B4\uC758 \uC774\uB3D9\uC18D\uB3C4\uAC00 20% \uC99D\uAC00\uD55C\uB2E4"
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: a8ae2ac60c936774b9d1edf075355df9, type: 3}
   statType: 2
   playerStatLevels:
   - level: 1

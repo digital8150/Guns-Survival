@@ -15,7 +15,7 @@ MonoBehaviour:
   skillName: "\uACBD\uD5D8\uCE58 \uD68D\uB4DD \uD6A8\uC728 \uC99D\uAC00"
   description: "\uACBD\uD5D8\uCE58 \uAD6C\uC2AC\uC5D0\uC11C \uC5BB\uC744 \uC218 \uC788\uB294
     \uACBD\uD5D8\uCE58\uB7C9\uC774 10% \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: fdef0d3ac52cdc04ab27b00eca382676, type: 3}
   statType: 0
   playerStatLevels:
   - level: 1
