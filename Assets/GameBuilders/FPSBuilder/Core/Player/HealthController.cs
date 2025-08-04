@@ -157,6 +157,8 @@ namespace GameBuilders.FPSBuilder.Core.Player
         /// </summary>
         public event Action HitEvent;
 
+        public static event Action<float, float> OnHealthChanged;
+
         #endregion
 
         private FirstPersonCharacterController m_FPController;
@@ -320,6 +322,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
             }
 
             m_CurrentVitality = m_TempVitality;
+            OnHealthChanged?.Invoke(m_CurrentVitality, m_TotalVitality);      //체력 변화 이벤트
             GameplayManager.Instance.IsDead |= Mathf.Abs(m_CurrentVitality) < Mathf.Epsilon;
 
             // Sets whether or not the character has broken their legs.

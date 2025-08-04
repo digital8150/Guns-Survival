@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GameBuilders.MinimalistUI.Scripts;
+using GameBuilders.FPSBuilder.Core.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,10 @@ public class UIManager : MonoBehaviour
     private Image image_ExpBar;
     [SerializeField]
     private Text text_Level;
+
+    [Header("UI요소 : HP")]
+    [SerializeField]
+    private Image image_HPBar;
 
     [Header("UI요소 : 레벨업 선택지")]
     [SerializeField]
@@ -41,12 +46,14 @@ public class UIManager : MonoBehaviour
     {
         EXPManager.OnExpChanged += UpdateExpBar;
         EXPManager.OnLevelChanged += UpdateLevel;
+        HealthController.OnHealthChanged += UpdateHP;
     }
 
     void OnDisable()
     {
         EXPManager.OnExpChanged -= UpdateExpBar;
         EXPManager.OnLevelChanged -= UpdateLevel;
+        HealthController.OnHealthChanged -= UpdateHP;
     }
 
     //----------------- EXP & LEVEL ----------------------
@@ -60,6 +67,13 @@ public class UIManager : MonoBehaviour
     {
         if (text_Level != null)
             text_Level.text = "Level : " + level.ToString();
+    }
+
+    //--------------------- HP -------------------------
+    private void UpdateHP(float  currentHP, float maxHp)
+    {
+        if(image_HPBar != null)
+            image_HPBar.fillAmount = currentHP / maxHp;
     }
 
     //------------------ 스킬 업그레이드 선택지 -----------
