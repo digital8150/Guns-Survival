@@ -40802,6 +40802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8669829034879904158}
   - component: {fileID: 8669829034879904145}
+  - component: {fileID: 3001932288079354226}
   - component: {fileID: 6691903478925588229}
   m_Layer: 0
   m_Name: Game UI
@@ -40851,6 +40852,38 @@ MonoBehaviour:
   m_FirstPersonCharacter: {fileID: 0}
   m_HealthController: {fileID: 0}
   m_InventoryManager: {fileID: 0}
+--- !u!114 &3001932288079354226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669829034879904144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bf36aa3c1d60f4693d016de5bf10d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_ExpBar: {fileID: 2461739341196932530}
+  text_Level: {fileID: 5854603163615236696}
+  image_HPBar: {fileID: 6553394659019487618}
+  upgradePanel: {fileID: 0}
+  skillOptions:
+  - skillNameText: {fileID: 0}
+    skillDescriptionText: {fileID: 0}
+    skillIconImage: {fileID: 0}
+    skillSelectButton: {fileID: 0}
+    container: {fileID: 0}
+  - skillNameText: {fileID: 0}
+    skillDescriptionText: {fileID: 0}
+    skillIconImage: {fileID: 0}
+    skillSelectButton: {fileID: 0}
+    container: {fileID: 0}
+  - skillNameText: {fileID: 0}
+    skillDescriptionText: {fileID: 0}
+    skillIconImage: {fileID: 0}
+    skillSelectButton: {fileID: 0}
+    container: {fileID: 0}
 --- !u!114 &6691903478925588229
 MonoBehaviour:
   m_ObjectHideFlags: 0
