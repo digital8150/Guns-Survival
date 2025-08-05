@@ -1,3 +1,4 @@
+using DTT.AreaOfEffectRegions;
 using UnityEngine;
 
 public class AreaDamageSkillController : SkillController
@@ -7,6 +8,14 @@ public class AreaDamageSkillController : SkillController
 
     //원기둥 판정 높이 상수
     private const float CAPSULEHEIGHT = 50f;
+
+    //레퍼런스
+    private CircleRegion skillRegionIndicator;
+
+    private void Awake()
+    {
+        skillRegionIndicator = GetComponentInChildren<CircleRegion>();
+    }
 
     private void Update()
     {
@@ -27,6 +36,19 @@ public class AreaDamageSkillController : SkillController
     {
         this.currentLevel = newLevel;
         tickTimer = 0f;
+        UpdateIndicatorRadius();
+    }
+
+    void UpdateIndicatorRadius()
+    {
+        if(skillData == null || currentLevel <= 0 || skillRegionIndicator == null)
+        {
+            return;
+        }
+
+        AreaDamageSkillData areaDamageSkillData = skillData as AreaDamageSkillData;
+        skillRegionIndicator.Radius = areaDamageSkillData.GetLevelInfo(currentLevel).radius;
+        
     }
 
     private void PerformAreaDamage(AreaDamageSkillLevelData levelData)
