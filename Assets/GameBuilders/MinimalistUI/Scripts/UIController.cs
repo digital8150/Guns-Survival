@@ -1,7 +1,6 @@
 ﻿using GameBuilders.FPSBuilder.Core.Inventory;
 using GameBuilders.FPSBuilder.Core.Managers;
 using GameBuilders.FPSBuilder.Core.Player;
-
 using TMPro;
 
 using UnityEngine;
@@ -51,6 +50,8 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         private bool m_Restarting;
         private bool m_About;
+        private bool m_UpgradeSelecting;
+        public bool UpgradeSelecting { get { return m_UpgradeSelecting; } set { m_UpgradeSelecting = value; } }
 
         private InputActionMap m_WeaponInputBindings;
         private InputActionMap m_MovementInputBindings;
@@ -107,6 +108,10 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         private void Pause()
         {
+            if (m_UpgradeSelecting)
+            {
+                return;
+            }
             m_WeaponInputBindings.Disable();
             m_MovementInputBindings.Disable();
 
