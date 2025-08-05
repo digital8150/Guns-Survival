@@ -1,3 +1,4 @@
+using System.Collections;
 using DTT.AreaOfEffectRegions;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class AreaDamageSkillController : SkillController
 
     //원기둥 판정 높이 상수
     private const float CAPSULEHEIGHT = 50f;
+    private const float LERPDURATION = 0.25f;
 
     //레퍼런스
     private CircleRegion skillRegionIndicator;
@@ -47,8 +49,19 @@ public class AreaDamageSkillController : SkillController
         }
 
         AreaDamageSkillData areaDamageSkillData = skillData as AreaDamageSkillData;
-        skillRegionIndicator.Radius = areaDamageSkillData.GetLevelInfo(currentLevel).radius;
+        StartCoroutine(LerpRadius(skillRegionIndicator.Radius, areaDamageSkillData.GetLevelInfo(currentLevel).radius));
         
+    }
+
+    IEnumerator LerpRadius(float origin, float target)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < LERPDURATION)
+        {
+            skillRegionIndicator.Radius = Mathf.Lerp(origin, target, elapsedTime / LERPDURATION);
+            elapsedTime += Time.unscaledDeltaTime;
+            yield return null;
+        }
     }
 
     private void PerformAreaDamage(AreaDamageSkillLevelData levelData)
