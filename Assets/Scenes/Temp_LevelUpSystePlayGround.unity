@@ -4476,6 +4476,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: spawnWaves.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: spawnWaves.Array.data[0].waveName
+      value: Wave1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: waves.Array.data[0].nextWaveDelay
       value: 4.23
       objectReference: {fileID: 0}
@@ -8684,6 +8694,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6466293125189103070, guid: e9811b5de53c549448fda06ec24f7122,
+        type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11663,6 +11678,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameBuilders.MinimalistUI.Scripts.Options.OptionsUI, GameBuilders.UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2256299109272765035, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 2461739341196932530, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Type
@@ -11671,17 +11691,17 @@ PrefabInstance:
     - target: {fileID: 2461739341196932530, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.7798742
+      value: 0.42767292
       objectReference: {fileID: 0}
     - target: {fileID: 2461739341196932530, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.316364
+      value: 0.17886944
       objectReference: {fileID: 0}
     - target: {fileID: 2461739341196932530, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.40617546
+      value: 0.22736505
       objectReference: {fileID: 0}
     - target: {fileID: 2461739341196932530, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
@@ -12223,6 +12243,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
+      propertyPath: m_Color.b
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
       propertyPath: m_Maskable
       value: 1
       objectReference: {fileID: 0}
@@ -12235,6 +12270,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_BestFit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854603163615236696, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7265336265986718527, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
@@ -14246,7 +14296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058334858
 RectTransform:
   m_ObjectHideFlags: 0
