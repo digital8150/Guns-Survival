@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using GameBuilders.MinimalistUI.Scripts;
 using GameBuilders.FPSBuilder.Core.Player;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -86,6 +86,7 @@ public class UIManager : MonoBehaviour
         }
 
         isSelecting = true;
+        _UIController.UpgradeSelecting = true;
 
         //pause
         _UIController.HUDCanvas.SetActive(false);
@@ -156,6 +157,7 @@ public class UIManager : MonoBehaviour
             AudioListener.pause = false;
             HideCursor(true);
             _UIController.EnableInputBindings();
+            _UIController.UpgradeSelecting = false;
         }
 
     }
