@@ -21,8 +21,6 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private float exp;                              //적이 드랍한 처치 경험치
     [SerializeField]
     private Color capsuleColor = Color.blue;        //경험치 캡슐 기본 색
-    [SerializeField]
-    private bool isBoss = false;
 
     //components
     [SerializeField]
@@ -46,9 +44,6 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         IsAlive = true;
         deadEnemyLayer = LayerMask.NameToLayer("DeadEnemy");
         expPool = FindAnyObjectByType<EXPPool>();
-        //일반 몹도 이벤트에 걸리기 때문에 isBoss flag 세워서 단독 이벤트로 변경
-        if (isBoss)
-            OnHealthChanged?.Invoke(currentHp, hp);
     }
 
     void FixedUpdate()
@@ -76,8 +71,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
 
         currentHp = Mathf.Max(currentHp - damage, 0);
 
-        if (isBoss)
-            OnHealthChanged?.Invoke(currentHp, hp);
+        OnHealthChanged?.Invoke(currentHp, hp);
 
         if (currentHp <= 0)
         {
@@ -113,8 +107,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         AnimSetTrigger("Dead");
         gameObject.layer = deadEnemyLayer;
 
-        if (isBoss)
-            OnHealthChanged?.Invoke(0, hp);
+        OnHealthChanged?.Invoke(0, hp);
 
         CreateExp();
         Destroy(this.gameObject, destroyDelay);
@@ -151,10 +144,6 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     public float GetMaxHealth()
     {
         return hp;
-    }
-    public bool IsBoss()
-    {
-        return isBoss;
     }
     public string GetName()
     {

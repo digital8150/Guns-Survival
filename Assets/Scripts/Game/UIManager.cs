@@ -28,6 +28,8 @@ public class UIManager : MonoBehaviour
     private Image image_BossHPBar;
     [SerializeField]
     private GameObject bossHPBarPanel;
+    [SerializeField]
+    private Text text_BossName;
 
     [Header("UI요소 : 레벨업 선택지")]
     [SerializeField]
@@ -58,6 +60,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        HandleBossUI();
+    }
+
     //------------ 라이프 사이클 ----------------------
     void OnEnable()
     {
@@ -65,7 +72,6 @@ public class UIManager : MonoBehaviour
         EXPManager.OnLevelChanged += UpdateLevel;
         HealthController.OnHealthChanged += UpdateHP;
         TimeManager.OnTimeChanged += UpdateTime;
-        EnemySpawner.OnBossSpawned += HandleBossSpawned;
     }
 
     void OnDisable()
@@ -74,9 +80,6 @@ public class UIManager : MonoBehaviour
         EXPManager.OnLevelChanged -= UpdateLevel;
         HealthController.OnHealthChanged -= UpdateHP;
         TimeManager.OnTimeChanged -= UpdateTime;
-        EnemySpawner.OnBossSpawned -= HandleBossSpawned;
-        if (_currentBoss != null)
-            _currentBoss.OnHealthChanged -= UpdateBossHP;
     }
 
     //----------------- TIME ---------------------------
@@ -110,36 +113,49 @@ public class UIManager : MonoBehaviour
     }
 
     //--------------------- BOSS HP -----------------------
-    private void HandleBossSpawned(GameObject boss)
+    private void HandleBossUI()
     {
-        if (bossHPBarPanel == null || boss == null)
-            return;
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
 
-        _currentBoss = boss.GetComponent<Enemy>();
-
-        if(_currentBoss != null)
+        //씬에 보스가 있는 경우
+        if(boss != null)
         {
-            bossHPBarPanel.SetActive(true);
-            _currentBoss.OnHealthChanged += UpdateBossHP;
+            Enemy bossEnemy = boss.GetComponent<Enemy>();
 
-            //UI 초기값 설정
+            if(_currentBoss != bossEnemy)
+            {
+                if (_currentBoss != null)
+                    _currentBoss.OnHealthChanged -= UpdateBossHP;
+
+                _currentBoss = bossEnemy;
+                _currentBoss.OnHealthChanged += UpdateBossHP;
+            }
+
+            if (bossHPBarPanel != null)
+                bossHPBarPanel.SetActive(true);
+
+            if (text_BossName != null)
+                text_BossName.text = _currentBoss.GetName();
+
             UpdateBossHP(_currentBoss.GetCurrentHealth(), _currentBoss.GetMaxHealth());
         }
-    }
-    private void UpdateBossHP(float currentHealth, float maxHealth)
-    {
-        if(image_BossHPBar != null)
-            image_BossHPBar.fillAmount = currentHealth / maxHealth;
 
-        if(currentHealth <= 0)
+        //씬에 보스가 없는 경우
+        else
         {
-            bossHPBarPanel.SetActive(false);
+            if(bossHPBarPanel != null)
+                bossHPBarPanel.SetActive(false);
             if(_currentBoss != null)
             {
                 _currentBoss.OnHealthChanged -= UpdateBossHP;
                 _currentBoss = null;
             }
         }
+    }
+    private void UpdateBossHP(float currentHealth, float maxHealth)
+    {
+        if(image_BossHPBar != null)
+            image_BossHPBar.fillAmount = currentHealth / maxHealth;
     }
 
     //------------------ 스킬 업그레이드 선택지 -----------
