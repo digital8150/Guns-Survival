@@ -2,6 +2,7 @@ using UnityEngine;
 using GameBuilders.FPSBuilder;
 using GameBuilders.FPSBuilder.Interfaces;
 using System.Runtime.CompilerServices;
+using System;
 
 public class Enemy : MonoBehaviour, IProjectileDamageable
 {
@@ -18,6 +19,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private float exp;                              //적이 드랍한 처치 경험치
     [SerializeField]
     private Color capsuleColor = Color.blue;        //경험치 캡슐 기본 색
+    [SerializeField]
+    private bool isBoss = false;
 
     //components
     [SerializeField]
@@ -33,12 +36,17 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private int deadEnemyLayer;
     private EXPPool expPool;
 
+    public event Action<float, float> OnHealthChanged;      //보스 체력 이벤트
+
     void Start()
     {
         currentHp = hp;
         IsAlive = true;
         deadEnemyLayer = LayerMask.NameToLayer("DeadEnemy");
         expPool = FindAnyObjectByType<EXPPool>();
+        //일반 몹도 이벤트에 걸리기 때문에 isBoss flag 세워서 단독 이벤트로 변경
+        if (isBoss)
+            OnHealthChanged?.Invoke(currentHp, hp);
     }
 
     void FixedUpdate()
@@ -64,8 +72,12 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
             return;
         }
 
-        hp -= damage;
-        if(hp <= 0)
+        currentHp = Mathf.Max(currentHp - damage, 0);
+
+        if (isBoss)
+            OnHealthChanged?.Invoke(currentHp, hp);
+
+        if (currentHp <= 0)
         {
             Die();
         }
@@ -99,8 +111,10 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         AnimSetTrigger("Dead");
         gameObject.layer = deadEnemyLayer;
 
-        CreateExp();
+        if (isBoss)
+            OnHealthChanged?.Invoke(0, hp);
 
+        CreateExp();
         Destroy(this.gameObject, destroyDelay);
     }
 
@@ -125,5 +139,16 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
             Debug.Log("EXPPool을 찾을 수 없으므로 직접 경험치 캡슐을 생성합니다");
             Instantiate(expPrefab, transform.position, Quaternion.identity);
         }
+    }
+
+    //UI 반환용
+    public float GetCurrentHealth()
+    {
+        return currentHp;
+    }
+
+    public float GetMaxHealth()
+    {
+        return hp;
     }
 }
