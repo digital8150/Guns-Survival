@@ -2735,6 +2735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7b696b6231814d8c82a5e56f0aa1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Dragon
   hp: 100
   currentHp: 0
   destroyDelay: 5
