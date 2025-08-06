@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
 {
     [Header("적 기본 정보")]
     [SerializeField]
+    private string enemyName;
+    [SerializeField]
     private float hp;
     [SerializeField]
     private float currentHp;
@@ -146,9 +148,16 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     {
         return currentHp;
     }
-
     public float GetMaxHealth()
     {
         return hp;
+    }
+    public bool IsBoss()
+    {
+        return isBoss;
+    }
+    public string GetName()
+    {
+        return enemyName;
     }
 }
