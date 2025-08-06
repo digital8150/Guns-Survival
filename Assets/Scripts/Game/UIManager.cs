@@ -4,18 +4,30 @@ using GameBuilders.FPSBuilder.Core.Player;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Drawing.Printing;
+using static UnityEngine.InputSystem.XR.TrackedPoseDriver;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("UI요소 : 게임 시간")]
+    [SerializeField]
+    private Text text_Timer;
+
     [Header("UI요소 : EXP & LEVEL")]
     [SerializeField]
     private Image image_ExpBar;
     [SerializeField]
     private Text text_Level;
 
-    [Header("UI요소 : HP")]
+    [Header("UI요소 : 플레이어 HP")]
     [SerializeField]
     private Image image_HPBar;
+
+    [Header("UI요소 : 보스 HP")]
+    [SerializeField]
+    private Image image_BossHPBar;
+    [SerializeField]
+    private GameObject bossHPBarPanel;
 
     [Header("UI요소 : 레벨업 선택지")]
     [SerializeField]
@@ -29,15 +41,20 @@ public class UIManager : MonoBehaviour
     private SkillManager _skillManager;
     private TimeScaleManager _scaleManager;
     private UIController _UIController;
+    private Enemy _currentBoss;
 
     private void Awake()
     {
         _skillManager = FindFirstObjectByType<SkillManager>();
         _scaleManager = FindFirstObjectByType<TimeScaleManager>();
         _UIController = GetComponent<UIController>();
-        if(upgradePanel != null)
+        if (upgradePanel != null)
         {
             upgradePanel.SetActive(false);
+        }
+        if (bossHPBarPanel != null)
+        {
+            bossHPBarPanel.SetActive(false);
         }
     }
 
@@ -47,6 +64,8 @@ public class UIManager : MonoBehaviour
         EXPManager.OnExpChanged += UpdateExpBar;
         EXPManager.OnLevelChanged += UpdateLevel;
         HealthController.OnHealthChanged += UpdateHP;
+        TimeManager.OnTimeChanged += UpdateTime;
+        EnemySpawner.OnBossSpawned += HandleBossSpawned;
     }
 
     void OnDisable()
@@ -54,8 +73,22 @@ public class UIManager : MonoBehaviour
         EXPManager.OnExpChanged -= UpdateExpBar;
         EXPManager.OnLevelChanged -= UpdateLevel;
         HealthController.OnHealthChanged -= UpdateHP;
+        TimeManager.OnTimeChanged -= UpdateTime;
+        EnemySpawner.OnBossSpawned -= HandleBossSpawned;
+        if (_currentBoss != null)
+            _currentBoss.OnHealthChanged -= UpdateBossHP;
     }
 
+    //----------------- TIME ---------------------------
+    private void UpdateTime(float elapsedTime)
+    {
+        if(text_Timer != null)
+        {
+            TimeSpan ts = TimeSpan.FromSeconds(elapsedTime);
+            text_Timer.text = string.Format("{0:D2}:{1:D2}",
+                ts.Minutes, ts.Seconds);
+        }
+    }
     //----------------- EXP & LEVEL ----------------------
     private void UpdateExpBar(float currentExp, float maxExp)
     {
@@ -66,14 +99,47 @@ public class UIManager : MonoBehaviour
     private void UpdateLevel(int level)
     {
         if (text_Level != null)
-            text_Level.text = "Level : " + level.ToString();
+            text_Level.text = "Lv : " + level.ToString();
     }
 
     //--------------------- HP -------------------------
-    private void UpdateHP(float  currentHP, float maxHp)
+    private void UpdateHP(float currentHP, float maxHp)
     {
-        if(image_HPBar != null)
+        if (image_HPBar != null)
             image_HPBar.fillAmount = currentHP / maxHp;
+    }
+
+    //--------------------- BOSS HP -----------------------
+    private void HandleBossSpawned(GameObject boss)
+    {
+        if (bossHPBarPanel == null || boss == null)
+            return;
+
+        _currentBoss = boss.GetComponent<Enemy>();
+
+        if(_currentBoss != null)
+        {
+            bossHPBarPanel.SetActive(true);
+            _currentBoss.OnHealthChanged += UpdateBossHP;
+
+            //UI 초기값 설정
+            UpdateBossHP(_currentBoss.GetCurrentHealth(), _currentBoss.GetMaxHealth());
+        }
+    }
+    private void UpdateBossHP(float currentHealth, float maxHealth)
+    {
+        if(image_BossHPBar != null)
+            image_BossHPBar.fillAmount = currentHealth / maxHealth;
+
+        if(currentHealth <= 0)
+        {
+            bossHPBarPanel.SetActive(false);
+            if(_currentBoss != null)
+            {
+                _currentBoss.OnHealthChanged -= UpdateBossHP;
+                _currentBoss = null;
+            }
+        }
     }
 
     //------------------ 스킬 업그레이드 선택지 -----------
