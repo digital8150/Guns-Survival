@@ -2,10 +2,13 @@ using UnityEngine;
 using GameBuilders.FPSBuilder;
 using GameBuilders.FPSBuilder.Interfaces;
 using System.Runtime.CompilerServices;
+using System;
 
 public class Enemy : MonoBehaviour, IProjectileDamageable
 {
     [Header("적 기본 정보")]
+    [SerializeField]
+    private string enemyName;
     [SerializeField]
     private float hp;
     [SerializeField]
@@ -32,6 +35,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     private Vector3 previousPosition;
     private int deadEnemyLayer;
     private EXPPool expPool;
+
+    public event Action<float, float> OnHealthChanged;      //보스 체력 이벤트
 
     void Start()
     {
@@ -64,8 +69,11 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
             return;
         }
 
-        hp -= damage;
-        if(hp <= 0)
+        currentHp = Mathf.Max(currentHp - damage, 0);
+
+        OnHealthChanged?.Invoke(currentHp, hp);
+
+        if (currentHp <= 0)
         {
             Die();
         }
@@ -99,8 +107,9 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
         AnimSetTrigger("Dead");
         gameObject.layer = deadEnemyLayer;
 
-        CreateExp();
+        OnHealthChanged?.Invoke(0, hp);
 
+        CreateExp();
         Destroy(this.gameObject, destroyDelay);
     }
 
@@ -125,5 +134,19 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
             Debug.Log("EXPPool을 찾을 수 없으므로 직접 경험치 캡슐을 생성합니다");
             Instantiate(expPrefab, transform.position, Quaternion.identity);
         }
+    }
+
+    //UI 반환용
+    public float GetCurrentHealth()
+    {
+        return currentHp;
+    }
+    public float GetMaxHealth()
+    {
+        return hp;
+    }
+    public string GetName()
+    {
+        return enemyName;
     }
 }
