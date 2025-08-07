@@ -67,6 +67,9 @@ public class SkillManager : MonoBehaviour
     [SerializeField]
     private UIManager _UIManager;
 
+    //이벤트
+    public static event Action<SerializableDictionary<SkillData, int>> OnSkillsUpdated;
+
     private void Start()
     {
         playerStatsManager = GetComponent<PlayerStatsManager>();
@@ -130,6 +133,7 @@ public class SkillManager : MonoBehaviour
                 SelectFromCadinates(cadinates);
 
             }
+            
         }
         else
         {
@@ -231,6 +235,8 @@ public class SkillManager : MonoBehaviour
                     throw new NotImplementedException($"구현 되지 않은 PlayerStatType에 대한 처리 발생 : {playerStatSkill.statType}");
             }
             Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
+            //스킬 레벨업 또는 습득 후 UI 업데이트
+            OnSkillsUpdated?.Invoke(ownedSkills);
             return;
         }
 
@@ -249,6 +255,8 @@ public class SkillManager : MonoBehaviour
             Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
         }
 
+        //스킬 레벨업 또는 습득 후 UI 업데이트
+        OnSkillsUpdated?.Invoke(ownedSkills);
     }
 
 
