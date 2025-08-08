@@ -39,6 +39,10 @@ public class UIManager : MonoBehaviour
     private bool isSelecting = false;
     private int pendingSelection = 0;
 
+    [Header("UI요소 : 보유 스킬 인디케이터")]
+    [SerializeField]
+    private SkillSlotUI[] skillSlots;
+
     //레퍼런스
     private SkillManager _skillManager;
     private TimeScaleManager _scaleManager;
@@ -72,6 +76,7 @@ public class UIManager : MonoBehaviour
         EXPManager.OnLevelChanged += UpdateLevel;
         HealthController.OnHealthChanged += UpdateHP;
         TimeManager.OnTimeChanged += UpdateTime;
+        SkillManager.OnSkillsUpdated += UpdateSkillIndicator;
     }
 
     void OnDisable()
@@ -80,6 +85,7 @@ public class UIManager : MonoBehaviour
         EXPManager.OnLevelChanged -= UpdateLevel;
         HealthController.OnHealthChanged -= UpdateHP;
         TimeManager.OnTimeChanged -= UpdateTime;
+        SkillManager.OnSkillsUpdated -= UpdateSkillIndicator;
     }
 
     //----------------- TIME ---------------------------
@@ -244,6 +250,28 @@ public class UIManager : MonoBehaviour
 
     }
 
+    //------------------ 보유 스킬 인디케이터 -----------
+    private void UpdateSkillIndicator(SerializableDictionary<SkillData, int> ownedSkills)
+    {
+        int skillSlotIndex = 0;
+        foreach(var skill in ownedSkills)
+        {
+            SkillData skillData = skill.Key;
+            int skillLevel = skill.Value;
+
+            if(skillSlotIndex >= skillSlots.Length)
+            {
+                Debug.LogWarning("보유 스킬 인디케이터 슬롯이 부족합니다. 추가 슬롯을 설정하세요.");
+                break;
+            }
+            skillSlots[skillSlotIndex].container.SetActive(true);
+            skillSlots[skillSlotIndex].skillIconImage.sprite = skillData.skillIcon;
+            skillSlots[skillSlotIndex].skillLevelText.text = skillLevel.ToString();
+            skillSlotIndex++;
+        }
+    }
+
+    //---------------- 공통 메서드 ----------------
     private static void HideCursor(bool hide)
     {
         if (hide)
@@ -266,5 +294,13 @@ public class SkillOptionUI
     public Text skillDescriptionText;
     public Image skillIconImage;
     public Button skillSelectButton;
+    public GameObject container;
+}
+
+[Serializable]
+public class SkillSlotUI
+{
+    public Image skillIconImage;
+    public Text skillLevelText;
     public GameObject container;
 }
