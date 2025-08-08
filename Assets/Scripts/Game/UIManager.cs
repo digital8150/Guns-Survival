@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using GameBuilders.MinimalistUI.Scripts;
 using GameBuilders.FPSBuilder.Core.Player;
+using GameBuilders.FPSBuilder.Core.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Drawing.Printing;
 using static UnityEngine.InputSystem.XR.TrackedPoseDriver;
+using GameBuilders.FPSBuilder.Core.Weapons;
 
 public class UIManager : MonoBehaviour
 {
@@ -43,17 +45,31 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private SkillSlotUI[] skillSlots;
 
+    [Header("UI요소 : 무기 선택")]
+    [SerializeField]
+    private GameObject weaponSelectionPanel;
+
     //레퍼런스
     private SkillManager _skillManager;
     private TimeScaleManager _scaleManager;
     private UIController _UIController;
     private Enemy _currentBoss;
+    private WeaponManager _weaponManager;
 
     private void Awake()
     {
         _skillManager = FindFirstObjectByType<SkillManager>();
         _scaleManager = FindFirstObjectByType<TimeScaleManager>();
-        _UIController = GetComponent<UIController>();
+        _weaponManager = FindFirstObjectByType<WeaponManager>();
+        _UIController = FindFirstObjectByType<UIController>();
+        if(_weaponManager == null)
+        {
+            Debug.LogError("웨폰매니저 못 찾음!");
+        }
+        if (_UIController == null)
+        {
+            Debug.LogError("UIController 찾지 못함!");
+        }
         if (upgradePanel != null)
         {
             upgradePanel.SetActive(false);
@@ -64,6 +80,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (weaponSelectionPanel != null)
+            ShowWeaponSelectionUI();
+    }
     private void Update()
     {
         HandleBossUI();
@@ -77,6 +98,7 @@ public class UIManager : MonoBehaviour
         HealthController.OnHealthChanged += UpdateHP;
         TimeManager.OnTimeChanged += UpdateTime;
         SkillManager.OnSkillsUpdated += UpdateSkillIndicator;
+        WeaponSelectionManager.OnWeaponSelected += EquipInitialWeapon;
     }
 
     void OnDisable()
@@ -86,6 +108,7 @@ public class UIManager : MonoBehaviour
         HealthController.OnHealthChanged -= UpdateHP;
         TimeManager.OnTimeChanged -= UpdateTime;
         SkillManager.OnSkillsUpdated -= UpdateSkillIndicator;
+        WeaponSelectionManager.OnWeaponSelected -= EquipInitialWeapon;
     }
 
     //----------------- TIME ---------------------------
@@ -162,6 +185,37 @@ public class UIManager : MonoBehaviour
     {
         if(image_BossHPBar != null)
             image_BossHPBar.fillAmount = currentHealth / maxHealth;
+    }
+
+    //----------------------- Select Weapon ----------------------
+    private void EquipInitialWeapon(Gun weaponPrefab)
+    {
+        if(_weaponManager != null)
+            _weaponManager.EquipInitWeapon(weaponPrefab);
+
+        if(weaponSelectionPanel != null)
+            weaponSelectionPanel.SetActive(false);
+
+        if(_UIController != null && _UIController.HUDCanvas != null)
+            _UIController.HUDCanvas.SetActive(true);
+
+        //활성
+        _scaleManager.Resume();
+        AudioListener.pause = false;
+        _UIController.EnableInputBindings();
+        HideCursor(true);
+    }
+    private void ShowWeaponSelectionUI()
+    {
+        weaponSelectionPanel.SetActive(true);
+
+        if (_UIController != null && _UIController.HUDCanvas != null)
+            _UIController.HUDCanvas.SetActive(false);
+        //비활성
+        _scaleManager.Pause();
+        AudioListener.pause = true;
+        _UIController.DisableInputBindings();
+        HideCursor(false);
     }
 
     //------------------ 스킬 업그레이드 선택지 -----------
