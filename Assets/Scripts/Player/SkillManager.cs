@@ -229,7 +229,7 @@ public class SkillManager : MonoBehaviour
                     playerStatsManager.SetExpGainMult(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 case PlayerStatType.ReloadSpeedMult:
-                    Debug.LogWarning("재장전 속도 증가는 현재 구현 필요");
+                    playerStatsManager.SetReloadAnimationSpeed(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 default:
                     throw new NotImplementedException($"구현 되지 않은 PlayerStatType에 대한 처리 발생 : {playerStatSkill.statType}");

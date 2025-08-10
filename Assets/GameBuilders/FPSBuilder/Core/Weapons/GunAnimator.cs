@@ -420,6 +420,7 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
         [MinMax(0.001f, Mathf.Infinity)]
         [Tooltip("Reload animation speed.")]
         private float m_ReloadSpeed = 1;
+        public float ReloadSpeed { set { m_ReloadSpeed = value; } }
 
         /// <summary>
         /// Reload animation sound.
@@ -441,6 +442,7 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
         [SerializeField]
         [MinMax(0.001f, Mathf.Infinity)]
         private float m_ReloadEmptySpeed = 1;
+        public float ReloadEmptySpeed {  set { m_ReloadEmptySpeed = value; } }
 
         /// <summary>
         /// Full reload animation sound.
@@ -475,6 +477,7 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
         [MinMax(0.001f, Mathf.Infinity)]
         [Tooltip("Speed of the reload start animation.")]
         private float m_StartReloadSpeed = 1;
+        
 
         /// <summary>
         /// Sound played at the start of the reload.

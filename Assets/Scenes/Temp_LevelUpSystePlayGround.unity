@@ -2682,6 +2682,31 @@ PrefabInstance:
       propertyPath: maxSkillCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5180428216651722140, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: weaponHandler
+      value: 
+      objectReference: {fileID: 500008894}
+    - target: {fileID: 5180428216651722140, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: guns.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180428216651722140, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: 'guns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 414399520}
+    - target: {fileID: 5180428216651722140, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: 'guns.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1757405193}
+    - target: {fileID: 5180428216651722140, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: 'guns.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1673244960}
     - target: {fileID: 5770629457513100571, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2752,6 +2777,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291398a25c9058d46ba3fd4a99d6487e, type: 3}
+--- !u!1 &500008894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5773448814843741581, guid: 291398a25c9058d46ba3fd4a99d6487e,
+    type: 3}
+  m_PrefabInstance: {fileID: 500008893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505131846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,12 +3741,12 @@ PrefabInstance:
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.data[0].endTime
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.data[1].endTime
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
@@ -3740,7 +3771,7 @@ PrefabInstance:
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.data[1].startTime
-      value: 11
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
@@ -9957,6 +9988,11 @@ PrefabInstance:
       propertyPath: skillSlots.Array.data[3].skillLevelText
       value: 
       objectReference: {fileID: 1796941931}
+    - target: {fileID: 3459173729670876608, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542367765341032296, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.b
@@ -10161,7 +10197,7 @@ PrefabInstance:
     - target: {fileID: 6062678583075972143, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6157609516536617529, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
