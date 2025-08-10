@@ -1728,9 +1728,9 @@ MonoBehaviour:
   vectorPrefab: {fileID: 1673244960}
   spasPrefab: {fileID: 414399520}
   cs5Prefab: {fileID: 1757405193}
-  vectorButton: {fileID: 790659971}
-  spasButton: {fileID: 790659972}
-  cs5Button: {fileID: 790659973}
+  vectorButton: {fileID: 790659973}
+  spasButton: {fileID: 790659971}
+  cs5Button: {fileID: 790659972}
 --- !u!1 &332630487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9817,6 +9817,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.74213827
       objectReference: {fileID: 0}
+    - target: {fileID: 1742748722312916509, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.84276724
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742748722312916509, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.84276724
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742748722312916509, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.84276724
+      objectReference: {fileID: 0}
     - target: {fileID: 2011725248471145170, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -10241,6 +10256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8433908714944321604, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
+      propertyPath: m_Text
+      value: "\uAE30\uAD00\uB2E8\uCD1D : Spas-12"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433908714944321604, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
       propertyPath: m_Color.b
       value: 0.7924528
       objectReference: {fileID: 0}
@@ -10362,17 +10382,17 @@ PrefabInstance:
     - target: {fileID: 9142663336526955923, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.50975037
+      value: 0.0691625
       objectReference: {fileID: 0}
     - target: {fileID: 9142663336526955923, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.61635214
+      value: 0.08176088
       objectReference: {fileID: 0}
     - target: {fileID: 9142663336526955923, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5147086
+      value: 0.06962911
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
