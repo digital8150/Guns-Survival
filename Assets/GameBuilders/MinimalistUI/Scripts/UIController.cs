@@ -125,14 +125,18 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         public void DisableInputBindings()
         {
-            m_WeaponInputBindings.Disable();
-            m_MovementInputBindings.Disable();
+            if(m_WeaponInputBindings != null)
+                m_WeaponInputBindings.Disable();
+            if(m_MovementInputBindings != null)
+                m_MovementInputBindings.Disable();
         }
 
         public void EnableInputBindings()
         {
-            m_WeaponInputBindings.Enable();
-            m_MovementInputBindings.Enable();
+            if (m_WeaponInputBindings != null)
+                m_WeaponInputBindings.Enable();
+            if (m_MovementInputBindings != null)
+                m_MovementInputBindings.Enable();
         }
 
         private void DeathScreen()
