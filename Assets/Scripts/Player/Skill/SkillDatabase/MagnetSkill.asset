@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9e2a35a9c17e44aa0c0e1ebee37fc6, type: 3}
   m_Name: MagnetSkill
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\uC790\uC11D"
+  description: "\uC8FC\uBCC0 \uBC18\uACBD\uC758 \uC544\uC774\uD15C\uC744 \uB04C\uC5B4\uB2F9\uAE38
+    \uC218 \uC788\uB2E4."
   skillIcon: {fileID: 0}
-  magnetLevels: []
+  magnetLevels:
+  - level: 1
+    upgradeDescription: 
+    radius: 0.5
+  - level: 2
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 1
+  - level: 3
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 2
+  - level: 4
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 4
+  - level: 5
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 8

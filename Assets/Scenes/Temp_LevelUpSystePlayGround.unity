@@ -8125,6 +8125,8 @@ MonoBehaviour:
     skillData: {fileID: 11400000, guid: f591ea81e6d9609418c9e65bde9f9adb, type: 2}
   - id: ReloadSpeedMult
     skillData: {fileID: 11400000, guid: 76526255091c44a489a21076c7fc62b3, type: 2}
+  - id: Magnet
+    skillData: {fileID: 11400000, guid: 4cb663623b6107b40a71ce005ab1f1ce, type: 2}
 --- !u!4 &1451151528
 Transform:
   m_ObjectHideFlags: 0
