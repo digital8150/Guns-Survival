@@ -75,7 +75,7 @@ public class AreaDamageSkillController : SkillController
         for (int i = 0; i < numColliders; i++)
         {
             Collider hit = hitBuffer[i];
-            if (hit.CompareTag("Enemy"))
+            if (hit.CompareTag("Enemy") || hit.CompareTag("Boss"))
             {
                 Enemy enemy = hit.GetComponent<Enemy>();
                 if (enemy != null)
