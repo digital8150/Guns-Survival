@@ -103,7 +103,7 @@ public class EnemyAI : MonoBehaviour
         // 예: 애니메이션 재생, 데미지 주기 등
         enemy.AnimSetTrigger("Attack");
         lastAttackTime = Time.time; // 마지막 공격 시간 갱신
-        damageHandler.Damage(damage);
+        damageHandler.Damage(damage, gameObject.transform.position, damageHandler.gameObject.transform.position);
         // isAttacking = true; // 애니메이션 등을 사용하는 경우 설정
     }
 
