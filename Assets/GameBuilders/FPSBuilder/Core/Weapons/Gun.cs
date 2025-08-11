@@ -1122,6 +1122,10 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
 
         public void SetRelodSpeed(float speed)
         {
+            if(m_GunAnimator == null)
+            {
+                return;
+            }
             m_GunAnimator.ReloadSpeed = speed;
             m_GunAnimator.ReloadEmptySpeed = speed;
             m_ReloadDuration = new WaitForSeconds(m_GunAnimator.ReloadAnimationLength);

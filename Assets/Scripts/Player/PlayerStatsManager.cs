@@ -58,6 +58,10 @@ public class PlayerStatsManager : MonoBehaviour
         {
             try
             {
+                if(gun == null)
+                {
+                    return;
+                }
                 gun.SetRelodSpeed(speed);
             }catch(Exception ex)
             {
