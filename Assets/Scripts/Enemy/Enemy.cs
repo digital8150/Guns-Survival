@@ -4,7 +4,7 @@ using GameBuilders.FPSBuilder.Interfaces;
 using System.Runtime.CompilerServices;
 using System;
 
-public class Enemy : MonoBehaviour, IProjectileDamageable
+public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 {
     [Header("적 기본 정보")]
     [SerializeField]
@@ -85,6 +85,11 @@ public class Enemy : MonoBehaviour, IProjectileDamageable
     }
 
     public void ProjectileDamage(float damage, Vector3 targetPosition, Vector3 hitPosition, float penetrationPower)
+    {
+        Damage(damage);
+    }
+
+    public void ExplosionDamage(float damage, Vector3 targetPosition, Vector3 hitPosition)
     {
         Damage(damage);
     }
