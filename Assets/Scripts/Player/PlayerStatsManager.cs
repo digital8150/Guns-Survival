@@ -1,4 +1,6 @@
+using System;
 using GameBuilders.FPSBuilder.Core.Player;
+using GameBuilders.FPSBuilder.Core.Weapons;
 using UnityEngine;
 
 public class PlayerStatsManager : MonoBehaviour
@@ -6,6 +8,7 @@ public class PlayerStatsManager : MonoBehaviour
     private HealthController healthController; //최대체력 스텟 의존성
     private EXPManager expManager; //경험치 획득량 배율 의존성
     private FirstPersonCharacterController firstPersonCharacterController; //이동 속도 의존성
+    [SerializeField] private Gun[] guns; //재장전 속도 의존성
 
     //---movement feature
     private float originMovementSpeed;
@@ -49,6 +52,20 @@ public class PlayerStatsManager : MonoBehaviour
     }
 
     /// TODO : 재장전 속도 증가 -> 재장전 속도를 어디서 관장하는지 추가 파악 필요
+    public void SetReloadAnimationSpeed(float speed)
+    {
+        foreach(var gun in guns)
+        {
+            try
+            {
+                gun.SetRelodSpeed(speed);
+            }catch(Exception ex)
+            {
+                Debug.LogError($"재장전 속도 제어 중 예외 발생 : {ex}");
+            }
+        }
+
+    } 
 
 
 }

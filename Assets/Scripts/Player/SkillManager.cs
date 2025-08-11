@@ -229,7 +229,7 @@ public class SkillManager : MonoBehaviour
                     playerStatsManager.SetExpGainMult(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 case PlayerStatType.ReloadSpeedMult:
-                    Debug.LogWarning("재장전 속도 증가는 현재 구현 필요");
+                    playerStatsManager.SetReloadAnimationSpeed(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 default:
                     throw new NotImplementedException($"구현 되지 않은 PlayerStatType에 대한 처리 발생 : {playerStatSkill.statType}");
@@ -252,10 +252,23 @@ public class SkillManager : MonoBehaviour
                 activeSkillControllers.Add(areaDamageSkillData, controller);
             }
             (activeSkillControllers[areaDamageSkillData] as AreaDamageSkillController)?.UpdateSkillLevel(newLevel);
-            Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
+            
+        }
+
+        if(skillData is MagnetSkillData magnetSkillData)
+        {
+            if(!activeSkillControllers.ContainsKey(magnetSkillData))
+            {
+                MagnetSkillController controller = gameObject.AddComponent<MagnetSkillController>();
+                controller.skillData = magnetSkillData;
+                activeSkillControllers.Add(magnetSkillData, controller);
+            }
+            (activeSkillControllers[magnetSkillData] as MagnetSkillController)?.UpdateSkillLevel(newLevel);
+
         }
 
         //스킬 레벨업 또는 습득 후 UI 업데이트
+        Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
         OnSkillsUpdated?.Invoke(ownedSkills);
     }
 

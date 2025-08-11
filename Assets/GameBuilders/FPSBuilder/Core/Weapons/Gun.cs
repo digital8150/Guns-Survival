@@ -1120,6 +1120,14 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
             }
         }
 
+        public void SetRelodSpeed(float speed)
+        {
+            m_GunAnimator.ReloadSpeed = speed;
+            m_GunAnimator.ReloadEmptySpeed = speed;
+            m_ReloadDuration = new WaitForSeconds(m_GunAnimator.ReloadAnimationLength);
+            m_CompleteReloadDuration = new WaitForSeconds(m_GunAnimator.FullReloadAnimationLength);
+        }
+
         public virtual void Interact()
         {
             m_NextInteractTime = Time.time + Mathf.Max(InteractAnimationLength, InteractDelay);
