@@ -15,7 +15,7 @@ MonoBehaviour:
   skillName: "\uC790\uC11D"
   description: "\uC8FC\uBCC0 \uBC18\uACBD\uC758 \uC544\uC774\uD15C\uC744 \uB04C\uC5B4\uB2F9\uAE38
     \uC218 \uC788\uB2E4."
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: d56d0367ed8d81c4fbde7b6ce7c770cb, type: 3}
   magnetLevels:
   - level: 1
     upgradeDescription: 
