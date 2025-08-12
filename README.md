@@ -59,7 +59,7 @@ Guns-Survival/
 
 1.  이 저장소를 클론하거나 다운로드합니다. (Git LFS 를 먼저 초기화 하세요)
 2.  Unity Hub를 통해 프로젝트를 엽니다. (Unity Version: `6000.0.42f1`)
-3.  `Assets/Scenes` 폴더에 있는 메인 씬(예: `SampleScene.unity` 또는 `PinePlayground.unity`)을 엽니다.
+3.  `Assets/Scenes` 폴더에 있는 메인 씬(`PinePlayground.unity`)을 엽니다.
 4.  Unity 에디터에서 플레이 버튼을 눌러 게임을 실행합니다.
 
 ## 👥 기여자
