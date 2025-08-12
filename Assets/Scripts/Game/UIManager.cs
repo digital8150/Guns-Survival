@@ -293,11 +293,12 @@ public class UIManager : MonoBehaviour
         if (skillLevel > 1)
         {
             skillOptions[i].skillDescriptionText.text = skillData.GetGenericLevelInfo(skillLevel).upgradeDescription;
+            skillOptions[i].NewOrUpgradeText.text = "업그레이드";
         }
         else
         {
             skillOptions[i].skillDescriptionText.text = skillData.description;
-            skillOptions[i].skillNameText.text += " (New!)";
+            skillOptions[i].NewOrUpgradeText.text = "신규";
         }
     }
 
@@ -420,6 +421,7 @@ public class SkillOptionUI
 {
     public Text skillNameText;
     public Text skillDescriptionText;
+    public Text NewOrUpgradeText;
     public Image skillIconImage;
     public Button skillSelectButton;
     public GameObject container;
