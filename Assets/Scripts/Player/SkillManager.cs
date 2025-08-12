@@ -104,8 +104,7 @@ public class SkillManager : MonoBehaviour
                 }
                 if (cadinates.Count == 0)
                 {
-                    //TODO : 대체보상 적용 (eg. 캐릭터 체력 회복)
-                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    _UIManager.ShowAltLevelupReward();
                     return;
                 }
 
@@ -124,8 +123,7 @@ public class SkillManager : MonoBehaviour
 
                 if (cadinates.Count == 0)
                 {
-                    //TODO : 대체보상 적용 (eg. 캐릭터 체력 회복)
-                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    _UIManager.ShowAltLevelupReward();
                     return;
                 }
 

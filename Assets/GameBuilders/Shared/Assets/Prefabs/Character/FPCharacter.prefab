@@ -3104,7 +3104,7 @@ MonoBehaviour:
   ownedSkills:
     keys: []
     values: 
-  maxSkillCount: 5
+  maxSkillCount: 4
   _UIManager: {fileID: 0}
 --- !u!114 &1155558023478987036
 MonoBehaviour:
@@ -3134,6 +3134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a278da7159ae54ca9943ab1a64aea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponManager: {fileID: 5771941363809642660}
+  guns:
+  - {fileID: 5876460681232937477}
+  - {fileID: 5876255316737481607}
+  - {fileID: 5876114291932597505}
 --- !u!1 &5772551611645844771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,7 +5466,6 @@ MonoBehaviour:
   m_WeaponList:
   - {fileID: 5876114291932597505}
   - {fileID: 5876460681232937477}
-  - {fileID: 5873358355613647189}
   - {fileID: 5876255316737481607}
   m_AmmoList:
   - m_AmmoType: {fileID: 11400000, guid: cfcb8336786bf764daa6a7a6b9dab04f, type: 2}
@@ -18166,6 +18170,16 @@ PrefabInstance:
       propertyPath: _radius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 725024690442378785, guid: 7aa07ab191b473a4bb0a16121a775908,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 725024690442378785, guid: 7aa07ab191b473a4bb0a16121a775908,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1190639487529821655, guid: 7aa07ab191b473a4bb0a16121a775908,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18239,6 +18253,16 @@ PrefabInstance:
     - target: {fileID: 3656534823255315731, guid: 7aa07ab191b473a4bb0a16121a775908,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219754244934542090, guid: 7aa07ab191b473a4bb0a16121a775908,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219754244934542090, guid: 7aa07ab191b473a4bb0a16121a775908,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

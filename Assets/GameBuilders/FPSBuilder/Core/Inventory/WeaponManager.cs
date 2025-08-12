@@ -633,6 +633,26 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             }
         }
 
+        public void RefillAmmoReward()
+        {
+            StartCoroutine(RefillAmmo());
+        }
+
+        public void MedkitReward()
+        {
+            HealthController healthController = m_FPController.GetComponent<HealthController>();
+
+            if (healthController != null)
+            {
+                //체력을 50만큼 회복
+                healthController.Heal(50, true);
+            }
+
+            //Sound Play
+            m_PlayerBodySource.ForcePlay(m_ItemPickupSound, m_ItemPickupVolume);
+        }
+
+
         /// <summary>
         /// Checks the target object to analyze if it is a interactive object.
         /// </summary>
