@@ -1,6 +1,21 @@
 # 🔥 Guns-Survival 🔥
 
-![Game Screenshot](https://via.placeholder.com/800x450.png?text=Your+Game+Screenshot+Here)
+<p align="center">
+  <img src="https://img.shields.io/badge/Unity-6000.0.42f1-blueviolet?logo=unity" alt="Unity Version"/>
+  <a href="https://github.com/YourUsername/Guns-Survival/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+  </a>
+  <a href="https://github.com/YourUsername/Guns-Survival/issues">
+    <img src="https://img.shields.io/github/issues/YourUsername/Guns-Survival" alt="Open Issues"/>
+  </a>
+  <a href="https://github.com/YourUsername/Guns-Survival/pulls">
+    <img src="https://img.shields.io/github/issues-pr/YourUsername/Guns-Survival" alt="Open Pull Requests"/>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://via.placeholder.com/800x450.png?text=Your+Game+Screenshot+Here" alt="Game Screenshot" width="80%">
+</p>
 
 ## 🎮 프로젝트 소개
 
@@ -16,7 +31,7 @@
 
 ## 🛠️ 기술 스택
 
-*   **게임 엔진**: [Unity](https://unity.com/)
+*   **게임 엔진**: [Unity](https://unity.com/) `6000.0.42f1`
 *   **주요 에셋**:
     *   [FPS Builder](https://assetstore.unity.com/packages/tools/game-toolkits/fps-builder-224206)
     *   Monster Packs (Zombies, Crocodiles, Demons, Dragons)
@@ -43,10 +58,14 @@ Guns-Survival/
 ## 🚀 시작하기
 
 1.  이 저장소를 클론하거나 다운로드합니다.
-2.  Unity Hub를 통해 프로젝트를 엽니다. (권장 Unity 버전: `ProjectVersion.txt` 파일 확인)
+2.  Unity Hub를 통해 프로젝트를 엽니다. (Unity Version: `6000.0.42f1`)
 3.  `Assets/Scenes` 폴더에 있는 메인 씬(예: `SampleScene.unity` 또는 `PinePlayground.unity`)을 엽니다.
 4.  Unity 에디터에서 플레이 버튼을 눌러 게임을 실행합니다.
 
----
+## 👥 기여자
 
-*이 README는 Gemini CLI에 의해 생성되었습니다.*
+<a href="https://github.com/YourUsername/Guns-Survival/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=YourUsername/Guns-Survival" />
+</a>
+
+*이 README는 Gemini CLI에 의해 개선되었습니다.*
