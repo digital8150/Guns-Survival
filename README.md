@@ -2,14 +2,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Unity-6000.0.42f1-blueviolet?logo=unity" alt="Unity Version"/>
-  <a href="https://github.com/YourUsername/Guns-Survival/blob/main/LICENSE">
+  <a href="https://github.com/digital8150/Guns-Survival/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
   </a>
-  <a href="https://github.com/YourUsername/Guns-Survival/issues">
-    <img src="https://img.shields.io/github/issues/YourUsername/Guns-Survival" alt="Open Issues"/>
+  <a href="https://github.com/digital8150/Guns-Survival/issues">
+    <img src="https://img.shields.io/github/issues/digital8150/Guns-Survival" alt="Open Issues"/>
   </a>
-  <a href="https://github.com/YourUsername/Guns-Survival/pulls">
-    <img src="https://img.shields.io/github/issues-pr/YourUsername/Guns-Survival" alt="Open Pull Requests"/>
+  <a href="https://github.com/digital8150/Guns-Survival/pulls">
+    <img src="https://img.shields.io/github/issues-pr/digital8150/Guns-Survival" alt="Open Pull Requests"/>
   </a>
 </p>
 
@@ -64,8 +64,6 @@ Guns-Survival/
 
 ## 👥 기여자
 
-<a href="https://github.com/YourUsername/Guns-Survival/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=YourUsername/Guns-Survival" />
+<a href="https://github.com/digital8150/Guns-Survival/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=digital8150/Guns-Survival" />
 </a>
-
-*이 README는 Gemini CLI에 의해 개선되었습니다.*
