@@ -19,16 +19,16 @@ MonoBehaviour:
   magnetLevels:
   - level: 1
     upgradeDescription: 
-    radius: 0.5
+    radius: 1
   - level: 2
     upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
-    radius: 1
-  - level: 3
-    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
     radius: 2
+  - level: 3
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 50% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 3
   - level: 4
-    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
-    radius: 4
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 50% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 4.5
   - level: 5
-    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 100% \uC99D\uAC00\uD55C\uB2E4"
-    radius: 8
+    upgradeDescription: "\uD6A8\uACFC \uBC18\uACBD\uC774 50% \uC99D\uAC00\uD55C\uB2E4"
+    radius: 6.75
