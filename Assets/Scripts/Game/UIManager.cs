@@ -297,6 +297,7 @@ public class UIManager : MonoBehaviour
         else
         {
             skillOptions[i].skillDescriptionText.text = skillData.description;
+            skillOptions[i].skillNameText.text += " (New!)";
         }
     }
 
