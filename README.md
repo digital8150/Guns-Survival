@@ -1,13 +1,69 @@
-# Guns-Survival
-BCSD Lab Beginner 과정 3D 프로젝트 - Guns Survival 코드 리포지토리 입니다.
+# 🔥 Guns-Survival 🔥
 
-## Git LFS 알림
-100MiB를 초과하는 에셋에 대해서 git lfs를 통해 관리되고 있습니다. 저장소 클론 전에 `git lfs install` 명령어를 실행한 다음 저장소를 클론합니다.
+<p align="center">
+  <img src="https://img.shields.io/badge/Unity-6000.0.42f1-blueviolet?logo=unity" alt="Unity Version"/>
+  <a href="https://github.com/digital8150/Guns-Survival/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+  </a>
+  <a href="https://github.com/digital8150/Guns-Survival/issues">
+    <img src="https://img.shields.io/github/issues/digital8150/Guns-Survival" alt="Open Issues"/>
+  </a>
+  <a href="https://github.com/digital8150/Guns-Survival/pulls">
+    <img src="https://img.shields.io/github/issues-pr/digital8150/Guns-Survival" alt="Open Pull Requests"/>
+  </a>
+</p>
 
-만약 LigthiningData.asset 에서 오류가 발생하는 경우, 다음 명령어를 실행하면 LFS 포인터를 실제 파일로 대체하여 오류를 해결할 수 있습니다.
-```bash
-git lfs install #git lfs 설치
-git lfs pull
-#또는
-git lfs checkout
+<p align="center">
+  <img src="https://via.placeholder.com/800x450.png?text=Your+Game+Screenshot+Here" alt="Game Screenshot" width="80%">
+</p>
+
+## 🎮 프로젝트 소개
+
+**Guns-Survival**은 다양한 몬스터로부터 살아남는 것을 목표로 하는 1인칭 슈팅(FPS) 서바이벌 게임입니다. 좀비, 악어, 악마, 드래곤 등 다양한 적들이 당신을 위협합니다. 강력한 무기로 적들을 물리치고 끝까지 생존하세요!
+
+## ✨ 주요 기능
+
+*   **FPS 게임 플레이**: 실감 나는 1인칭 시점의 전투를 경험하세요.
+*   **다양한 적**: 좀비, 악어, 악마, 드래곤 등 개성 넘치는 몬스터들이 등장합니다.
+*   **무기 시스템**: 다양한 총기를 사용하여 적들을 전략적으로 상대할 수 있습니다.
+*   **스포너 시스템**: 설정된 위치에서 지속적으로 적들이 생성되어 긴장감을 유지합니다.
+*   **레벨업 시스템**: 플레이어의 성장을 통해 더욱 강력해질 수 있습니다.
+
+## 🛠️ 기술 스택
+
+*   **게임 엔진**: [Unity](https://unity.com/) `6000.0.42f1`
+*   **주요 에셋**:
+    *   [FPS Builder](https://assetstore.unity.com/packages/tools/game-toolkits/fps-builder-224206)
+    *   Monster Packs (Zombies, Crocodiles, Demons, Dragons)
+    *   Modern Weapons Pack
+*   **입력 시스템**: Unity New Input System
+
+## 📂 프로젝트 구조
+
 ```
+Guns-Survival/
+├── Assets/              # 모든 게임 리소스 (스크립트, 프리팹, 씬 등)
+│   ├── Scenes/          # 게임 씬 파일
+│   ├── Scripts/         # C# 스크립트
+│   │   ├── Player/      # 플레이어 관련 로직
+│   │   ├── Enemy/       # 적 관련 로직
+│   │   ├── Spawner/     # 적 생성 관련 로직
+│   │   └── Game/        # 게임 관리 로직
+│   ├── Prefabs/         # 재사용 가능한 게임 오브젝트
+│   └── Animations/      # 애니메이션 파일
+├── ProjectSettings/     # Unity 프로젝트 설정
+└── Packages/            # 프로젝트 종속성 패키지
+```
+
+## 🚀 시작하기
+
+1.  이 저장소를 클론하거나 다운로드합니다. (Git LFS 를 먼저 초기화 하세요)
+2.  Unity Hub를 통해 프로젝트를 엽니다. (Unity Version: `6000.0.42f1`)
+3.  `Assets/Scenes` 폴더에 있는 메인 씬(`PinePlayground.unity`)을 엽니다.
+4.  Unity 에디터에서 플레이 버튼을 눌러 게임을 실행합니다.
+
+## 👥 기여자
+
+<a href="https://github.com/digital8150/Guns-Survival/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=digital8150/Guns-Survival" />
+</a>
