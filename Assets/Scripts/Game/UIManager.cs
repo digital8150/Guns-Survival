@@ -37,7 +37,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject upgradePanel;
     [SerializeField]
+    private GameObject altRewardPanel;
+    [SerializeField]
     private SkillOptionUI[] skillOptions;
+    [SerializeField]
+    private Text upgradePanelTitle;
+    [SerializeField]
+    private Text upgradePanelDescription;
     private bool isSelecting = false;
     private int pendingSelection = 0;
 
@@ -56,6 +62,10 @@ public class UIManager : MonoBehaviour
     private Enemy _currentBoss;
     private WeaponManager _weaponManager;
 
+    //UI Events
+    public static event Action HPRewardSelected;
+    public static event Action AMMORewardSelected;
+
     private void Awake()
     {
         _skillManager = FindFirstObjectByType<SkillManager>();
@@ -73,6 +83,14 @@ public class UIManager : MonoBehaviour
         if (upgradePanel != null)
         {
             upgradePanel.SetActive(false);
+        }
+        if (altRewardPanel != null)
+        {
+            altRewardPanel.SetActive(false);
+        }
+        if (upgradePanelTitle != null)
+        {
+            upgradePanelTitle.gameObject.SetActive(false);
         }
         if (bossHPBarPanel != null)
         {
@@ -231,12 +249,16 @@ public class UIManager : MonoBehaviour
         _UIController.UpgradeSelecting = true;
 
         //pause
-        _UIController.HUDCanvas.SetActive(false);
         _scaleManager.Pause();
-        upgradePanel.SetActive(true);
         AudioListener.pause = true;
         _UIController.DisableInputBindings();
         HideCursor(false);
+        _UIController.HUDCanvas.SetActive(false);
+
+        upgradePanelTitle.text = "레벨 업!";
+        upgradePanelDescription.text = "레벨 업 보상으로 스킬을 업그레이드 하거나 새로 습득하세요!";
+        upgradePanelTitle.gameObject.SetActive(true);
+        upgradePanel.SetActive(true);
 
         KeyValuePair<SkillData, int>[] options = { skill1, skill2, skill3 };
 
@@ -261,7 +283,6 @@ public class UIManager : MonoBehaviour
             UpdateSkillDescription(i, skillData, skillLevel);
 
             skillOptions[i].skillSelectButton.onClick.AddListener(() => SelectSkillAndCloseUI(skillData));
-            Debug.Log($"스킬 옵션 {i}번 버튼에 리스너 등록 : {skillData.skillName}");
             return;
         }
         skillOptions[i].container.SetActive(false);
@@ -272,37 +293,91 @@ public class UIManager : MonoBehaviour
         if (skillLevel > 1)
         {
             skillOptions[i].skillDescriptionText.text = skillData.GetGenericLevelInfo(skillLevel).upgradeDescription;
+            skillOptions[i].NewOrUpgradeText.text = "업그레이드";
         }
         else
         {
             skillOptions[i].skillDescriptionText.text = skillData.description;
+            skillOptions[i].NewOrUpgradeText.text = "신규";
         }
     }
 
     public void SelectSkillAndCloseUI(SkillData skillData)
     {
-        Debug.Log($"버튼 클릭 : {skillData.skillName}");
         _skillManager.LearnOrUpgradeSkill(skillData);
         isSelecting = false;
+        ResumeWhenSelectingFinished();
+    }
 
-        if(pendingSelection > 0)
-        {
-            _skillManager.LevelUp();
-            pendingSelection--;
-        }
-        else
+    public void SelectHPReward()
+    {
+        HPRewardSelected?.Invoke();
+        isSelecting = false;
+        ResumeWhenSelectingFinished();
+    }
+
+    public void SelectAMMOReward()
+    {
+        AMMORewardSelected?.Invoke();
+        isSelecting = false;
+        ResumeWhenSelectingFinished();
+    }
+
+    private void ResumeWhenSelectingFinished()
+    {
+        if (!IsSelectionPending())
         {
             //RESUME
             _UIController.HUDCanvas.SetActive(true);
             upgradePanel.SetActive(false);
+            altRewardPanel.SetActive(false);
+            upgradePanelTitle.gameObject.SetActive(false);
             _scaleManager.Resume();
             AudioListener.pause = false;
             HideCursor(true);
             _UIController.EnableInputBindings();
             _UIController.UpgradeSelecting = false;
         }
-
     }
+
+    private bool IsSelectionPending()
+    {
+        if (pendingSelection > 0)
+        {
+            upgradePanel.SetActive(false);
+            altRewardPanel.SetActive(false);
+            _skillManager.LevelUp();
+            pendingSelection--;
+            return true;
+        }
+        return false;
+    }
+
+    public void ShowAltLevelupReward()
+    {
+        if (isSelecting)
+        {
+            pendingSelection++;
+            return;
+        }
+
+        isSelecting = true;
+        _UIController.UpgradeSelecting = true;
+
+        //pause
+        _scaleManager.Pause();
+        AudioListener.pause = true;
+        _UIController.DisableInputBindings();
+        HideCursor(false);
+        _UIController.HUDCanvas.SetActive(false);
+
+        upgradePanelTitle.text = "모든 스킬 최대 업그레이드";
+        upgradePanelDescription.text = "모든 스킬을 최대로 업그레이드 하였습니다. 대체 보상을 선택하세요.";
+        upgradePanelTitle.gameObject.SetActive(true);
+        altRewardPanel.SetActive(true);
+    }
+
+
 
     //------------------ 보유 스킬 인디케이터 -----------
     private void UpdateSkillIndicator(SerializableDictionary<SkillData, int> ownedSkills)
@@ -346,6 +421,7 @@ public class SkillOptionUI
 {
     public Text skillNameText;
     public Text skillDescriptionText;
+    public Text NewOrUpgradeText;
     public Image skillIconImage;
     public Button skillSelectButton;
     public GameObject container;
