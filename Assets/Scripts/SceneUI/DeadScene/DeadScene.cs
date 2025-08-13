@@ -2,14 +2,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using GameBuilders.FPSBuilder.Core.Player;
+using UnityEngine.UI;
 
 public class DeadScene : MonoBehaviour
 {
+    [Header("DeadSceneUI")]
     [SerializeField]
     private CanvasGroup gameOverPanel;
-
+    [Header("페이드 인 시간")]
     [SerializeField]
     private float fadeDuration = 2.0f;
+    [Header("플레이 한 시간")]
+    [SerializeField]
+    private Text playTimeText;
 
     void Start()
     {
@@ -47,13 +52,22 @@ public class DeadScene : MonoBehaviour
             gameOverPanel.interactable = true;
             gameOverPanel.blocksRaycasts = true;
         }
+
+        //플레이 시간 표시, 게임 정지, 마우스 활성화
+        if (playTimeText != null)
+        {
+            float timeInSec = Time.timeSinceLevelLoad;
+            int minutes = Mathf.FloorToInt(timeInSec / 60F);
+            int seconds = Mathf.FloorToInt(timeInSec % 60F);
+            playTimeText.text = string.Format("생존 시간 : {0:00}:{1:00}", minutes, seconds);
+        }
+
+        Time.timeScale = 0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     //------------------------ 버튼 메소드 ----------------------------
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
     public void ExitToMain()
     {
         //이름이 변하지 않아 그냥 하드코딩 처리
