@@ -158,6 +158,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         public event Action HitEvent;
 
         public static event Action<float, float> OnHealthChanged;
+        public static event Action OnPlayerDied;
 
         #endregion
 
@@ -501,6 +502,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         /// </summary>
         protected virtual void Die()
         {
+            OnPlayerDied?.Invoke();
             SetNormalSnapshot();
             gameObject.SetActive(false);
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using GameBuilders.FPSBuilder.Core.Player;
 
 public class DeadScene : MonoBehaviour
 {
@@ -61,5 +62,15 @@ public class DeadScene : MonoBehaviour
     public void ExitToBackGround()
     {
         Application.Quit();
+    }
+
+    //---------------------------- 플레이어 죽음 이벤트 처리 ------------------------
+    private void OnEnable()
+    {
+        HealthController.OnPlayerDied += HandlePlayerDead;
+    }
+    private void OnDisable()
+    {
+        HealthController.OnPlayerDied -= HandlePlayerDead;
     }
 }
