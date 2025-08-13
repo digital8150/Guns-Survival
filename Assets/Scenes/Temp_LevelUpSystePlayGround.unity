@@ -4638,6 +4638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1796941930}
   fadeDuration: 2
+  playTimeText: {fileID: 0}
 --- !u!1001 &840700721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9710,6 +9711,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5426585620885707226, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435931282204471518, guid: b35c0bc36248d6340acde9f0669c268a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 5450469081611569155, guid: b35c0bc36248d6340acde9f0669c268a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9900,6 +9911,7 @@ PrefabInstance:
     - {fileID: 1533711420126848934, guid: b35c0bc36248d6340acde9f0669c268a, type: 3}
     - {fileID: 1533711419708100247, guid: b35c0bc36248d6340acde9f0669c268a, type: 3}
     - {fileID: 1533711420369676101, guid: b35c0bc36248d6340acde9f0669c268a, type: 3}
+    - {fileID: 1378346718440933170, guid: b35c0bc36248d6340acde9f0669c268a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b35c0bc36248d6340acde9f0669c268a, type: 3}
