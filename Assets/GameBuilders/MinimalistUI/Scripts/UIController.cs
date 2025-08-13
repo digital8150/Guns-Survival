@@ -1,7 +1,6 @@
 ﻿using GameBuilders.FPSBuilder.Core.Inventory;
 using GameBuilders.FPSBuilder.Core.Managers;
 using GameBuilders.FPSBuilder.Core.Player;
-
 using TMPro;
 
 using UnityEngine;
@@ -19,6 +18,7 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         [SerializeField]
         private GameObject m_HUDCanvas;
+        public GameObject HUDCanvas => m_HUDCanvas;
 
         [SerializeField]
         private GameObject m_DeathScreenCanvas;
@@ -50,6 +50,8 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         private bool m_Restarting;
         private bool m_About;
+        private bool m_UpgradeSelecting;
+        public bool UpgradeSelecting { get { return m_UpgradeSelecting; } set { m_UpgradeSelecting = value; } }
 
         private InputActionMap m_WeaponInputBindings;
         private InputActionMap m_MovementInputBindings;
@@ -106,6 +108,10 @@ namespace GameBuilders.MinimalistUI.Scripts
 
         private void Pause()
         {
+            if (m_UpgradeSelecting)
+            {
+                return;
+            }
             m_WeaponInputBindings.Disable();
             m_MovementInputBindings.Disable();
 
@@ -115,6 +121,22 @@ namespace GameBuilders.MinimalistUI.Scripts
             m_DeathScreenCanvas.SetActive(false);
             AudioListener.pause = true;
             HideCursor(false);
+        }
+
+        public void DisableInputBindings()
+        {
+            if(m_WeaponInputBindings != null)
+                m_WeaponInputBindings.Disable();
+            if(m_MovementInputBindings != null)
+                m_MovementInputBindings.Disable();
+        }
+
+        public void EnableInputBindings()
+        {
+            if (m_WeaponInputBindings != null)
+                m_WeaponInputBindings.Enable();
+            if (m_MovementInputBindings != null)
+                m_MovementInputBindings.Enable();
         }
 
         private void DeathScreen()
@@ -129,41 +151,6 @@ namespace GameBuilders.MinimalistUI.Scripts
             m_DeathScreenCanvas.SetActive(true);
 
             AudioListener.pause = false;
-
-            m_DeathBlackScreen.Show = true;
-            Invoke(nameof(LoadLastLevel), 4f);
-        }
-
-        public void Restart()
-        {
-            m_WeaponInputBindings.Disable();
-            m_MovementInputBindings.Disable();
-
-            m_Restarting = true;
-            Time.timeScale = 1;
-            m_PauseBlackScreen.Show = true;
-            Invoke(nameof(LoadLastLevel), 1f);
-        }
-
-        public void About()
-        {
-            m_About = !m_About;
-            m_AboutView.SetActive(m_About);
-        }
-
-        private void LoadLastLevel ()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        
-        public void Quit ()
-        {
-            AudioListener.pause = false;
-            Application.Quit();
-
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-            #endif
         }
 
         private void OnApplicationQuit ()

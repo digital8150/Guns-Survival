@@ -852,7 +852,7 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
     ReservedCFE: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;PUBLISHING_TOOLS_ASSET_STORE_RELEASE;AREA_OF_EFFECT_REGIONS_ASSET_STORE_RELEASE
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
     WebGL: UNITY_POST_PROCESSING_STACK_V2
     Windows Store Apps: MOBILE_INPUT;UNITY_POST_PROCESSING_STACK_V2
@@ -979,7 +979,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 407924a0-60b9-4f74-92d9-10fb7d0c5e09
   framebufferDepthMemorylessMode: 0

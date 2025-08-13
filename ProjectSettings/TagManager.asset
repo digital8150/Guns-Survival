@@ -9,6 +9,7 @@ TagManager:
   - Medkit
   - Enemy
   - EXP
+  - Boss
   layers:
   - Default
   - TransparentFX

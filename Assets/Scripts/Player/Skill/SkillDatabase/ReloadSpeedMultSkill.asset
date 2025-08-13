@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: ReloadSpeedMultSkill
   m_EditorClassIdentifier: 
   skillName: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4 \uC99D\uAC00"
-  description: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 5% \uC99D\uAC00\uD55C\uB2E4"
-  skillIcon: {fileID: 0}
+  description: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 25% \uC99D\uAC00\uD55C\uB2E4"
+  skillIcon: {fileID: 21300000, guid: b48fae1f571997e458fc524eedad5c67, type: 3}
   statType: 3
   playerStatLevels:
   - level: 1
     upgradeDescription: 
-    value: 1.05
-  - level: 2
-    upgradeDescription: 5 -> 10%
-    value: 1.1
-  - level: 3
-    upgradeDescription: 10 -> 15%
-    value: 1.15
-  - level: 4
-    upgradeDescription: 15 -> 20%
-    value: 1.2
-  - level: 5
-    upgradeDescription: 20 -> 25%
     value: 1.25
+  - level: 2
+    upgradeDescription: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 50% \uC99D\uAC00\uD55C\uB2E4"
+    value: 1.5
+  - level: 3
+    upgradeDescription: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 75% \uC99D\uAC00\uD55C\uB2E4"
+    value: 1.75
+  - level: 4
+    upgradeDescription: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 100% \uC99D\uAC00\uD55C\uB2E4"
+    value: 2
+  - level: 5
+    upgradeDescription: "\uC7AC\uC7A5\uC804 \uC18D\uB3C4\uAC00 125% \uC99D\uAC00\uD55C\uB2E4"
+    value: 2.25

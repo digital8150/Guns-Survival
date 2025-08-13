@@ -633,6 +633,26 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
             }
         }
 
+        public void RefillAmmoReward()
+        {
+            StartCoroutine(RefillAmmo());
+        }
+
+        public void MedkitReward()
+        {
+            HealthController healthController = m_FPController.GetComponent<HealthController>();
+
+            if (healthController != null)
+            {
+                //체력을 50만큼 회복
+                healthController.Heal(50, true);
+            }
+
+            //Sound Play
+            m_PlayerBodySource.ForcePlay(m_ItemPickupSound, m_ItemPickupVolume);
+        }
+
+
         /// <summary>
         /// Checks the target object to analyze if it is a interactive object.
         /// </summary>
@@ -936,6 +956,43 @@ namespace GameBuilders.FPSBuilder.Core.Inventory
                     return;
                 }
             }
+        }
+
+        //초기 무기 장착
+        public void EquipInitWeapon(Gun weaponPrefab)
+        {
+            int weaponIndex = GetWeaponIndexOnList(weaponPrefab.Identifier);
+            
+            //무기 없으면 추가
+            if(weaponIndex == -1)
+            {
+                m_WeaponList.Add(weaponPrefab);
+                weaponIndex = m_WeaponList.Count - 1;
+            }
+
+            //기존 장착 무기 해제
+            for(int i = 0; i < m_EquippedWeaponsList.Count; i++)
+            {
+                if(m_EquippedWeaponsList[i] != null)
+                    m_EquippedWeaponsList[i].Viewmodel.SetActive(false);
+                m_EquippedWeaponsList[i] = null;
+            }
+
+            //첫 번째 슬롯에 선택한 무기 장착
+            if (m_EquippedWeaponsList.Count > 0)
+                m_EquippedWeaponsList[0] = m_WeaponList[weaponIndex];
+            else
+                m_EquippedWeaponsList.Add(m_WeaponList[weaponIndex]);
+
+            //선택 무기 활성화
+            Gun newWeapon = m_EquippedWeaponsList[0];
+            if(newWeapon != null)
+            {
+                newWeapon.InitializeMagazineAsDefault();
+                Select(newWeapon, newWeapon.CurrentRounds);
+            }
+
+            CalculateWeight();
         }
 
         /// <summary>

@@ -62,10 +62,28 @@ public class SkillManager : MonoBehaviour
     //액티브 및 유틸리티 스킬 컨트롤러
     private Dictionary<SkillData, SkillController> activeSkillControllers = new Dictionary<SkillData, SkillController>();
 
+    //레퍼런스
+    [Header("컴포넌트 참조")]
+    [SerializeField]
+    private UIManager _UIManager;
+
+    //이벤트
+    public static event Action<SerializableDictionary<SkillData, int>> OnSkillsUpdated;
+
     private void Start()
     {
         playerStatsManager = GetComponent<PlayerStatsManager>();
         skillDatabase = FindFirstObjectByType<SkillDatabase>();
+    }
+
+    private void OnEnable()
+    {
+        EXPManager.OnLevelUp += LevelUp;
+    }
+
+    private void OnDisable()
+    {
+        EXPManager.OnLevelUp -= LevelUp;
     }
 
     /// <summary>
@@ -75,27 +93,24 @@ public class SkillManager : MonoBehaviour
     {
         if (skillDatabase != null)
         {
-
-            //임시 테스트 구현 : 랜덤으로 스킬 슥듭 또는 업그레이드
-            //TODO : 실제 게임 구현에서는 증강 선택지 시스템을 구현해야 함.
             if(ownedSkills.Count < maxSkillCount)
             {
                 //최대 보유 스킬보다 적은 스킬을 보유 중인 경우
-                //실제 게임에서는 레벨업 선택지 제공 구현해야 함
+                //모든 스킬 데이터 베이스 목록에서 스킬 3개 선택
                 List<SkillData> cadinates = new List<SkillData>();
-                foreach(var entry in skillDatabase.skillDatas) //후보는 스킬 데이터베이스의 모든 스킬 중에서 가져온다
+                foreach (var entry in skillDatabase.skillDatas) //후보는 스킬 데이터베이스의 모든 스킬 중에서 가져온다
                 {
-                    if ( !ownedSkills.ContainsKey(entry.skillData) || entry.skillData.MaxLevel > ownedSkills[entry.skillData])
-                    {
-                        cadinates.Add(entry.skillData); //최대 레벨이 아닌 것만 후보에 등록
-                    }
+                    RegisterSkillCandidate(cadinates, entry);
                 }
                 if (cadinates.Count == 0)
                 {
-                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    _UIManager.ShowAltLevelupReward();
                     return;
                 }
-                LearnOrUpgradeSkill(cadinates[UnityEngine.Random.Range(0, cadinates.Count)]); //후보에서 획득 또는 레벨업
+
+                //선택지 최대 3개 뽑아서 UI 호출
+                SelectFromCadinates(cadinates);
+
             }
             else
             {
@@ -103,24 +118,75 @@ public class SkillManager : MonoBehaviour
                 List<SkillData> cadinates = new List<SkillData>();
                 foreach (var entry in ownedSkills) //후보는 보유하고 있는 스킬 목록에서 가져온다
                 {
-                    if(entry.Key.MaxLevel > entry.Value)
-                    {
-                        cadinates.Add(entry.Key); //최대 레벨이 아닌 것만 후보에 등록
-                    }
+                    RegisterSkillCadinates(cadinates, entry);
                 }
 
                 if (cadinates.Count == 0)
                 {
-                    Debug.Log("모든 스킬을 레벨 업 했습니다.");
+                    _UIManager.ShowAltLevelupReward();
                     return;
                 }
-                LearnOrUpgradeSkill(cadinates[UnityEngine.Random.Range(0, cadinates.Count)]); //후보에서 레벨업
+
+                //선택지 최대 3개 뽑아서 UI 호출
+                SelectFromCadinates(cadinates);
+
             }
+            
         }
         else
         {
             Debug.LogError("스킬 데이터베이스가 null이었습니다.");
         }
+    }
+
+    private void RegisterSkillCadinates(List<SkillData> cadinates, KeyValuePair<SkillData, int> entry)
+    {
+        if (entry.Key.MaxLevel > entry.Value)
+        {
+            cadinates.Add(entry.Key); //최대 레벨이 아닌 것만 후보에 등록
+        }
+    }
+
+    private void RegisterSkillCandidate(List<SkillData> cadinates, SkillEntry entry)
+    {
+        if (!ownedSkills.ContainsKey(entry.skillData) || entry.skillData.MaxLevel > ownedSkills[entry.skillData])
+        {
+            cadinates.Add(entry.skillData); //최대 레벨이 아닌 것만 후보에 등록
+        }
+    }
+
+    private void SelectFromCadinates(List<SkillData> cadinates)
+    {
+        SkillData[] upgradeOptions = new SkillData[3];
+        List<SkillData> availableOptions = new List<SkillData>(cadinates);
+        int count = Mathf.Min(3, availableOptions.Count);
+
+        for (int i = 0; i < count; i++)
+        {
+            int randomIdx = UnityEngine.Random.Range(0, availableOptions.Count);
+            upgradeOptions[i] = availableOptions[randomIdx];
+            availableOptions.RemoveAt(randomIdx);
+        }
+
+        _UIManager.ShowUpgradeUI(
+            new KeyValuePair<SkillData, int>(upgradeOptions[0], GetTargetLevelOfSkill(upgradeOptions[0])),
+            new KeyValuePair<SkillData, int>(upgradeOptions[1], GetTargetLevelOfSkill(upgradeOptions[1])),
+            new KeyValuePair<SkillData, int>(upgradeOptions[2], GetTargetLevelOfSkill(upgradeOptions[2])));
+    }
+
+    private int GetTargetLevelOfSkill(SkillData skill)
+    {
+        if(skill == null)
+        {
+            return -1;
+        }
+
+        if (!ownedSkills.ContainsKey(skill))
+        {
+            return 1;
+        }
+
+        return ownedSkills[skill] + 1;
     }
 
     /// <summary>
@@ -161,12 +227,14 @@ public class SkillManager : MonoBehaviour
                     playerStatsManager.SetExpGainMult(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 case PlayerStatType.ReloadSpeedMult:
-                    Debug.LogWarning("재장전 속도 증가는 현재 구현 필요");
+                    playerStatsManager.SetReloadAnimationSpeed(playerStatSkill.GetLevelInfo(newLevel).value);
                     break;
                 default:
                     throw new NotImplementedException($"구현 되지 않은 PlayerStatType에 대한 처리 발생 : {playerStatSkill.statType}");
             }
             Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
+            //스킬 레벨업 또는 습득 후 UI 업데이트
+            OnSkillsUpdated?.Invoke(ownedSkills);
             return;
         }
 
@@ -182,9 +250,24 @@ public class SkillManager : MonoBehaviour
                 activeSkillControllers.Add(areaDamageSkillData, controller);
             }
             (activeSkillControllers[areaDamageSkillData] as AreaDamageSkillController)?.UpdateSkillLevel(newLevel);
-            Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
+            
         }
 
+        if(skillData is MagnetSkillData magnetSkillData)
+        {
+            if(!activeSkillControllers.ContainsKey(magnetSkillData))
+            {
+                MagnetSkillController controller = gameObject.AddComponent<MagnetSkillController>();
+                controller.skillData = magnetSkillData;
+                activeSkillControllers.Add(magnetSkillData, controller);
+            }
+            (activeSkillControllers[magnetSkillData] as MagnetSkillController)?.UpdateSkillLevel(newLevel);
+
+        }
+
+        //스킬 레벨업 또는 습득 후 UI 업데이트
+        Debug.Log($"스킬 레벨업(또는 습득)! : {skillData.skillName} | {skillData.description} | {skillData.GetGenericLevelInfo(newLevel).upgradeDescription}");
+        OnSkillsUpdated?.Invoke(ownedSkills);
     }
 
 
