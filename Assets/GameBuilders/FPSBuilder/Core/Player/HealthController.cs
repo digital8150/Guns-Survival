@@ -140,6 +140,11 @@ namespace GameBuilders.FPSBuilder.Core.Player
         [Tooltip("The dead character prefab. (Instantiated when the character dies).")]
         protected GameObject m_DeadCharacter;
 
+        [SerializeField]
+        private Collider m_PlayerCollider;
+        [SerializeField]
+        private Renderer[] m_PlayerRenderers;
+
         #region EVENTS
 
         /// <summary>
@@ -158,6 +163,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         public event Action HitEvent;
 
         public static event Action<float, float> OnHealthChanged;
+        public static event Action OnPlayerDied;
 
         #endregion
 
@@ -168,6 +174,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         private float m_TotalVitality;
         private float m_CurrentVitality;
         private float m_TempVitality;
+        private bool m_HasDied;
 
         #region PROPERTIES
 
@@ -268,6 +275,9 @@ namespace GameBuilders.FPSBuilder.Core.Player
             m_FPController = GetComponent<FirstPersonCharacterController>();
             m_FPController.LandingEvent += FallDamage;
 
+            m_PlayerCollider = GetComponent<Collider>();
+            m_PlayerRenderers = GetComponentsInChildren<Renderer>();
+
             // Audio Sources
             m_PlayerHealthSource = AudioManager.Instance.RegisterSource("[AudioEmitter] CharacterHealth", transform.root);
             m_PlayerBreathSource = AudioManager.Instance.RegisterSource("[AudioEmitter] CharacterGeneric", transform.root);
@@ -329,7 +339,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
             m_FPController.LowerBodyDamaged = Limping;
             m_FPController.TremorTrauma = Trembling;
 
-            if (GameplayManager.Instance.IsDead && m_DeadCharacter != null)
+            if (GameplayManager.Instance.IsDead && m_DeadCharacter != null && !m_HasDied)
             {
                 Die();
             }
@@ -501,9 +511,19 @@ namespace GameBuilders.FPSBuilder.Core.Player
         /// </summary>
         protected virtual void Die()
         {
-            SetNormalSnapshot();
-            gameObject.SetActive(false);
+            if (m_HasDied) return;
+            m_HasDied = true;
 
+            OnPlayerDied?.Invoke();
+            SetNormalSnapshot();
+
+            if(m_FPController != null) m_FPController.enabled = false;
+            if(m_PlayerCollider != null) m_PlayerCollider.enabled = false;
+            if(m_PlayerRenderers != null)
+            {
+                foreach(Renderer r in m_PlayerRenderers)
+                    if(r != null) r.enabled = false;
+            }
             Transform t = transform;
             Instantiate(m_DeadCharacter, t.position, t.rotation);
         }
