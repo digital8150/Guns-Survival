@@ -48,6 +48,7 @@ public class TimeManager : MonoBehaviour
     private void PlayerDeathSq()
     {
         PlayerPrefs.SetFloat("SurvivalTime", ElapsedTime);
+        PlayerPrefs.SetInt("PlayerScore", GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score);
         PlayerPrefs.Save();
         StartCoroutine(LoadGameOverSceneAfterDelay(3f));
     }
@@ -64,6 +65,7 @@ public class TimeManager : MonoBehaviour
         if(isGameCleared) return;
         isGameCleared = true;
         GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score += clearScore;
+        PlayerPrefs.SetInt("PlayerScore", GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score);
 
         StartCoroutine(LoadGameClearSceneAfterDelay(3f));
     }
