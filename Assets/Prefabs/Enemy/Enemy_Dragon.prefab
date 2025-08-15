@@ -2678,7 +2678,7 @@ GameObject:
   - component: {fileID: 5125474138088149689}
   - component: {fileID: 8482652010906149308}
   m_Layer: 0
-  m_Name: Enemy_DragonPurple
+  m_Name: Enemy_Dragon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2736,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Dragon
-  hp: 100
+  hp: 400
   currentHp: 0
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
