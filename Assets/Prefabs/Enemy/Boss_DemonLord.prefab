@@ -1759,7 +1759,7 @@ GameObject:
   - component: {fileID: 8284347772555154704}
   - component: {fileID: 852740689210711985}
   m_Layer: 0
-  m_Name: Enemy_DemonLord
+  m_Name: Boss_DemonLord
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1820,10 +1820,10 @@ MonoBehaviour:
   enemyName: DemonLord
   hp: 100
   currentHp: 0
-  destroyDelay: 4
+  destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
-  exp: 30
+  exp: 300
   capsuleColor: {r: 1, g: 0.5624503, b: 0, a: 1}
   animator1: {fileID: 1812497180872820598}
   animator2: {fileID: 0}

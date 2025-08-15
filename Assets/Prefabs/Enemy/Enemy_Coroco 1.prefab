@@ -122,13 +122,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7b696b6231814d8c82a5e56f0aa1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: ExCrocodile
   hp: 100
   currentHp: 0
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
   exp: 20
-  capsuleColor: {r: 0, g: 0.9496107, b: 1, a: 1}
+  capsuleColor: {r: 0, g: 0.43571344, b: 0.45911938, a: 1}
   animator1: {fileID: 6050087459441920461}
   animator2: {fileID: 8765343248132476927}
 --- !u!114 &4897782530400224798

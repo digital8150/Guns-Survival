@@ -2678,8 +2678,8 @@ GameObject:
   - component: {fileID: 5125474138088149689}
   - component: {fileID: 8482652010906149308}
   m_Layer: 0
-  m_Name: Enemy_DragonPurple
-  m_TagString: Enemy
+  m_Name: FinalBoss_Dragon
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2694,7 +2694,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.22, y: 3.68, z: -43.91}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7411660745623093963}
@@ -2735,14 +2735,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7b696b6231814d8c82a5e56f0aa1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Dragon
+  enemyName: FinalBossDragon
   hp: 100
   currentHp: 0
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
-  exp: 40
-  capsuleColor: {r: 0.35625982, g: 0, b: 0.55345905, a: 1}
+  exp: 500
+  capsuleColor: {r: 0.7924528, g: 0.12709136, b: 0.1339485, a: 1}
   animator1: {fileID: 7314022258026853924}
   animator2: {fileID: 0}
 --- !u!114 &4573738031828235228
@@ -2983,7 +2983,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6a1d1f1e0ac339489c17274f110669a, type: 2}
+  - {fileID: 2100000, guid: c8239f6eb50865f458f0de9d8eb8a6bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
