@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using Newtonsoft.Json; // Newtonsoft.Json 네임스페이스 추가
 
 public class LeaderboardHttpService
 {
@@ -19,7 +20,7 @@ public class LeaderboardHttpService
     // Top 10 랭킹 가져오기
     public void GetTop10(Action<List<ScoreEntry>> onSuccess, Action<string> onError)
     {
-        _coroutineRunner.StartCoroutine(GetRequest<List<ScoreEntry>>($"{_baseUrl}/leaderboard/top10", onSuccess, onError, true));
+        _coroutineRunner.StartCoroutine(GetRequest<List<ScoreEntry>>($"{_baseUrl}/leaderboard/top10", onSuccess, onError));
     }
 
     // 점수 등록
@@ -31,7 +32,7 @@ public class LeaderboardHttpService
     // 특정 ID 주변 랭킹 가져오기
     public void GetAroundId(string scoreId, Action<List<ScoreEntry>> onSuccess, Action<string> onError)
     {
-        _coroutineRunner.StartCoroutine(GetRequest<List<ScoreEntry>>($"{_baseUrl}/leaderboard/{scoreId}/around", onSuccess, onError, true));
+        _coroutineRunner.StartCoroutine(GetRequest<List<ScoreEntry>>($"{_baseUrl}/leaderboard/{scoreId}/around", onSuccess, onError));
     }
 
     // 특정 점수 삭제
@@ -46,8 +47,7 @@ public class LeaderboardHttpService
         _coroutineRunner.StartCoroutine(DeleteRequest($"{_baseUrl}/leaderboard", onSuccess, onError));
     }
 
-
-    private IEnumerator GetRequest<T>(string url, Action<T> onSuccess, Action<string> onError, bool isList = false)
+    private IEnumerator GetRequest<T>(string url, Action<T> onSuccess, Action<string> onError)
     {
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
@@ -62,22 +62,14 @@ public class LeaderboardHttpService
                 string json = request.downloadHandler.text;
                 try
                 {
-                    T result;
-                    if (isList)
-                    {
-                        string wrappedJson = $"{{\"items\":{json}}}";
-                        var wrapper = JsonUtility.FromJson<ScoreEntryListWrapper>(wrappedJson);
-                        result = (T)(object)wrapper.items;
-                    }
-                    else
-                    {
-                        result = JsonUtility.FromJson<T>(json);
-                    }
+                    // JsonUtility 대신 JsonConvert.DeserializeObject 사용
+                    // 이제 JSON 배열을 직접 List<T>로 변환 가능
+                    T result = JsonConvert.DeserializeObject<T>(json);
                     onSuccess?.Invoke(result);
                 }
                 catch (Exception e)
                 {
-                    onError?.Invoke($"JSON Parse Error: {e.Message}");
+                    onError?.Invoke($"JSON Parse Error: {e.Message}\nReceived JSON: {json}");
                 }
             }
         }
@@ -85,7 +77,8 @@ public class LeaderboardHttpService
 
     private IEnumerator PostRequest<T>(string url, object payload, Action<T> onSuccess, Action<string> onError)
     {
-        string jsonPayload = JsonUtility.ToJson(payload);
+        // JsonUtility 대신 JsonConvert.SerializeObject 사용하여 페이로드 직렬화
+        string jsonPayload = JsonConvert.SerializeObject(payload);
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonPayload);
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
@@ -102,14 +95,16 @@ public class LeaderboardHttpService
             }
             else
             {
+                string json = request.downloadHandler.text;
                 try
                 {
-                    var result = JsonUtility.FromJson<T>(request.downloadHandler.text);
+                    // JsonUtility 대신 JsonConvert.DeserializeObject 사용
+                    var result = JsonConvert.DeserializeObject<T>(json);
                     onSuccess?.Invoke(result);
                 }
                 catch (Exception e)
                 {
-                    onError?.Invoke($"JSON Parse Error: {e.Message}");
+                    onError?.Invoke($"JSON Parse Error: {e.Message}\nReceived JSON: {json}");
                 }
             }
         }
