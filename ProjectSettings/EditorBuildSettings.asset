@@ -5,17 +5,23 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/PublisherTools/LoadingScreen/LoadingScreen.unity
-    guid: 852815e4a99635242b5bd8a34a601d4e
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
+    path: Assets/Scenes/GameScene/TitleScene.unity
     guid: 832056d0510027c4d9cdea3dae437b54
+  - enabled: 1
+    path: Assets/Scenes/GameScene/LoadingScene.unity
+    guid: bd2d5d5b8ce5ffe49a0ae4283201231f
   - enabled: 1
     path: Assets/GameBuilders/Environment Pack/Scenes/Pine.unity
     guid: 4188f576ed0a42541965108b9659a080
   - enabled: 1
-    path: Assets/Scenes/Temp_LevelUpSystePlayGround.unity
+    path: Assets/Scenes/MainScene/Temp_LevelUpSystePlayGround.unity
     guid: b55b43a10dbdee64d8aef8c79781111b
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameOverScene.unity
+    guid: f81a4cd2e3f41b24a8eeb253c8452662
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameClear.unity
+    guid: 5e40b78ee9f3e4f4b83ce347dbe0a587
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

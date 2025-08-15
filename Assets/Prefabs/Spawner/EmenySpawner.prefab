@@ -45,16 +45,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 3
-  waves:
+  spawnWaves:
   - waveName: Wave1
-    waveStartDelay: 3
-    monsterGroups:
-    - monsterPrefab: {fileID: 3094641989431790095, guid: a42992095553d4742a97d3f928e7defe,
-        type: 3}
-      numberOfMonsters: 3
-      spawnInterval: 2
-    - monsterPrefab: {fileID: 1599731724452271769, guid: e9811b5de53c549448fda06ec24f7122,
-        type: 3}
-      numberOfMonsters: 3
-      spawnInterval: 2
-    nextWaveDelay: 0
+    startTime: 1
+    endTime: 150
+    spawnInterval: 7
+    monsterPrefab: {fileID: 3094641989431790095, guid: a42992095553d4742a97d3f928e7defe,
+      type: 3}
+    isBoss: 0
+    isFinalBoss: 0
+    nextSpawnTime: 0
+    hasSpawned: 0
+  - waveName: Wave2
+    startTime: 151
+    endTime: 300
+    spawnInterval: 7
+    monsterPrefab: {fileID: 3094641989431790095, guid: 7d5f4c1e2d52c49418d7068ba9e0493b,
+      type: 3}
+    isBoss: 0
+    isFinalBoss: 0
+    nextSpawnTime: 0
+    hasSpawned: 0
+  - waveName: Boss1
+    startTime: 301
+    endTime: 450
+    spawnInterval: 0
+    monsterPrefab: {fileID: 1599731724452271769, guid: e9811b5de53c549448fda06ec24f7122,
+      type: 3}
+    isBoss: 1
+    isFinalBoss: 0
+    nextSpawnTime: 0
+    hasSpawned: 0
+  - waveName: Wave3
+    startTime: 451
+    endTime: 600
+    spawnInterval: 0
+    monsterPrefab: {fileID: 6267619021521361520, guid: 8a4df7f31c720d949a94feee843deccb,
+      type: 3}
+    isBoss: 0
+    isFinalBoss: 0
+    nextSpawnTime: 0
+    hasSpawned: 0
+  - waveName: Wave4
+    startTime: 601
+    endTime: 750
+    spawnInterval: 5
+    monsterPrefab: {fileID: 6267619021521361520, guid: 8a4df7f31c720d949a94feee843deccb,
+      type: 3}
+    isBoss: 0
+    isFinalBoss: 0
+    nextSpawnTime: 0
+    hasSpawned: 0
+  - waveName: FinalBoss
+    startTime: 751
+    endTime: 900
+    spawnInterval: 5
+    monsterPrefab: {fileID: 6267619021521361520, guid: ff4e71c8c9b7e7645b460babc8eace55,
+      type: 3}
+    isBoss: 0
+    isFinalBoss: 1
+    nextSpawnTime: 0
+    hasSpawned: 0

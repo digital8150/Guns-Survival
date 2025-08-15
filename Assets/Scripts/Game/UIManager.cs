@@ -32,6 +32,18 @@ public class UIManager : MonoBehaviour
     private GameObject bossHPBarPanel;
     [SerializeField]
     private Text text_BossName;
+    [SerializeField]
+    private Text text_BossHP;
+
+    [Header("UI요소 : 파이널 보스 HP")]
+    [SerializeField]
+    private Image image_FinalBossHPBar;
+    [SerializeField]
+    private GameObject finalbossHPBarPanel;
+    [SerializeField]
+    private Text text_FinalBossName;
+    [SerializeField]
+    private Text text_FinalBossHP;
 
     [Header("UI요소 : 레벨업 선택지")]
     [SerializeField]
@@ -60,11 +72,13 @@ public class UIManager : MonoBehaviour
     private TimeScaleManager _scaleManager;
     private UIController _UIController;
     private Enemy _currentBoss;
+    private Enemy _currentFinalBoss;
     private WeaponManager _weaponManager;
 
     //UI Events
     public static event Action HPRewardSelected;
     public static event Action AMMORewardSelected;
+    public static event Action OnFinalBossDied;
 
     private void Awake()
     {
@@ -72,30 +86,27 @@ public class UIManager : MonoBehaviour
         _scaleManager = FindFirstObjectByType<TimeScaleManager>();
         _weaponManager = FindFirstObjectByType<WeaponManager>();
         _UIController = FindFirstObjectByType<UIController>();
+
         if(_weaponManager == null)
-        {
             Debug.LogError("웨폰매니저 못 찾음!");
-        }
+
         if (_UIController == null)
-        {
             Debug.LogError("UIController 찾지 못함!");
-        }
+
         if (upgradePanel != null)
-        {
             upgradePanel.SetActive(false);
-        }
+
         if (altRewardPanel != null)
-        {
             altRewardPanel.SetActive(false);
-        }
+
         if (upgradePanelTitle != null)
-        {
             upgradePanelTitle.gameObject.SetActive(false);
-        }
+
         if (bossHPBarPanel != null)
-        {
             bossHPBarPanel.SetActive(false);
-        }
+
+        if (finalbossHPBarPanel!= null)
+            finalbossHPBarPanel.SetActive(false);
     }
 
     private void Start()
@@ -105,7 +116,8 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        HandleBossUI();
+        HandleBossUI("Boss", ref _currentBoss, bossHPBarPanel, null, text_BossName, null);
+        HandleBossUI("FinalBoss", ref _currentFinalBoss, finalbossHPBarPanel, null, text_FinalBossName, null);
     }
 
     //------------ 라이프 사이클 ----------------------
@@ -127,6 +139,11 @@ public class UIManager : MonoBehaviour
         TimeManager.OnTimeChanged -= UpdateTime;
         SkillManager.OnSkillsUpdated -= UpdateSkillIndicator;
         WeaponSelectionManager.OnWeaponSelected -= EquipInitialWeapon;
+
+        if (_currentBoss != null)
+            _currentBoss.OnHealthChanged -= UpdateBossHP;
+        if( _currentFinalBoss != null)
+            _currentFinalBoss.OnHealthChanged -= UpdateFinalBossHP;
     }
 
     //----------------- TIME ---------------------------
@@ -159,43 +176,59 @@ public class UIManager : MonoBehaviour
             image_HPBar.fillAmount = currentHP / maxHp;
     }
 
-    //--------------------- BOSS HP -----------------------
-    private void HandleBossUI()
+    //--------------------- Boss ,FinalBoss HP -----------------------
+    private void HandleBossUI(string tag, ref Enemy currentEnemy, GameObject hpBarPanel, Image hpBarImage, Text nameText, Text hpText)
     {
-        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        GameObject enemyObj = GameObject.FindGameObjectWithTag(tag);
 
         //씬에 보스가 있는 경우
-        if(boss != null)
+        if(enemyObj != null)
         {
-            Enemy bossEnemy = boss.GetComponent<Enemy>();
+            Enemy enemy = enemyObj.GetComponent<Enemy>();
 
-            if(_currentBoss != bossEnemy)
+            if(currentEnemy != enemy)
             {
-                if (_currentBoss != null)
-                    _currentBoss.OnHealthChanged -= UpdateBossHP;
+                if(currentEnemy != null)
+                {
+                    currentEnemy.OnHealthChanged -= (tag == "Boss")
+                        ? UpdateBossHP : UpdateFinalBossHP;
 
-                _currentBoss = bossEnemy;
-                _currentBoss.OnHealthChanged += UpdateBossHP;
+                    if (tag == "FinalBoss")
+                        currentEnemy.OnDied -= HandleFinalBossDeath;
+                }
+
+                currentEnemy = enemy;
+                currentEnemy.OnHealthChanged += (tag == "Boss") 
+                    ? UpdateBossHP : UpdateFinalBossHP;
+
+                if (tag == "FinalBoss")
+                    currentEnemy.OnDied += HandleFinalBossDeath;
             }
 
-            if (bossHPBarPanel != null)
-                bossHPBarPanel.SetActive(true);
-
-            if (text_BossName != null)
-                text_BossName.text = _currentBoss.GetName();
-
-            UpdateBossHP(_currentBoss.GetCurrentHealth(), _currentBoss.GetMaxHealth());
+            //UI 초기화
+            if(hpBarPanel != null && !hpBarPanel.activeSelf)
+                hpBarPanel.SetActive(true);
+            if (nameText != null)
+                nameText.text = currentEnemy.GetName();
+            if (hpBarImage != null)
+                hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
+                    / currentEnemy.GetMaxHealth();
+            if(hpText != null)
+                hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
         }
-
-        //씬에 보스가 없는 경우
         else
         {
-            if(bossHPBarPanel != null)
-                bossHPBarPanel.SetActive(false);
-            if(_currentBoss != null)
+            //보스가 없으면 구독 해제
+            if(hpBarPanel != null && hpBarPanel.activeSelf)
+                hpBarPanel.SetActive(false);
+
+            if(currentEnemy != null)
             {
-                _currentBoss.OnHealthChanged -= UpdateBossHP;
-                _currentBoss = null;
+                currentEnemy.OnHealthChanged -= (tag == "Boss") ?
+                    UpdateBossHP : UpdateFinalBossHP;
+                if (tag == "FinalBoss")
+                    currentEnemy.OnDied -= HandleFinalBossDeath;
+                currentEnemy = null;
             }
         }
     }
@@ -203,6 +236,20 @@ public class UIManager : MonoBehaviour
     {
         if(image_BossHPBar != null)
             image_BossHPBar.fillAmount = currentHealth / maxHealth;
+        if(text_BossHP != null)
+            text_BossHP.text = $"{Mathf.CeilToInt(currentHealth)} / { Mathf.CeilToInt(maxHealth)}";
+    }
+    private void UpdateFinalBossHP(float currentHealth, float maxHealth)
+    {
+        if (image_FinalBossHPBar != null)
+            image_FinalBossHPBar.fillAmount = currentHealth / maxHealth;
+        if(text_FinalBossHP != null)
+            text_FinalBossHP.text = $"{Mathf.CeilToInt(currentHealth)} / {Mathf.CeilToInt(maxHealth)}";
+
+    }
+    private void HandleFinalBossDeath()
+    {
+        OnFinalBossDied?.Invoke();
     }
 
     //----------------------- Select Weapon ----------------------

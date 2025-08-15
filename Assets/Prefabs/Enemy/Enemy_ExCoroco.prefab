@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4897782530400224798}
   - component: {fileID: 4654955779601283150}
   m_Layer: 0
-  m_Name: Enemy_Coroco
+  m_Name: Enemy_ExCoroco
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,14 +122,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7b696b6231814d8c82a5e56f0aa1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Crocodile
-  hp: 100
+  enemyName: ExCrocodile
+  hp: 200
   currentHp: 0
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
-  exp: 10
-  capsuleColor: {r: 0, g: 0.9496107, b: 1, a: 1}
+  exp: 20
+  capsuleColor: {r: 0, g: 0.43571344, b: 0.45911938, a: 1}
   animator1: {fileID: 6050087459441920461}
   animator2: {fileID: 8765343248132476927}
 --- !u!114 &4897782530400224798
@@ -428,7 +428,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ebb62cbf7cdd65749bf0b20cecc839b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 4bddc613992675840ba24e99fabdc8dc, type: 2}
     - target: {fileID: 1761413384596271507, guid: 055d3fd7bd3901042a44bb13f3160e0e,
         type: 3}
       propertyPath: m_Layer
@@ -855,7 +855,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ebb62cbf7cdd65749bf0b20cecc839b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 4bddc613992675840ba24e99fabdc8dc, type: 2}
     - target: {fileID: 1761413384596271507, guid: af69d37b180cc2f49b87e760dfaa46bb,
         type: 3}
       propertyPath: m_Layer
