@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour
     //UI Events
     public static event Action HPRewardSelected;
     public static event Action AMMORewardSelected;
+    public static event Action OnFinalBossDied;
 
     private void Awake()
     {
@@ -115,8 +116,8 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        HandleBossUI("Boss", ref _currentBoss, bossHPBarPanel, image_BossHPBar, text_BossName, text_BossHP);
-        HandleBossUI("FinalBoss", ref _currentFinalBoss, finalbossHPBarPanel, image_FinalBossHPBar, text_FinalBossName, text_FinalBossHP);
+        HandleBossUI("Boss", ref _currentBoss, bossHPBarPanel, null, text_BossName, null);
+        HandleBossUI("FinalBoss", ref _currentFinalBoss, finalbossHPBarPanel, null, text_FinalBossName, null);
     }
 
     //------------ 라이프 사이클 ----------------------
@@ -183,40 +184,72 @@ public class UIManager : MonoBehaviour
         //씬에 보스가 있는 경우
         if(enemyObj != null)
         {
+            Enemy enemy = enemyObj.GetComponent<Enemy>();
+
+            if(currentEnemy != enemy)
+            {
+                if(currentEnemy != null)
+                {
+                    currentEnemy.OnHealthChanged -= (tag == "Boss")
+                        ? UpdateBossHP : UpdateFinalBossHP;
+
+                    if (tag == "FinalBoss")
+                        currentEnemy.OnDied -= HandleFinalBossDeath;
+                }
+
+                currentEnemy = enemy;
+                currentEnemy.OnHealthChanged += (tag == "Boss") 
+                    ? UpdateBossHP : UpdateFinalBossHP;
+
+                if (tag == "FinalBoss")
+                    currentEnemy.OnDied += HandleFinalBossDeath;
+            }
+
+            //UI 초기화
             if(hpBarPanel != null && !hpBarPanel.activeSelf)
                 hpBarPanel.SetActive(true);
-
-            currentEnemy = enemyObj.GetComponent<Enemy>();
-
             if (nameText != null)
                 nameText.text = currentEnemy.GetName();
-
-            if(hpBarImage != null)
+            if (hpBarImage != null)
                 hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
                     / currentEnemy.GetMaxHealth();
-
             if(hpText != null)
-            {
                 hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
-            }
         }
         else
         {
+            //보스가 없으면 구독 해제
             if(hpBarPanel != null && hpBarPanel.activeSelf)
                 hpBarPanel.SetActive(false);
 
-            currentEnemy = null;
+            if(currentEnemy != null)
+            {
+                currentEnemy.OnHealthChanged -= (tag == "Boss") ?
+                    UpdateBossHP : UpdateFinalBossHP;
+                if (tag == "FinalBoss")
+                    currentEnemy.OnDied -= HandleFinalBossDeath;
+                currentEnemy = null;
+            }
         }
     }
     private void UpdateBossHP(float currentHealth, float maxHealth)
     {
         if(image_BossHPBar != null)
             image_BossHPBar.fillAmount = currentHealth / maxHealth;
+        if(text_BossHP != null)
+            text_BossHP.text = $"{Mathf.CeilToInt(currentHealth)} / { Mathf.CeilToInt(maxHealth)}";
     }
     private void UpdateFinalBossHP(float currentHealth, float maxHealth)
     {
         if (image_FinalBossHPBar != null)
             image_FinalBossHPBar.fillAmount = currentHealth / maxHealth;
+        if(text_FinalBossHP != null)
+            text_FinalBossHP.text = $"{Mathf.CeilToInt(currentHealth)} / {Mathf.CeilToInt(maxHealth)}";
+
+    }
+    private void HandleFinalBossDeath()
+    {
+        OnFinalBossDied?.Invoke();
     }
 
     //----------------------- Select Weapon ----------------------

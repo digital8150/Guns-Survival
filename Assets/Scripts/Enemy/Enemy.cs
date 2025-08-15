@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
     private EXPPool expPool;
 
     public event Action<float, float> OnHealthChanged;      //보스 체력 이벤트
+    public event Action OnDied;      //파이널 보스 사망 이벤트
 
     void Start()
     {
@@ -116,6 +117,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 
         CreateExp();
         Destroy(this.gameObject, destroyDelay);
+
+        OnDied?.Invoke();
     }
 
     void CreateExp()
