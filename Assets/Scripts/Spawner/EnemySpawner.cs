@@ -15,6 +15,9 @@ public class SpawnWave
     public GameObject monsterPrefab;
     [Tooltip("보스 웨이브 취급")]
     public bool isBoss;
+    [Tooltip("파이널 보스 웨이브 취급")]
+    public bool isFinalBoss;
+
     [HideInInspector]
     public float nextSpawnTime;
     [HideInInspector]
@@ -50,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
                 continue;
 
             //보스 웨이브 로직
-            if (wave.isBoss)
+            if (wave.isBoss || wave.isFinalBoss)
             {
                 if (!wave.hasSpawned)
                 {
