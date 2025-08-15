@@ -57,7 +57,7 @@ namespace GameBuilders.MinimalistUI.Scripts
         private InputActionMap m_MovementInputBindings;
         private InputActionMap m_MenuInputBindings;
         private InputAction m_PauseAction;
-
+        private PlayerInput m_PlayerInput;
         public FirstPersonCharacterController FirstPersonCharacter => m_FirstPersonCharacter;
 
         public HealthController HealthController => m_HealthController;

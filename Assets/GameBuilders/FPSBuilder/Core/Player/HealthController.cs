@@ -166,7 +166,6 @@ namespace GameBuilders.FPSBuilder.Core.Player
         public static event Action OnPlayerDied;
 
         #endregion
-
         private FirstPersonCharacterController m_FPController;
         private AudioEmitter m_PlayerHealthSource;
         private AudioEmitter m_PlayerBreathSource;
@@ -174,7 +173,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
         private float m_TotalVitality;
         private float m_CurrentVitality;
         private float m_TempVitality;
-        private bool m_HasDied;
+        private bool m_IsDead;
 
         #region PROPERTIES
 
@@ -339,7 +338,7 @@ namespace GameBuilders.FPSBuilder.Core.Player
             m_FPController.LowerBodyDamaged = Limping;
             m_FPController.TremorTrauma = Trembling;
 
-            if (GameplayManager.Instance.IsDead && m_DeadCharacter != null && !m_HasDied)
+            if (GameplayManager.Instance.IsDead && m_DeadCharacter != null)
             {
                 Die();
             }
@@ -511,9 +510,8 @@ namespace GameBuilders.FPSBuilder.Core.Player
         /// </summary>
         protected virtual void Die()
         {
-            if (m_HasDied) return;
-            m_HasDied = true;
-
+            if (m_IsDead) return;
+            m_IsDead = true;
             OnPlayerDied?.Invoke();
             SetNormalSnapshot();
 
