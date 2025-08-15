@@ -27,7 +27,8 @@ public class TitleSceneManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(mainGameScene);
+        LoadingController.nextScene = mainGameScene;
+        SceneManager.LoadScene("LoadingScene");
     }
     public void ShowTutorial()
     {
