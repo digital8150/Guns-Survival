@@ -11,6 +11,9 @@ public class TimeManager : MonoBehaviour
     [Header("게임 시간 한도")]
     [SerializeField]
     private float ClearTime;
+    [Header("게임 클리어 점수")]
+    [SerializeField]
+    private int clearScore;
     public float ElapsedTime {  get; private set; }
     public static event Action<float> OnTimeChanged;
 
@@ -60,6 +63,7 @@ public class TimeManager : MonoBehaviour
     {
         if(isGameCleared) return;
         isGameCleared = true;
+        GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score += clearScore;
 
         StartCoroutine(LoadGameClearSceneAfterDelay(3f));
     }
