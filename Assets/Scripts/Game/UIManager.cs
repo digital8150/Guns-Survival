@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     private GameObject bossHPBarPanel;
     [SerializeField]
     private Text text_BossName;
+    [SerializeField]
+    private Text text_BossHP;
 
     [Header("UI요소 : 파이널 보스 HP")]
     [SerializeField]
@@ -40,6 +42,8 @@ public class UIManager : MonoBehaviour
     private GameObject finalbossHPBarPanel;
     [SerializeField]
     private Text text_FinalBossName;
+    [SerializeField]
+    private Text text_FinalBossHP;
 
     [Header("UI요소 : 레벨업 선택지")]
     [SerializeField]
@@ -111,8 +115,8 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        HandleBossUI("Boss", ref _currentBoss, bossHPBarPanel, image_BossHPBar, text_BossName);
-        HandleBossUI("FinalBoss", ref _currentFinalBoss, finalbossHPBarPanel, image_FinalBossHPBar, text_FinalBossName);
+        HandleBossUI("Boss", ref _currentBoss, bossHPBarPanel, image_BossHPBar, text_BossName, text_BossHP);
+        HandleBossUI("FinalBoss", ref _currentFinalBoss, finalbossHPBarPanel, image_FinalBossHPBar, text_FinalBossName, text_FinalBossHP);
     }
 
     //------------ 라이프 사이클 ----------------------
@@ -172,7 +176,7 @@ public class UIManager : MonoBehaviour
     }
 
     //--------------------- Boss ,FinalBoss HP -----------------------
-    private void HandleBossUI(string tag, ref Enemy currentEnemy, GameObject hpBarPanel, Image hpBarImage, Text nameText)
+    private void HandleBossUI(string tag, ref Enemy currentEnemy, GameObject hpBarPanel, Image hpBarImage, Text nameText, Text hpText)
     {
         GameObject enemyObj = GameObject.FindGameObjectWithTag(tag);
 
@@ -190,6 +194,11 @@ public class UIManager : MonoBehaviour
             if(hpBarImage != null)
                 hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
                     / currentEnemy.GetMaxHealth();
+
+            if(hpText != null)
+            {
+                hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
+            }
         }
         else
         {
