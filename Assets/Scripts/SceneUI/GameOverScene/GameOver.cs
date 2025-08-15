@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using GameBuilders.FPSBuilder.Core.Managers;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,6 +10,9 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
+        //버튼과 상호작용 가능하도록 변경
+        Time.timeScale = 1.0f;
+
         if (timeText != null)
         {
             float ftime = PlayerPrefs.GetFloat("SurvivalTime", 0f);
