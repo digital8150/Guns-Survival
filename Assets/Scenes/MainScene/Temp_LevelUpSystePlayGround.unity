@@ -3708,6 +3708,11 @@ PrefabInstance:
       propertyPath: maxSkillCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5141852617322459198, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: _radius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5770629457513100571, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3763,10 +3768,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6176631622393374586, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176631622393374586, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176631622393374586, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6658801518946114467, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615195863260436412, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.378
       objectReference: {fileID: 0}
     - target: {fileID: 8615195863260436414, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
