@@ -34,6 +34,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<SpawnWave> spawnWaves; // 각 웨이브의 정보를 담는 배열
 
+    [Header("플레이어 트랜스폼")]
+    [SerializeField]
+    private Transform playerTransform;
+
     private TimeManager _timeManager;
 
     //초기화
@@ -58,6 +62,7 @@ public class EnemySpawner : MonoBehaviour
                 if (!wave.hasSpawned)
                 {
                     GameObject bossInstance = SpawnMonster(wave.monsterPrefab);
+                    bossInstance.GetComponent<EnemyAI>().PlayerTransform = playerTransform;
                     wave.hasSpawned = true;
                 }
             }
@@ -66,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (currentTime >= wave.nextSpawnTime)
                 {
-                    SpawnMonster(wave.monsterPrefab);
+                    var clone = SpawnMonster(wave.monsterPrefab);
                     wave.nextSpawnTime = currentTime + wave.spawnInterval;
                 }
             }
@@ -79,6 +84,13 @@ public class EnemySpawner : MonoBehaviour
         // 스포너 오브젝트의 위치를 기준으로 랜덤한 오프셋 생성 (X, Z 평면)
         Vector2 randomCirclePoint = UnityEngine.Random.insideUnitCircle * spawnRadius;
         Vector3 spawnPos = transform.position + new Vector3(randomCirclePoint.x, 0f, randomCirclePoint.y);
-        return Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+
+        GameObject mobInstance = Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+        EnemyAI mobAI = mobInstance.GetComponent<EnemyAI>();
+        if(mobAI != null)
+        {
+            mobAI.PlayerTransform = playerTransform;
+        }
+        return mobInstance;
     }
 }

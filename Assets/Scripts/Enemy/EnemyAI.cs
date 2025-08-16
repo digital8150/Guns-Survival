@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     //컴포넌트 연결
     Enemy enemy;
     Transform playerTransform; // 플레이어의 Transform
+    public Transform PlayerTransform { set { playerTransform = value; } }
     DamageHandler damageHandler;
     
 
@@ -24,9 +25,10 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         enemy = GetComponent<Enemy>();
-        playerTransform = FindFirstObjectByType<FirstPersonCharacterController>().transform;
         damageHandler = playerTransform.gameObject.GetComponent<DamageHandler>();
     }
+
+    
 
     void Awake()
     {

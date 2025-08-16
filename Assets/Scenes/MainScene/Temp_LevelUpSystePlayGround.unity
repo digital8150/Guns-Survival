@@ -684,6 +684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: spawnWaves.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -1288,6 +1293,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -2591,6 +2601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: spawnWaves.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -3098,6 +3113,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -3718,6 +3738,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291398a25c9058d46ba3fd4a99d6487e, type: 3}
+--- !u!4 &500008894 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5770629457513100571, guid: 291398a25c9058d46ba3fd4a99d6487e,
+    type: 3}
+  m_PrefabInstance: {fileID: 500008893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505131846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +4326,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -4919,6 +4950,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -7328,6 +7364,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -9774,6 +9815,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 500008894}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: spawnWaves.Array.size
@@ -12508,6 +12554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClearTime: 900
+  clearScore: 0
 --- !u!4 &1855539798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4968121221617278, guid: fb55df42e763c444281a53dd9f4dc873,
