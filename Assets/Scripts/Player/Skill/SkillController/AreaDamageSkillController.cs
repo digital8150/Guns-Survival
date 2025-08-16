@@ -50,7 +50,7 @@ public class AreaDamageSkillController : SkillController
 
         AreaDamageSkillData areaDamageSkillData = skillData as AreaDamageSkillData;
         StartCoroutine(LerpRadius(skillRegionIndicator.Radius, areaDamageSkillData.GetLevelInfo(currentLevel).radius));
-        
+
     }
 
     IEnumerator LerpRadius(float origin, float target)
@@ -59,6 +59,7 @@ public class AreaDamageSkillController : SkillController
         while (elapsedTime < LERPDURATION)
         {
             skillRegionIndicator.Radius = Mathf.Lerp(origin, target, elapsedTime / LERPDURATION);
+            skillRegionIndicator.UpdateProjectors();
             elapsedTime += Time.unscaledDeltaTime;
             yield return null;
         }
