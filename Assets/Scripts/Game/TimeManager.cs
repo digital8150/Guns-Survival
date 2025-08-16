@@ -11,6 +11,9 @@ public class TimeManager : MonoBehaviour
     [Header("게임 시간 한도")]
     [SerializeField]
     private float ClearTime;
+    [Header("게임 클리어 점수")]
+    [SerializeField]
+    private int clearScore;
     public float ElapsedTime {  get; private set; }
     public static event Action<float> OnTimeChanged;
 
@@ -45,6 +48,7 @@ public class TimeManager : MonoBehaviour
     private void PlayerDeathSq()
     {
         PlayerPrefs.SetFloat("SurvivalTime", ElapsedTime);
+        PlayerPrefs.SetInt("PlayerScore", GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score);
         PlayerPrefs.Save();
         StartCoroutine(LoadGameOverSceneAfterDelay(3f));
     }
@@ -60,6 +64,8 @@ public class TimeManager : MonoBehaviour
     {
         if(isGameCleared) return;
         isGameCleared = true;
+        GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score += clearScore;
+        PlayerPrefs.SetInt("PlayerScore", GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score);
 
         StartCoroutine(LoadGameClearSceneAfterDelay(3f));
     }

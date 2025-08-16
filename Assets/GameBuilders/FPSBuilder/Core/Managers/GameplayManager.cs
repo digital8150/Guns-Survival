@@ -34,6 +34,7 @@ namespace GameBuilders.FPSBuilder.Core.Managers
         [Tooltip("Provides all buttons and axes used by the character.")]
         private InputActionAsset m_InputBindings;
         public float SurvivalTime {  get; set; }
+        public int Score { get; set; }
 
         #region PROPERTIES
 

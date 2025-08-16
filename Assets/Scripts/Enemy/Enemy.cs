@@ -3,6 +3,7 @@ using GameBuilders.FPSBuilder;
 using GameBuilders.FPSBuilder.Interfaces;
 using System.Runtime.CompilerServices;
 using System;
+using UnityEditor.Build.Content;
 
 public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 {
@@ -13,6 +14,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
     private float hp;
     [SerializeField]
     private float currentHp;
+    [SerializeField]
+    private int score = 100; //È¹µæ Á¡¼ö
     [SerializeField]
     private float destroyDelay;
     [SerializeField]
@@ -112,6 +115,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
         IsAlive = false;
         AnimSetTrigger("Dead");
         gameObject.layer = deadEnemyLayer;
+        GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score += this.score;
 
         OnHealthChanged?.Invoke(0, hp);
 
