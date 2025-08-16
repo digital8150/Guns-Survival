@@ -12,11 +12,11 @@ public class AreaDamageSkillController : SkillController
     private const float LERPDURATION = 0.25f;
 
     //레퍼런스
-    private CircleRegion skillRegionIndicator;
+    private CircleRegionProjector skillRegionIndicator;
 
     private void Awake()
     {
-        skillRegionIndicator = GetComponentInChildren<CircleRegion>();
+        skillRegionIndicator = GetComponentInChildren<CircleRegionProjector>();
     }
 
     private void Update()
