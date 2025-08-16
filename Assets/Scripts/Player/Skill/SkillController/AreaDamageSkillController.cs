@@ -12,11 +12,11 @@ public class AreaDamageSkillController : SkillController
     private const float LERPDURATION = 0.25f;
 
     //레퍼런스
-    private CircleRegion skillRegionIndicator;
+    private CircleRegionProjector skillRegionIndicator;
 
     private void Awake()
     {
-        skillRegionIndicator = GetComponentInChildren<CircleRegion>();
+        skillRegionIndicator = GetComponentInChildren<CircleRegionProjector>();
     }
 
     private void Update()
@@ -50,7 +50,7 @@ public class AreaDamageSkillController : SkillController
 
         AreaDamageSkillData areaDamageSkillData = skillData as AreaDamageSkillData;
         StartCoroutine(LerpRadius(skillRegionIndicator.Radius, areaDamageSkillData.GetLevelInfo(currentLevel).radius));
-        
+
     }
 
     IEnumerator LerpRadius(float origin, float target)
@@ -59,6 +59,7 @@ public class AreaDamageSkillController : SkillController
         while (elapsedTime < LERPDURATION)
         {
             skillRegionIndicator.Radius = Mathf.Lerp(origin, target, elapsedTime / LERPDURATION);
+            skillRegionIndicator.UpdateProjectors();
             elapsedTime += Time.unscaledDeltaTime;
             yield return null;
         }

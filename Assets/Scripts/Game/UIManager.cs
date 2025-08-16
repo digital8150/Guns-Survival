@@ -176,45 +176,89 @@ public class UIManager : MonoBehaviour
             image_HPBar.fillAmount = currentHP / maxHp;
     }
 
+
+
     //--------------------- Boss ,FinalBoss HP -----------------------
+    private GameObject bossObj;
+    private GameObject finalBossObj;
+    private Enemy bossEnemyComponent;
+    private Enemy finalBossEnemyComponent;
+
+    public void RegisterBossObject(GameObject gameObject)
+    {
+        if (gameObject.CompareTag("Boss"))
+        {
+            bossObj = gameObject;
+            bossEnemyComponent = gameObject.GetComponent<Enemy>();
+        }
+        else if (gameObject.CompareTag("FinalBoss"))
+        {
+            finalBossObj = gameObject;
+            finalBossEnemyComponent = gameObject.GetComponent<Enemy>();
+        }
+        if(bossEnemyComponent == null && finalBossEnemyComponent == null)
+        {
+            Debug.LogError("UIManager.cs : 유효하지 않은 보스 오브젝트 등록");
+        }
+    }
+
     private void HandleBossUI(string tag, ref Enemy currentEnemy, GameObject hpBarPanel, Image hpBarImage, Text nameText, Text hpText)
     {
-        GameObject enemyObj = GameObject.FindGameObjectWithTag(tag);
 
         //씬에 보스가 있는 경우
-        if(enemyObj != null)
+        if(bossObj != null || finalBossObj != null)
         {
-            Enemy enemy = enemyObj.GetComponent<Enemy>();
 
-            if(currentEnemy != enemy)
+            if(tag == "Boss" && bossObj != null)
             {
-                if(currentEnemy != null)
+                if(currentEnemy != bossEnemyComponent)
                 {
-                    currentEnemy.OnHealthChanged -= (tag == "Boss")
-                        ? UpdateBossHP : UpdateFinalBossHP;
-
-                    if (tag == "FinalBoss")
-                        currentEnemy.OnDied -= HandleFinalBossDeath;
+                    if(currentEnemy != null)
+                    {
+                        currentEnemy.OnHealthChanged -= UpdateBossHP;
+                    }
+                    currentEnemy = bossEnemyComponent;
+                    currentEnemy.OnHealthChanged += UpdateBossHP;
                 }
 
-                currentEnemy = enemy;
-                currentEnemy.OnHealthChanged += (tag == "Boss") 
-                    ? UpdateBossHP : UpdateFinalBossHP;
-
-                if (tag == "FinalBoss")
+                //UI 초기화
+                if (hpBarPanel != null && !hpBarPanel.activeSelf)
+                    hpBarPanel.SetActive(true);
+                if (nameText != null)
+                    nameText.text = currentEnemy.GetName();
+                if (hpBarImage != null)
+                    hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
+                        / currentEnemy.GetMaxHealth();
+                if (hpText != null)
+                    hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
+            }
+            else if(tag == "FinalBoss" && finalBossObj != null)
+            {
+                if(currentEnemy != finalBossEnemyComponent)
+                {
+                    if(currentEnemy != null)
+                    {
+                        currentEnemy.OnHealthChanged -= UpdateFinalBossHP;
+                        currentEnemy.OnDied -= HandleFinalBossDeath;
+                    }
+                    currentEnemy = finalBossEnemyComponent;
+                    currentEnemy.OnHealthChanged += UpdateFinalBossHP;
                     currentEnemy.OnDied += HandleFinalBossDeath;
+                }
+
+                //UI 초기화
+                if (hpBarPanel != null && !hpBarPanel.activeSelf)
+                    hpBarPanel.SetActive(true);
+                if (nameText != null)
+                    nameText.text = currentEnemy.GetName();
+                if (hpBarImage != null)
+                    hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
+                        / currentEnemy.GetMaxHealth();
+                if (hpText != null)
+                    hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
             }
 
-            //UI 초기화
-            if(hpBarPanel != null && !hpBarPanel.activeSelf)
-                hpBarPanel.SetActive(true);
-            if (nameText != null)
-                nameText.text = currentEnemy.GetName();
-            if (hpBarImage != null)
-                hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
-                    / currentEnemy.GetMaxHealth();
-            if(hpText != null)
-                hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
+
         }
         else
         {
