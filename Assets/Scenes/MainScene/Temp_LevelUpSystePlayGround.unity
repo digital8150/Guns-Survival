@@ -3663,10 +3663,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 521585615595423190, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1155558023478987036, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
       propertyPath: maxExp
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687461808333858352, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2275856252409324150, guid: 291398a25c9058d46ba3fd4a99d6487e,
         type: 3}
@@ -3732,6 +3742,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658801518946114467, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615195863260436414, guid: 291398a25c9058d46ba3fd4a99d6487e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
