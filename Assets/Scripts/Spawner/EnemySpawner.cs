@@ -34,9 +34,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<SpawnWave> spawnWaves; // 각 웨이브의 정보를 담는 배열
 
-    [Header("플레이어 트랜스폼")]
+    [Header("컴포넌트 참조")]
     [SerializeField]
     private Transform playerTransform;
+    [SerializeField]
+    private UIManager _UIManager;
 
     private TimeManager _timeManager;
 
@@ -62,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
                 if (!wave.hasSpawned)
                 {
                     GameObject bossInstance = SpawnMonster(wave.monsterPrefab);
-                    bossInstance.GetComponent<EnemyAI>().PlayerTransform = playerTransform;
+                    _UIManager.RegisterBossObject(bossInstance);
                     wave.hasSpawned = true;
                 }
             }
