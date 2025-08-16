@@ -684,6 +684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 500008894}
@@ -1293,6 +1298,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: playerTransform
@@ -2601,6 +2611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 500008894}
@@ -3113,6 +3128,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: playerTransform
@@ -4348,6 +4368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 500008894}
@@ -4970,6 +4995,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: playerTransform
@@ -7384,6 +7414,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: playerTransform
@@ -9835,6 +9870,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
+        type: 3}
+      propertyPath: _UIManager
+      value: 
+      objectReference: {fileID: 230826339}
     - target: {fileID: 3475761561834273535, guid: 2fad26cf46eed6e4e80547582d23cf94,
         type: 3}
       propertyPath: playerTransform
