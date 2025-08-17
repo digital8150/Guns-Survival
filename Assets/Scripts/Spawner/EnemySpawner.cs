@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.Pool;
+using System.Threading.Tasks;
 
 //웨이브 정보
 [System.Serializable]
@@ -34,6 +36,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<SpawnWave> spawnWaves; // 각 웨이브의 정보를 담는 배열
 
+    
+    // 오브젝트 풀 환경 설정
+    // 적 프리팹 종류별로 해당 크기의 풀이 생성됨을 고려하여 설정
+    // MEMO :
+    // 초기 사이즈가 너무 작을 경우 런타임에서 Instantiate 가 자주 발생 됨 (프레임 드랍 발생 가능성)
+    // 최대 사이즈가 너무 작을 경우 런타임에서 Destory가 자주 발생 됨 (GC Spike로 인한 GC랙 발생 가능성)
+    // 두 사이즈 모두 너무 클 경우 불필요한 메모리 공간을 차지할 수 있음 (메모리 낭비)
+
+    static int pool_initalSize = 30; //초기사이즈
+    static int pool_maxSize = 120; //최대사이즈 - 해당 사이즈 초과시 반환되지 않고 삭제됨
+
+
     [Header("컴포넌트 참조")]
     [SerializeField]
     private Transform playerTransform;
@@ -42,10 +56,82 @@ public class EnemySpawner : MonoBehaviour
 
     private TimeManager _timeManager;
 
-    //초기화
+    //----------- 오브젝트 풀링 ----------
+    //여러 스포너 간에 공유하는 오브젝트 풀 딕셔너리 (프리팹별로 오브젝트 풀 관리)
+    private static Dictionary<GameObject, ObjectPool<GameObject>> enemyPools = new Dictionary<GameObject, ObjectPool<GameObject>>();
+
+    public static async void ReturnEnemyToPool(GameObject prefab, GameObject enemyObject, float delay)
+    {
+        if(enemyPools.TryGetValue(prefab, out ObjectPool<GameObject> pool))
+        {
+            await Task.Delay((int)(delay * 1000)); //MEMO : 유니티에서 async/await 비동기 작업하는게 비표준이긴 한것 같은데... 여기서 잠깐 기다리자고 코루틴 써야하나...????? 끔찍한레거시가되...
+            pool.Release(enemyObject); //프리팹에 맞는 풀을 찾아서 릴리즈
+        }
+        else
+        {
+            Debug.LogWarning($"EnemySpawner: {prefab.name}에 맞는 풀을 찾지 못하여 직접 삭제합니다");
+            Destroy(enemyObject);
+        }
+    }
+
+    // -------- 라이프 사이클 ------
+    private void OnApplicationQuit()
+    {
+        foreach(var pool in enemyPools.Values)
+        {
+            pool.Dispose();
+        }
+        enemyPools.Clear();
+    }
+
+    private void OnDestroy()
+    {
+        // 스포너 파괴( 씬 전환 등)시 오브젝트 풀 정리 (메모리 누수 방지)
+        foreach (var pool in enemyPools.Values)
+        {
+            pool.Dispose();
+        }
+        enemyPools.Clear();
+    }
+
     private void Awake()
     {
         _timeManager = FindFirstObjectByType<TimeManager>();
+
+        //오브젝트 풀 초기화
+        foreach(var wave in spawnWaves)
+        {
+            if(wave.monsterPrefab != null && !enemyPools.ContainsKey(wave.monsterPrefab))
+            {
+                //몬스터 프리팹에 해당하는 풀이 존재하지 않을 경우 새로 풀 생성
+                enemyPools.Add(wave.monsterPrefab, new ObjectPool<GameObject>(
+                    createFunc:
+                    () => Instantiate(wave.monsterPrefab),
+                    actionOnGet:
+                    (obj) =>
+                    {
+                        obj.SetActive(true);
+                        Enemy enemy = obj.GetComponent<Enemy>();
+                        if (enemy != null)
+                        {
+                            enemy.ResetEnemyState();
+                        }
+                    },
+                    actionOnRelease:
+                    (obj) =>
+                    {
+                        obj.SetActive(false);
+                    },
+                    actionOnDestroy:
+                    (obj) =>
+                    {
+                        Destroy(obj);
+                    },
+                    defaultCapacity: pool_initalSize,
+                    maxSize: pool_maxSize
+                    ));
+            }
+        }
     }
 
     private void Update()
@@ -87,11 +173,27 @@ public class EnemySpawner : MonoBehaviour
         Vector2 randomCirclePoint = UnityEngine.Random.insideUnitCircle * spawnRadius;
         Vector3 spawnPos = transform.position + new Vector3(randomCirclePoint.x, 0f, randomCirclePoint.y);
 
-        GameObject mobInstance = Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+        GameObject mobInstance = null;
+
+        //object pooling
+        if(enemyPools.TryGetValue(monsterPrefab, out ObjectPool<GameObject> pool))
+        {
+            mobInstance = pool.Get();
+            mobInstance.transform.position = spawnPos;
+            mobInstance.transform.rotation = Quaternion.identity;
+        }
+        else
+        {
+            Debug.LogError($"EnemySpawner: {monsterPrefab.name}에 대한 오브젝트 풀이 존재하지 않아 직접 생성합니다.");
+            mobInstance = Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+        }
+
         EnemyAI mobAI = mobInstance.GetComponent<EnemyAI>();
-        if(mobAI != null)
+        Enemy mob = mobInstance.GetComponent<Enemy>();
+        if(mobAI != null && mob != null)
         {
             mobAI.PlayerTransform = playerTransform;
+            mob.OriginalPrefab = monsterPrefab;
         }
         return mobInstance;
     }
