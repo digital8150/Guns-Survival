@@ -4,6 +4,7 @@ using GameBuilders.FPSBuilder.Interfaces;
 using System.Runtime.CompilerServices;
 using System;
 using UnityEditor.Build.Content;
+using DTT.AreaOfEffectRegions.Shaders;
 
 public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 {
@@ -41,11 +42,20 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 
     public event Action<float, float> OnHealthChanged;      //보스 체력 이벤트
     public event Action OnDied;      //파이널 보스 사망 이벤트
+    public GameObject OriginalPrefab { get; set; } //오브젝트 풀 반환 시 사용
 
-    void Start()
+    //-------- 오브젝트 풀링 ----------
+    public void ResetEnemyState()
     {
         currentHp = hp;
         IsAlive = true;
+        gameObject.layer = 0; //default
+        
+    }
+
+    void Start()
+    {
+        ResetEnemyState();
         deadEnemyLayer = LayerMask.NameToLayer("DeadEnemy");
         expPool = FindAnyObjectByType<EXPPool>();
     }
@@ -120,9 +130,18 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
         OnHealthChanged?.Invoke(0, hp);
 
         CreateExp();
-        Destroy(this.gameObject, destroyDelay);
+        
+        if(OriginalPrefab != null)
+        {
+            EnemySpawner.ReturnEnemyToPool(OriginalPrefab, gameObject, destroyDelay);
+        }
+        else
+        {
+            Debug.LogWarning($"Enemy: 프리펩 설정이 null이었습니다. 오브젝트 풀 반환에 실패하여 직접 파괴합니다.");
+            Destroy(gameObject, destroyDelay);
+        }
 
-        OnDied?.Invoke();
+            OnDied?.Invoke();
     }
 
     void CreateExp()
