@@ -1,10 +1,6 @@
 using UnityEngine;
-using GameBuilders.FPSBuilder;
 using GameBuilders.FPSBuilder.Interfaces;
-using System.Runtime.CompilerServices;
 using System;
-using UnityEditor.Build.Content;
-using DTT.AreaOfEffectRegions.Shaders;
 
 public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 {
