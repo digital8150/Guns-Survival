@@ -74,6 +74,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    // -------- 라이프 사이클 ------
     private void OnApplicationQuit()
     {
         foreach(var pool in enemyPools.Values)
@@ -83,7 +84,16 @@ public class EnemySpawner : MonoBehaviour
         enemyPools.Clear();
     }
 
-    //초기화
+    private void OnDestroy()
+    {
+        // 스포너 파괴( 씬 전환 등)시 오브젝트 풀 정리 (메모리 누수 방지)
+        foreach (var pool in enemyPools.Values)
+        {
+            pool.Dispose();
+        }
+        enemyPools.Clear();
+    }
+
     private void Awake()
     {
         _timeManager = FindFirstObjectByType<TimeManager>();
