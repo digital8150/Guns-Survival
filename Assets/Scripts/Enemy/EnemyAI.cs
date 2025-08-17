@@ -12,27 +12,26 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float damage = 10;
 
     //컴포넌트 연결
-    Enemy enemy;
+    [Header("컴포넌트 참조")]
+    [SerializeField] Enemy enemy;
     Transform playerTransform; // 플레이어의 Transform
-    public Transform PlayerTransform { set { playerTransform = value; } }
+    [SerializeField] private NavMeshAgent agent;
     DamageHandler damageHandler;
-    
-
-    private NavMeshAgent agent;
+    public Transform PlayerTransform
+    {
+        set
+        {
+            playerTransform = value;
+            damageHandler = playerTransform.gameObject.GetComponent<DamageHandler>();
+        }
+    }
     private bool isAttacking = false;
     private float lastAttackTime;
-
-    private void Start()
-    {
-        enemy = GetComponent<Enemy>();
-        damageHandler = playerTransform.gameObject.GetComponent<DamageHandler>();
-    }
 
     
 
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
         if (agent == null)
         {
             Debug.LogError("NavMeshAgent 컴포넌트가 없습니다! 적 오브젝트에 추가해주세요.");
