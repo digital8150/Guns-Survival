@@ -15,7 +15,7 @@ MonoBehaviour:
   m_AmmunitionName: .45 ACP
   m_ProjectileMass: 0.023
   m_CanPenetrate: 1
-  m_PenetrationPower: 0.44
+  m_PenetrationPower: 0.5
   m_Refraction: {x: -0.5, y: 0.5}
   m_DensityInfluence: 2
   m_DamageMode: 0

@@ -408,16 +408,40 @@ public class UIManager : MonoBehaviour
 
     public void SelectHPReward()
     {
-        HPRewardSelected?.Invoke();
-        isSelecting = false;
-        ResumeWhenSelectingFinished();
+        try
+        {
+            HPRewardSelected?.Invoke();
+            isSelecting = false;
+            
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"UIManager: 대체 보상 선택지에서 예외 발생 {ex}");
+        }
+        finally
+        {
+            ResumeWhenSelectingFinished();
+        }
+
     }
 
     public void SelectAMMOReward()
     {
-        AMMORewardSelected?.Invoke();
-        isSelecting = false;
-        ResumeWhenSelectingFinished();
+        try
+        {
+            AMMORewardSelected?.Invoke();
+            isSelecting = false;
+            
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"UIManager: 대체 보상 선택지에서 예외 발생 {ex}");
+        }
+        finally
+        {
+            ResumeWhenSelectingFinished();
+        }
+
     }
 
     private void ResumeWhenSelectingFinished()

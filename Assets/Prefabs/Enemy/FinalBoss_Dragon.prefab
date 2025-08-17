@@ -2677,6 +2677,8 @@ GameObject:
   - component: {fileID: 4177884680166210062}
   - component: {fileID: 5125474138088149689}
   - component: {fileID: 8482652010906149308}
+  - component: {fileID: 6808794726980409413}
+  - component: {fileID: 2110573174179834928}
   m_Layer: 0
   m_Name: FinalBoss_Dragon
   m_TagString: FinalBoss
@@ -2736,7 +2738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: FinalBossDragon
-  hp: 6000
+  hp: 80000
   currentHp: 0
   score: 7000
   destroyDelay: 3
@@ -2760,7 +2762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 200
   stoppingDistance: 5
-  attackRange: 6
+  attackRange: 4
   attackCooldown: 2
   damage: 15
   enemy: {fileID: 1125207832440530508}
@@ -2833,8 +2835,46 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3181057, y: 5.2457213, z: 3.791031}
-  m_Center: {x: 0.10155201, y: 2.1228602, z: 0.04807666}
+  m_Size: {x: 1.8018932, y: 5.2457213, z: 6.1313133}
+  m_Center: {x: -0.15655422, y: 2.1228602, z: 1.2182178}
+--- !u!114 &6808794726980409413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267619021521361520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c1e2e7012218746bced1050584d93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SurfaceList:
+  - m_SurfaceType: {fileID: 11400000, guid: ca96bdf6c62a2460890f887a1deadcf0, type: 2}
+    m_AllowDecals: 1
+    m_Penetration: 1
+    m_Density: 0.25
+--- !u!65 &2110573174179834928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267619021521361520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.1330185, y: 4.292181, z: 6.219391}
+  m_Center: {x: 0.043720245, y: 3.3540473, z: -0.81324005}
 --- !u!1 &6368619559781652264
 GameObject:
   m_ObjectHideFlags: 0

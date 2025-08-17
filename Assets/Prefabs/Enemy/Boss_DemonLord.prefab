@@ -1758,6 +1758,7 @@ GameObject:
   - component: {fileID: 6192339784002967495}
   - component: {fileID: 8284347772555154704}
   - component: {fileID: 852740689210711985}
+  - component: {fileID: -9047256062822949637}
   m_Layer: 0
   m_Name: Boss_DemonLord
   m_TagString: Boss
@@ -1818,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: DemonLord
-  hp: 2000
+  hp: 35000
   currentHp: 0
   score: 5000
   destroyDelay: 3
@@ -1842,7 +1843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 200
   stoppingDistance: 1.5
-  attackRange: 3
+  attackRange: 4
   attackCooldown: 2
   damage: 15
   enemy: {fileID: 6466293125189103070}
@@ -1917,6 +1918,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.4067864, z: 1}
   m_Center: {x: 0, y: 1.1971934, z: 0}
+--- !u!114 &-9047256062822949637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599731724452271769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c1e2e7012218746bced1050584d93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SurfaceList:
+  - m_SurfaceType: {fileID: 11400000, guid: ca96bdf6c62a2460890f887a1deadcf0, type: 2}
+    m_AllowDecals: 1
+    m_Penetration: 1
+    m_Density: 0.25
 --- !u!1 &1629231223074216744
 GameObject:
   m_ObjectHideFlags: 0

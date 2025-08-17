@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: CS5 Data
   m_EditorClassIdentifier: 
   m_GunName: CS5
+  m_WeaponType: 0
   m_DroppablePrefab: {fileID: 1124406106152640, guid: 45d82c83f6ca7bb43865f73be8c4aa2d,
     type: 3}
   m_Weight: 4.8
   m_Size: 1.1
   m_MeleeDamage: 50
   m_MeleeForce: 20
-  m_PrimaryFireMode: 2
+  m_PrimaryFireMode: 4
   m_SecondaryFireMode: 0
   m_PrimaryRateOfFire: 40
   m_SecondaryRateOfFire: 600
   m_Range: 100
-  m_BulletsPerShoot: 5
+  m_BulletsPerShoot: 6
   m_BulletsPerBurst: 3
   m_AffectedLayers:
     serializedVersion: 2
@@ -33,9 +34,9 @@ MonoBehaviour:
   m_ReloadMode: 0
   m_RoundsPerMagazine: 10
   m_HasChamber: 1
-  m_MaximumSpread: 2
-  m_BaseAccuracy: 0.3
-  m_HIPAccuracy: 0.4
+  m_MaximumSpread: 0.001
+  m_BaseAccuracy: 1
+  m_HIPAccuracy: 1
   m_AIMAccuracy: 1
   m_DecreaseRateByWalking: 1
   m_DecreaseRateByShooting: 0.8
