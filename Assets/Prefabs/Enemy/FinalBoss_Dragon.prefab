@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: FinalBossDragon
-  hp: 8000
+  hp: 80000
   currentHp: 0
   score: 7000
   destroyDelay: 3

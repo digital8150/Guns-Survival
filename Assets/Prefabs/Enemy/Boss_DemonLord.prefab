@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: DemonLord
-  hp: 3500
+  hp: 35000
   currentHp: 0
   score: 5000
   destroyDelay: 3
