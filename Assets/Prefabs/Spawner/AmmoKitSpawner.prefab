@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2095478441625289348}
   - component: {fileID: 6060937595655178376}
   m_Layer: 0
-  m_Name: AmmokitSpawner
+  m_Name: AmmoKitSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,6 +255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841457588922532588, guid: 8eb281411569e43458e97d5473c9cbda,
+        type: 3}
+      propertyPath: respawnTime
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7158517516792409112, guid: 8eb281411569e43458e97d5473c9cbda,
         type: 3}

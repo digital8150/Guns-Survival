@@ -75,7 +75,7 @@ namespace GameBuilders.MinimalistUI.Scripts
 
             m_SceneLabel.text = "Operation - " + SceneManager.GetActiveScene().name;
 
-            Resume();
+            //Resume();
         }
 
         private void Update()

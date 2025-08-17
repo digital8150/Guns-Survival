@@ -45706,6 +45706,11 @@ MonoBehaviour:
   image_BossHPBar: {fileID: 2609204833092740273}
   bossHPBarPanel: {fileID: 5331272821322818952}
   text_BossName: {fileID: 8341284802311385405}
+  text_BossHP: {fileID: 0}
+  image_FinalBossHPBar: {fileID: 0}
+  finalbossHPBarPanel: {fileID: 0}
+  text_FinalBossName: {fileID: 0}
+  text_FinalBossHP: {fileID: 0}
   upgradePanel: {fileID: 3459173729670876608}
   altRewardPanel: {fileID: 3042331485485744790}
   skillOptions:
@@ -45743,6 +45748,7 @@ MonoBehaviour:
     skillLevelText: {fileID: 5604214044852092771}
     container: {fileID: 6157609516536617529}
   weaponSelectionPanel: {fileID: 5234425295112310667}
+  _UIController: {fileID: 8669829034879904145}
 --- !u!1 &8669829034925955137
 GameObject:
   m_ObjectHideFlags: 0
