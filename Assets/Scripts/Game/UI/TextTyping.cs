@@ -5,14 +5,20 @@ using UnityEngine.UI;
 public class TextTyping : MonoBehaviour
 {
     [SerializeField] Text text;
-    WaitForSeconds interval = new WaitForSeconds(0.05f);
+    WaitForSecondsRealtime interval = new WaitForSecondsRealtime(0.05f);
 
     public void StartAnimation(string content)
     {
         StopAllCoroutines();
-        StartCoroutine(Typing(content));
-        StartCoroutine(Deleting());
+        StartCoroutine(RunAnimation(content));
     }
+
+    IEnumerator RunAnimation(string content)
+    {
+        yield return StartCoroutine(Typing(content));
+        yield return StartCoroutine(Deleting());
+    }
+
 
     IEnumerator Typing(string content)
     {
@@ -26,11 +32,16 @@ public class TextTyping : MonoBehaviour
 
     IEnumerator Deleting()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSecondsRealtime(2f);
         for (int i = text.text.Length - 1; i >= 0; i--)
         {
             text.text = text.text.Remove(i);
             yield return interval;
         }
+    }
+
+    private void OnDisable()
+    {
+        text.text = null;
     }
 }
