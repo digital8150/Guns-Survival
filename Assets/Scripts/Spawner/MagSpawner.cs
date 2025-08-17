@@ -16,6 +16,11 @@ public class MagSpawner : MonoBehaviour
 
     void Start()
     {
+        if (currentPrefab != null)
+        {
+            return; //스폰되어 있으면 건너뛰기
+        }
+
         elapsedTime = respawnTime;
         StartCoroutine(SpawnMagCoroutine(SpawnDelay));
     }

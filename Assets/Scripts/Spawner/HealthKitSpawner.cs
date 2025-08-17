@@ -22,6 +22,11 @@ public class HealthPackSpawner : MonoBehaviour
 
     private void Update()
     {
+        if(currentHealthPack != null)
+        {
+            return; //스폰되어 있으면 건너뛰기
+        }
+
         elapsedTime -= Time.deltaTime;
         if (elapsedTime <= 0)
         {
