@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
 
     public event Action<float, float> OnHealthChanged;      //보스 체력 이벤트
     public event Action OnDied;      //파이널 보스 사망 이벤트
+    public static event Action OnHit;
+    public static event Action<int, string> OnScoreUp;
     public GameObject OriginalPrefab { get; set; } //오브젝트 풀 반환 시 사용
 
     //-------- 오브젝트 풀링 ----------
@@ -86,6 +88,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
         currentHp = Mathf.Max(currentHp - damage, 0);
 
         OnHealthChanged?.Invoke(currentHp, hp);
+        OnHit?.Invoke();
 
         if (currentHp <= 0)
         {
@@ -126,6 +129,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
         AnimSetTrigger("Dead");
         gameObject.layer = deadEnemyLayer;
         GameBuilders.FPSBuilder.Core.Managers.GameplayManager.Instance.Score += this.score;
+        OnScoreUp?.Invoke(this.score, "적 처치");
 
         OnHealthChanged?.Invoke(0, hp);
 
@@ -141,7 +145,7 @@ public class Enemy : MonoBehaviour, IProjectileDamageable, IExplosionDamageable
             Destroy(gameObject, destroyDelay);
         }
 
-            OnDied?.Invoke();
+        OnDied?.Invoke();
     }
 
     void CreateExp()
