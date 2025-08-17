@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 89475636917686128}
   - component: {fileID: 4897782530400224798}
   - component: {fileID: 4654955779601283150}
+  - component: {fileID: 7407857819884681381}
   m_Layer: 0
   m_Name: Enemy_ExCoroco
   m_TagString: Enemy
@@ -125,7 +126,7 @@ MonoBehaviour:
   enemyName: ExCrocodile
   hp: 200
   currentHp: 0
-  score: 100
+  score: 150
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
@@ -174,6 +175,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7407857819884681381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094641989431790095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c1e2e7012218746bced1050584d93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SurfaceList:
+  - m_SurfaceType: {fileID: 11400000, guid: ca96bdf6c62a2460890f887a1deadcf0, type: 2}
+    m_AllowDecals: 1
+    m_Penetration: 1
+    m_Density: 0.25
 --- !u!1001 &3653910429424827291
 PrefabInstance:
   m_ObjectHideFlags: 0

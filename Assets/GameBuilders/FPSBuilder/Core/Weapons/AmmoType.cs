@@ -75,7 +75,7 @@ namespace GameBuilders.FPSBuilder.Core.Weapons
         /// Defines the minimum and maximum damage value inflicted by this projectile.
         /// </summary>
         [SerializeField]
-        [MinMaxSlider(0, 100, "Defines the minimum and maximum damage value inflicted by this projectile.")]
+        [MinMaxSlider(0, 400, "Defines the minimum and maximum damage value inflicted by this projectile.")]
         private Vector2 m_Damage = new Vector2(15, 30);
 
         /// <summary>

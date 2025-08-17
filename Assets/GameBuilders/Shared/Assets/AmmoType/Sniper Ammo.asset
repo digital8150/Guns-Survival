@@ -15,11 +15,11 @@ MonoBehaviour:
   m_AmmunitionName: "7.62\xD751mm NATO"
   m_ProjectileMass: 0.0175
   m_CanPenetrate: 1
-  m_PenetrationPower: 1
-  m_Refraction: {x: 0.3452244, y: 0.6452244}
-  m_DensityInfluence: 3
+  m_PenetrationPower: Infinity
+  m_Refraction: {x: 0, y: 0}
+  m_DensityInfluence: 0
   m_DamageMode: 1
-  m_Damage: {x: 75, y: 100}
+  m_Damage: {x: 100, y: 200}
   m_DamageFalloffCurve:
     serializedVersion: 2
     m_Curve:
