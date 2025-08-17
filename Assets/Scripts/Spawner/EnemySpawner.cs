@@ -36,6 +36,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<SpawnWave> spawnWaves; // 각 웨이브의 정보를 담는 배열
 
+    
+    // 오브젝트 풀 환경 설정
+    // 적 프리팹 종류별로 해당 크기의 풀이 생성됨을 고려하여 설정
+    // MEMO :
+    // 초기 사이즈가 너무 작을 경우 런타임에서 Instantiate 가 자주 발생 됨 (프레임 드랍 발생 가능성)
+    // 최대 사이즈가 너무 작을 경우 런타임에서 Destory가 자주 발생 됨 (GC Spike로 인한 GC랙 발생 가능성)
+    // 두 사이즈 모두 너무 클 경우 불필요한 메모리 공간을 차지할 수 있음 (메모리 낭비)
+
+    static int pool_initalSize = 30; //초기사이즈
+    static int pool_maxSize = 120; //최대사이즈 - 해당 사이즈 초과시 반환되지 않고 삭제됨
+
+
     [Header("컴포넌트 참조")]
     [SerializeField]
     private Transform playerTransform;
@@ -105,8 +117,8 @@ public class EnemySpawner : MonoBehaviour
                     {
                         Destroy(obj);
                     },
-                    defaultCapacity: 100,
-                    maxSize: 300
+                    defaultCapacity: pool_initalSize,
+                    maxSize: pool_maxSize
                     ));
             }
         }
