@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections; // IEnumerator 사용을 위해 필요
 
 public class HealthPackSpawner : MonoBehaviour
@@ -10,12 +11,44 @@ public class HealthPackSpawner : MonoBehaviour
     private float SpawnDelay = 3f;           // 스폰 딜레이
     [SerializeField]
     private float respawnTime = 100f;        //힐팩이 사라진 후 다시 스폰되기까지의 주기
+    private float elapsedTime;
+
+    [Header("레펀러스 참조")]
+    [SerializeField] private Image lefttime_indicator;
 
     private GameObject currentHealthPack; // 현재 스폰된 힐팩 인스턴스를 추적
 
     void Start()
     {
+        elapsedTime = respawnTime + SpawnDelay;
         StartCoroutine(SpawnHealthPackRoutine(SpawnDelay));
+    }
+
+    private void Update()
+    {
+        if (currentHealthPack != null)
+        {
+            return; //스폰되어 있으면 건너뛰기
+        }
+
+        UpdateIndicator();
+        TryRespawn();
+    }
+
+    private void TryRespawn()
+    {
+        elapsedTime -= Time.deltaTime;
+        if (elapsedTime <= 0)
+        {
+            StartCoroutine(SpawnHealthPackRoutine(SpawnDelay));
+            elapsedTime = respawnTime + SpawnDelay;
+        }
+    }
+
+    private void UpdateIndicator()
+    {
+        lefttime_indicator.gameObject.SetActive(true);
+        lefttime_indicator.fillAmount = (respawnTime - elapsedTime) / respawnTime;
     }
 
     //-------------------------------- 힐팩 스폰 딜레이 관리 --------------------------------------

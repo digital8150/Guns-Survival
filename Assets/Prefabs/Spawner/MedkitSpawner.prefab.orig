@@ -178,7 +178,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -383,58 +384,72 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2574980950289022239}
     m_Modifications:
-    - target: {fileID: 1237351353369699653, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 1237351353369699653, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_Name
       value: MedkitSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8860393967128263240, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
-      propertyPath: respawnTime
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8860393967128263240, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+    - target: {fileID: 8860393967128263240, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+        type: 3}
+<<<<<<< HEAD
       propertyPath: lefttime_indicator
       value: 
       objectReference: {fileID: 8349358840807250633}
+=======
+      propertyPath: respawnTime
+      value: 30
+      objectReference: {fileID: 0}
+>>>>>>> main
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -442,6 +457,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
 --- !u!4 &7963778688393243981 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2534468339061169324, guid: 7f46ee7292de14949b81dc2f21e1f8d0,
+    type: 3}
   m_PrefabInstance: {fileID: 5596068897594175969}
   m_PrefabAsset: {fileID: 0}
