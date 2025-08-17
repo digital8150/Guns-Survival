@@ -13,9 +13,11 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://via.placeholder.com/800x450.png?text=Your+Game+Screenshot+Here" alt="Game Screenshot" width="80%">
-</p>
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/95bfdd0a-e7d0-4eea-b6cf-b35d7100dca4" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/4ba30d97-483c-436b-b085-4c53862629af" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/3b863fb4-7d6f-4b53-8cbf-755fbc245f26" />
+
+
 
 ## 🎮 프로젝트 소개
 
