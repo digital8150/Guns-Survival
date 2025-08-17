@@ -20,9 +20,9 @@ public class ScoreBoard : MonoBehaviour
 
     void ScoreUp(int score, string content)
     {
+        MoveAllScoresDown(scoreTexts[currentIdx]);
         scoreTexts[currentIdx].transform.localPosition= Vector3.zero;
         scoreTexts[currentIdx].StartAnimation($"+{score} {content}");
-        MoveAllScoresDown();
         IncreaseIndex();
     }
 
@@ -40,10 +40,14 @@ public class ScoreBoard : MonoBehaviour
         }
     }
 
-    void MoveAllScoresDown()
+    void MoveAllScoresDown(TextTyping Except)
     {
         foreach (var obj in scoreTexts)
         {
+            if(obj == Except)
+            {
+                continue;
+            }
             StartCoroutine(MoveScoreDown(obj.gameObject));
         }
     }
