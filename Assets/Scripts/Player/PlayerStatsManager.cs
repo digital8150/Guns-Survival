@@ -1,4 +1,5 @@
 using System;
+using System.Linq.Expressions;
 using GameBuilders.FPSBuilder.Core.Inventory;
 using GameBuilders.FPSBuilder.Core.Player;
 using GameBuilders.FPSBuilder.Core.Weapons;
@@ -79,12 +80,28 @@ public class PlayerStatsManager : MonoBehaviour
 
     void HPReward()
     {
-        weaponManager.MedkitReward();
+        try
+        {
+            weaponManager.MedkitReward();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"PlayerStatsManager: 대체 보상 부여 중 예외 발생 {ex}");
+        }
+        
     }
 
     void AMMOReward()
     {
-        weaponManager.RefillAmmoReward();
+        try
+        {
+            weaponManager.RefillAmmoReward();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"PlayerStatsManager: 대체 보상 부여 중 예외 발생 {ex}");
+        }
+        
     }
 
 
