@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74434106ace6d8e448f5443c53f6cc89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
+  detectionRange: 75
   stoppingDistance: 1.5
   attackRange: 2
   attackCooldown: 2
