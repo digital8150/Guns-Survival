@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
     //레퍼런스
     private SkillManager _skillManager;
     private TimeScaleManager _scaleManager;
-    private UIController _UIController;
+    [SerializeField] private UIController _UIController;
     private Enemy _currentBoss;
     private Enemy _currentFinalBoss;
     private WeaponManager _weaponManager;
@@ -85,7 +85,6 @@ public class UIManager : MonoBehaviour
         _skillManager = FindFirstObjectByType<SkillManager>();
         _scaleManager = FindFirstObjectByType<TimeScaleManager>();
         _weaponManager = FindFirstObjectByType<WeaponManager>();
-        _UIController = FindFirstObjectByType<UIController>();
 
         if(_weaponManager == null)
             Debug.LogError("웨폰매니저 못 찾음!");
@@ -107,10 +106,12 @@ public class UIManager : MonoBehaviour
 
         if (finalbossHPBarPanel!= null)
             finalbossHPBarPanel.SetActive(false);
+
     }
 
     private void Start()
     {
+
         if (weaponSelectionPanel != null)
             ShowWeaponSelectionUI();
     }
@@ -316,10 +317,15 @@ public class UIManager : MonoBehaviour
     }
     private void ShowWeaponSelectionUI()
     {
+        
         weaponSelectionPanel.SetActive(true);
 
         if (_UIController != null && _UIController.HUDCanvas != null)
+        {
             _UIController.HUDCanvas.SetActive(false);
+            Debug.Log($"허드 캔버스를 감춥니다...");
+        }
+
         //비활성
         _scaleManager.Pause();
         AudioListener.pause = true;

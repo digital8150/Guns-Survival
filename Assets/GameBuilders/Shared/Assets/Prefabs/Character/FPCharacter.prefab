@@ -2998,6 +2998,8 @@ MonoBehaviour:
     type: 2}
   m_DeadCharacter: {fileID: 1581970581462352, guid: 9a0310892fdd0c642835396d53d08f7a,
     type: 3}
+  m_PlayerCollider: {fileID: 0}
+  m_PlayerRenderers: []
 --- !u!114 &5876379828761331257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3120,8 +3122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   currentExp: 0
-  maxExp: 30
-  nextLevelPenalty: 1
+  maxExp: 50
+  nextLevelPenalty: 1.1
 --- !u!114 &5180428216651722140
 MonoBehaviour:
   m_ObjectHideFlags: 0
