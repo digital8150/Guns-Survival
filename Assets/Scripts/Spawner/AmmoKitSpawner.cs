@@ -10,12 +10,24 @@ public class AmmoPackSpawner : MonoBehaviour
     private float SpawnDelay = 3f;              // 스폰 딜레이
     [SerializeField]
     private float respawnTime = 50f;           //탄창이 사라진 후 다시 스폰되기까지의 주기
+    private float elapsedTime;
 
     private GameObject currentAmmoPack;       // 현재 스폰된 탄창 인스턴스를 추적
 
     void Start()
     {
+        elapsedTime = respawnTime;
         StartCoroutine(SpawnAmmoPackCoroutine(SpawnDelay));
+    }
+
+    private void Update()
+    {
+        elapsedTime -= Time.deltaTime;
+        if (elapsedTime <= 0)
+        {
+            StartCoroutine(SpawnAmmoPackCoroutine(SpawnDelay));
+            elapsedTime = respawnTime;
+        }
     }
 
     //-------------------------------- 탄창 스폰 딜레이 관리 --------------------------------------
