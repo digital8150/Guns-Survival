@@ -10,12 +10,24 @@ public class MagSpawner : MonoBehaviour
     private float SpawnDelay = 3f;              // 스폰 딜레이
     [SerializeField]
     private float respawnTime = 50f;           //다시 스폰되기까지의 주기
+    private float elapsedTime;
 
     private GameObject currentPrefab;       // 현재 인스턴스를 추적
 
     void Start()
     {
+        elapsedTime = respawnTime;
         StartCoroutine(SpawnMagCoroutine(SpawnDelay));
+    }
+
+    private void Update()
+    {
+        elapsedTime -= Time.deltaTime;
+        if(elapsedTime <= 0)
+        {
+            StartCoroutine(SpawnMagCoroutine(SpawnDelay));
+            elapsedTime = respawnTime;
+        }
     }
 
     //-------------------------------- 딜레이 관리 --------------------------------------
