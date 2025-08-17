@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AmmoPackSpawner : MonoBehaviour
 {
@@ -12,11 +13,14 @@ public class AmmoPackSpawner : MonoBehaviour
     private float respawnTime = 50f;           //탄창이 사라진 후 다시 스폰되기까지의 주기
     private float elapsedTime;
 
+    [Header("레펀러스 참조")]
+    [SerializeField] private Image lefttime_indicator;
+
     private GameObject currentAmmoPack;       // 현재 스폰된 탄창 인스턴스를 추적
 
     void Start()
     {
-        elapsedTime = respawnTime;
+        elapsedTime = respawnTime + SpawnDelay;
         StartCoroutine(SpawnAmmoPackCoroutine(SpawnDelay));
     }
 
@@ -24,22 +28,33 @@ public class AmmoPackSpawner : MonoBehaviour
     {
         if (currentAmmoPack != null)
         {
+            lefttime_indicator.gameObject.SetActive(false);
             return; //스폰되어 있으면 건너뛰기
         }
+        UpdateIndicator();
+        TryRespawn();
+    }
 
+    private void TryRespawn()
+    {
         elapsedTime -= Time.deltaTime;
         if (elapsedTime <= 0)
         {
             StartCoroutine(SpawnAmmoPackCoroutine(SpawnDelay));
-            elapsedTime = respawnTime;
+            elapsedTime = respawnTime + SpawnDelay;
         }
+    }
+
+    private void UpdateIndicator()
+    {
+        lefttime_indicator.gameObject.SetActive(true);
+        lefttime_indicator.fillAmount = (respawnTime - elapsedTime) / respawnTime;
     }
 
     //-------------------------------- 탄창 스폰 딜레이 관리 --------------------------------------
     IEnumerator SpawnAmmoPackCoroutine(float delay)
     {
         yield return new WaitForSeconds(delay);     //딜레이
-
         // 탄창이 현재 스폰되어 있지 않을 때만 스폰
         if (currentAmmoPack == null)
         {
