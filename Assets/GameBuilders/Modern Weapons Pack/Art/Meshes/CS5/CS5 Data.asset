@@ -25,7 +25,7 @@ MonoBehaviour:
   m_PrimaryRateOfFire: 40
   m_SecondaryRateOfFire: 600
   m_Range: 100
-  m_BulletsPerShoot: 4
+  m_BulletsPerShoot: 6
   m_BulletsPerBurst: 3
   m_AffectedLayers:
     serializedVersion: 2
