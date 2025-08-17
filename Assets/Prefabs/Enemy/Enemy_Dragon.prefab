@@ -2676,8 +2676,10 @@ GameObject:
   - component: {fileID: 4573738031828235228}
   - component: {fileID: 4177884680166210062}
   - component: {fileID: 5125474138088149689}
+  - component: {fileID: 441731277880691010}
   - component: {fileID: 8482652010906149308}
   - component: {fileID: 3666190788021665299}
+  - component: {fileID: 1684004223587704613}
   m_Layer: 0
   m_Name: Enemy_Dragon
   m_TagString: Enemy
@@ -2815,6 +2817,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &441731277880691010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267619021521361520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.492569, y: 1.3101768, z: 5.604973}
+  m_Center: {x: 0.09977341, y: 1.7750013, z: 0.013999939}
 --- !u!65 &8482652010906149308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2834,8 +2857,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3181057, y: 5.2457213, z: 3.791031}
-  m_Center: {x: 0.10155201, y: 2.1228602, z: 0.04807666}
+  m_Size: {x: 2.3181057, y: 1.5059209, z: 9.489597}
+  m_Center: {x: 0.10155201, y: 2.1438622, z: -2.8012064}
 --- !u!114 &3666190788021665299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2853,6 +2876,27 @@ MonoBehaviour:
     m_AllowDecals: 1
     m_Penetration: 1
     m_Density: 0.25
+--- !u!65 &1684004223587704613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267619021521361520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.8236458, z: 4.7974854}
+  m_Center: {x: 0, y: 2.1267633, z: 1.8987427}
 --- !u!1 &6368619559781652264
 GameObject:
   m_ObjectHideFlags: 0
