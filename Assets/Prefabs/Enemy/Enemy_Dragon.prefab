@@ -2760,8 +2760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 75
-  stoppingDistance: 5
-  attackRange: 5
+  stoppingDistance: 1.5
+  attackRange: 3
   attackCooldown: 2
   damage: 10
   enemy: {fileID: 1125207832440530508}
