@@ -5471,17 +5471,17 @@ MonoBehaviour:
   - {fileID: 5876255316737481607}
   m_AmmoList:
   - m_AmmoType: {fileID: 11400000, guid: cfcb8336786bf764daa6a7a6b9dab04f, type: 2}
-    m_Amount: 60
+    m_Amount: 210
     m_MaxAmount: 210
   - m_AmmoType: {fileID: 11400000, guid: f9d597e4e5acb854187e9ea38e609177, type: 2}
-    m_Amount: 90
-    m_MaxAmount: 150
+    m_Amount: 300
+    m_MaxAmount: 300
   - m_AmmoType: {fileID: 11400000, guid: 6326d30055ba9e341a39ab79178e5207, type: 2}
-    m_Amount: 0
-    m_MaxAmount: 40
+    m_Amount: 80
+    m_MaxAmount: 80
   - m_AmmoType: {fileID: 11400000, guid: 45fa26ded5618c3458198e0c6830c0e1, type: 2}
-    m_Amount: 0
-    m_MaxAmount: 30
+    m_Amount: 60
+    m_MaxAmount: 60
   m_DefaultWeapon: {fileID: 5877078645702383347}
   m_FragGrenade: {fileID: 5876185151891509709}
 --- !u!1 &5773163971348383561
