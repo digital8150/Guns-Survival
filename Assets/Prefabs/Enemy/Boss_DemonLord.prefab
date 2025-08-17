@@ -1820,6 +1820,7 @@ MonoBehaviour:
   enemyName: DemonLord
   hp: 1000
   currentHp: 0
+  score: 100
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
@@ -1844,6 +1845,8 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 2
   damage: 10
+  enemy: {fileID: 6466293125189103070}
+  agent: {fileID: 6192339784002967495}
 --- !u!195 &6192339784002967495
 NavMeshAgent:
   m_ObjectHideFlags: 0

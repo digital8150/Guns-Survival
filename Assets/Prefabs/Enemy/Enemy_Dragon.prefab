@@ -2738,6 +2738,7 @@ MonoBehaviour:
   enemyName: Dragon
   hp: 400
   currentHp: 0
+  score: 100
   destroyDelay: 3
   expPrefab: {fileID: 350707820961524556, guid: 5719b4b7f309f0e46b5077d6c0aeb606,
     type: 3}
@@ -2762,6 +2763,8 @@ MonoBehaviour:
   attackRange: 5
   attackCooldown: 2
   damage: 10
+  enemy: {fileID: 1125207832440530508}
+  agent: {fileID: 4177884680166210062}
 --- !u!195 &4177884680166210062
 NavMeshAgent:
   m_ObjectHideFlags: 0
