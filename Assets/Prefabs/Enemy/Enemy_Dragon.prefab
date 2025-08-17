@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Dragon
-  hp: 400
+  hp: 300
   currentHp: 0
   score: 200
   destroyDelay: 3
