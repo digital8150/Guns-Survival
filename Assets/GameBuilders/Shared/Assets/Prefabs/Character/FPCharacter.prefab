@@ -2998,6 +2998,8 @@ MonoBehaviour:
     type: 2}
   m_DeadCharacter: {fileID: 1581970581462352, guid: 9a0310892fdd0c642835396d53d08f7a,
     type: 3}
+  m_PlayerCollider: {fileID: 0}
+  m_PlayerRenderers: []
 --- !u!114 &5876379828761331257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3120,8 +3122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   currentExp: 0
-  maxExp: 30
-  nextLevelPenalty: 1
+  maxExp: 50
+  nextLevelPenalty: 1.1
 --- !u!114 &5180428216651722140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5469,17 +5471,17 @@ MonoBehaviour:
   - {fileID: 5876255316737481607}
   m_AmmoList:
   - m_AmmoType: {fileID: 11400000, guid: cfcb8336786bf764daa6a7a6b9dab04f, type: 2}
-    m_Amount: 60
+    m_Amount: 210
     m_MaxAmount: 210
   - m_AmmoType: {fileID: 11400000, guid: f9d597e4e5acb854187e9ea38e609177, type: 2}
-    m_Amount: 90
-    m_MaxAmount: 150
+    m_Amount: 300
+    m_MaxAmount: 300
   - m_AmmoType: {fileID: 11400000, guid: 6326d30055ba9e341a39ab79178e5207, type: 2}
-    m_Amount: 0
-    m_MaxAmount: 40
+    m_Amount: 80
+    m_MaxAmount: 80
   - m_AmmoType: {fileID: 11400000, guid: 45fa26ded5618c3458198e0c6830c0e1, type: 2}
-    m_Amount: 0
-    m_MaxAmount: 30
+    m_Amount: 60
+    m_MaxAmount: 60
   m_DefaultWeapon: {fileID: 5877078645702383347}
   m_FragGrenade: {fileID: 5876185151891509709}
 --- !u!1 &5773163971348383561

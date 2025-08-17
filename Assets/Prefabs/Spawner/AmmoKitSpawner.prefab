@@ -364,8 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -384,63 +383,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2614819206591730133}
     m_Modifications:
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5841457588922532588, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 5841457588922532588, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
+      propertyPath: respawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841457588922532588, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: lefttime_indicator
       value: 
       objectReference: {fileID: 5408981274148015743}
-    - target: {fileID: 7158517516792409112, guid: 8eb281411569e43458e97d5473c9cbda,
-        type: 3}
+    - target: {fileID: 7158517516792409112, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
       propertyPath: m_Name
       value: AmmokitSystem
       objectReference: {fileID: 0}
@@ -451,7 +442,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
 --- !u!4 &6959537839334049967 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 4000911453625593662, guid: 8eb281411569e43458e97d5473c9cbda, type: 3}
   m_PrefabInstance: {fileID: 6274403847460906897}
   m_PrefabAsset: {fileID: 0}
