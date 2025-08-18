@@ -86,32 +86,11 @@ public class UIManager : MonoBehaviour
         _scaleManager = FindFirstObjectByType<TimeScaleManager>();
         _weaponManager = FindFirstObjectByType<WeaponManager>();
 
-        if(_weaponManager == null)
-            Debug.LogError("웨폰매니저 못 찾음!");
-
-        if (_UIController == null)
-            Debug.LogError("UIController 찾지 못함!");
-
-        if (upgradePanel != null)
-            upgradePanel.SetActive(false);
-
-        if (altRewardPanel != null)
-            altRewardPanel.SetActive(false);
-
-        if (upgradePanelTitle != null)
-            upgradePanelTitle.gameObject.SetActive(false);
-
-        if (bossHPBarPanel != null)
-            bossHPBarPanel.SetActive(false);
-
-        if (finalbossHPBarPanel!= null)
-            finalbossHPBarPanel.SetActive(false);
-
+        CheckUIObj();
     }
 
     private void Start()
     {
-
         if (weaponSelectionPanel != null)
             ShowWeaponSelectionUI();
     }
@@ -160,7 +139,6 @@ public class UIManager : MonoBehaviour
     //----------------- EXP & LEVEL ----------------------
     private void UpdateExpBar(float currentExp, float maxExp)
     {
-        //경험치 바 업데이트
         if (image_ExpBar != null)
             image_ExpBar.fillAmount = currentExp / maxExp;
     }
@@ -176,8 +154,6 @@ public class UIManager : MonoBehaviour
         if (image_HPBar != null)
             image_HPBar.fillAmount = currentHP / maxHp;
     }
-
-
 
     //--------------------- Boss ,FinalBoss HP -----------------------
     private GameObject bossObj;
@@ -205,7 +181,6 @@ public class UIManager : MonoBehaviour
 
     private void HandleBossUI(string tag, ref Enemy currentEnemy, GameObject hpBarPanel, Image hpBarImage, Text nameText, Text hpText)
     {
-
         //씬에 보스가 있는 경우
         if(bossObj != null || finalBossObj != null)
         {
@@ -223,15 +198,7 @@ public class UIManager : MonoBehaviour
                 }
 
                 //UI 초기화
-                if (hpBarPanel != null && !hpBarPanel.activeSelf)
-                    hpBarPanel.SetActive(true);
-                if (nameText != null)
-                    nameText.text = currentEnemy.GetName();
-                if (hpBarImage != null)
-                    hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
-                        / currentEnemy.GetMaxHealth();
-                if (hpText != null)
-                    hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
+                ShowBossesUI(ref currentEnemy, hpBarPanel, hpBarImage, nameText, hpText);
             }
             else if(tag == "FinalBoss" && finalBossObj != null)
             {
@@ -248,15 +215,7 @@ public class UIManager : MonoBehaviour
                 }
 
                 //UI 초기화
-                if (hpBarPanel != null && !hpBarPanel.activeSelf)
-                    hpBarPanel.SetActive(true);
-                if (nameText != null)
-                    nameText.text = currentEnemy.GetName();
-                if (hpBarImage != null)
-                    hpBarImage.fillAmount = currentEnemy.GetCurrentHealth()
-                        / currentEnemy.GetMaxHealth();
-                if (hpText != null)
-                    hpText.text = $"{Mathf.CeilToInt(currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(currentEnemy.GetMaxHealth())}";
+                ShowBossesUI(ref currentEnemy, hpBarPanel, hpBarImage, nameText, hpText);
             }
 
 
@@ -534,6 +493,44 @@ public class UIManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+    //-------------------기타 메소드 -----------------------
+    private void CheckUIObj()
+    {
+        if (_weaponManager == null)
+            Debug.LogError("웨폰매니저 못 찾음!");
+
+        if (_UIController == null)
+            Debug.LogError("UIController 찾지 못함!");
+
+        if (upgradePanel != null)
+            upgradePanel.SetActive(false);
+
+        if (altRewardPanel != null)
+            altRewardPanel.SetActive(false);
+
+        if (upgradePanelTitle != null)
+            upgradePanelTitle.gameObject.SetActive(false);
+
+        if (bossHPBarPanel != null)
+            bossHPBarPanel.SetActive(false);
+
+        if (finalbossHPBarPanel != null)
+            finalbossHPBarPanel.SetActive(false);
+    }
+
+    private void ShowBossesUI(ref Enemy _currentEnemy, GameObject _hpBarPanel, Image _hpBarImage, Text _nameText, Text _hpText)
+    {
+        if (_hpBarPanel != null && !_hpBarPanel.activeSelf)
+            _hpBarPanel.SetActive(true);
+        if (_nameText != null)
+            _nameText.text = _currentEnemy.GetName();
+        if (_hpBarImage != null)
+            _hpBarImage.fillAmount = _currentEnemy.GetCurrentHealth()
+                / _currentEnemy.GetMaxHealth();
+        if (_hpText != null)
+            _hpText.text = $"{Mathf.CeilToInt(_currentEnemy.GetCurrentHealth())} / {Mathf.CeilToInt(_currentEnemy.GetMaxHealth())}";
     }
 }
 
