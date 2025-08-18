@@ -14,7 +14,7 @@ public class LeaderboardStartScene : MonoBehaviour
         FetchTop10Scores();
     }
 
-    void FetchTop10Scores()
+    public void FetchTop10Scores()
     {
         leaderboardHttpService.GetTop10(onSuccess: (scores) =>
             {
