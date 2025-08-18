@@ -38,6 +38,7 @@ public class TextTyping : MonoBehaviour
             text.text = text.text.Remove(i);
             yield return interval;
         }
+        this.gameObject.SetActive(false);
     }
 
     private void OnDisable()
