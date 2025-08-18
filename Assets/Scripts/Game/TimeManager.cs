@@ -74,4 +74,9 @@ public class TimeManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("GameClear");
     }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
 }
