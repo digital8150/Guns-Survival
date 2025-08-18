@@ -20,9 +20,9 @@ MonoBehaviour:
   m_Size: 1.1
   m_MeleeDamage: 50
   m_MeleeForce: 20
-  m_PrimaryFireMode: 4
+  m_PrimaryFireMode: 5
   m_SecondaryFireMode: 0
-  m_PrimaryRateOfFire: 40
+  m_PrimaryRateOfFire: 60
   m_SecondaryRateOfFire: 600
   m_Range: 100
   m_BulletsPerShoot: 6
@@ -32,11 +32,11 @@ MonoBehaviour:
     m_Bits: 17
   m_AmmoType: {fileID: 11400000, guid: 45fa26ded5618c3458198e0c6830c0e1, type: 2}
   m_ReloadMode: 0
-  m_RoundsPerMagazine: 10
+  m_RoundsPerMagazine: 20
   m_HasChamber: 1
   m_MaximumSpread: 0.001
-  m_BaseAccuracy: 1
+  m_BaseAccuracy: 0.9
   m_HIPAccuracy: 1
   m_AIMAccuracy: 1
-  m_DecreaseRateByWalking: 1
-  m_DecreaseRateByShooting: 0.8
+  m_DecreaseRateByWalking: 0
+  m_DecreaseRateByShooting: 0

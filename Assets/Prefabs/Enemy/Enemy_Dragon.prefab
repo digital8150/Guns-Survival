@@ -2680,6 +2680,7 @@ GameObject:
   - component: {fileID: 8482652010906149308}
   - component: {fileID: 3666190788021665299}
   - component: {fileID: 1684004223587704613}
+  - component: {fileID: 980956512142903559}
   m_Layer: 0
   m_Name: Enemy_Dragon
   m_TagString: Enemy
@@ -2777,7 +2778,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6267619021521361520}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 4
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2897,6 +2898,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.8236458, z: 4.7974854}
   m_Center: {x: 0, y: 2.1267633, z: 1.8987427}
+--- !u!65 &980956512142903559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267619021521361520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.529236, y: 1.6422927, z: 8.329811}
+  m_Center: {x: -0.13219833, y: 4.2249517, z: -2.1769905}
 --- !u!1 &6368619559781652264
 GameObject:
   m_ObjectHideFlags: 0
