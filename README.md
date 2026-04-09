@@ -17,7 +17,7 @@
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/4ba30d97-483c-436b-b085-4c53862629af" />
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/3b863fb4-7d6f-4b53-8cbf-755fbc245f26" />
 
-
+[![Play Through](http://img.youtube.com/vi/zpHhpyGQJGA/0.jpg)](https://youtu.be/zpHhpyGQJGA?t=0s)
 
 ## 🎮 프로젝트 소개
 
